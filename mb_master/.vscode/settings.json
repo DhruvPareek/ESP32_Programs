@@ -1,0 +1,8 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.adapterTargetName": "esp32c6",
+  "files.associations": {
+    "gpio_modbus.h": "c",
+    "esp_log.h": "c"
+  }
+}
