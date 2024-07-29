@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "generic_gpio",
-    "project_version":    "3ce8121",
+    "project_version":    "aebfc67-dirty",
     "project_path":       "/Users/dhruv/esp/gpio_single_output",
     "idf_path":           "/Users/dhruv/esp/esp-idf",
     "build_dir":          "/Users/dhruv/esp/gpio_single_output/build",
