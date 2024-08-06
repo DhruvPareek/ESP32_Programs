@@ -36,7 +36,7 @@ const char *TAG = "MASTER_TEST";
 
 // Enumeration of modbus device addresses accessed by master device
 enum {
-    MB_DEVICE_ADDR1 = 5 // Only one slave device used for the test (add other slave addresses here)
+    MB_DEVICE_ADDR1 = 0xC0 // Only one slave device used for the test (add other slave addresses here)
 };
 
 // Enumeration of all supported CIDs for device (used in parameter definition table)
@@ -65,7 +65,7 @@ enum {
 // Access Mode - can be used to implement custom options for processing of characteristic (Read/Write restrictions, factory mode values and etc).
 const mb_parameter_descriptor_t device_parameters[] = {
     // { CID, Param Name, Units, Modbus Slave Addr, Modbus Reg Type, Reg Start, Reg Size, Instance Offset, Data Type, Data Size, Parameter Options, Access Mode}
-    { CID_INP_DATA_0, STR("MaxChargeCurr"), STR("%rH"), MB_DEVICE_ADDR1, MB_PARAM_HOLDING, 0xE20A, 1, HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS( 0, 0xFFFF, 1 ), PAR_PERMS_READ_WRITE_TRIGGER }, // function code 0x10
+    { CID_INP_DATA_0, STR("Curve_CC"), STR("%rH"), MB_DEVICE_ADDR1, MB_PARAM_HOLDING, 0xB0, 1, HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS( 0, 0xFFFF, 1 ), PAR_PERMS_READ_WRITE_TRIGGER }, // function code 0x10
 };
 
 // Calculate number of parameters in the table
@@ -151,7 +151,7 @@ void* master_get_param_data(const mb_parameter_descriptor_t* param_descriptor)
 }
 
 // User operation function to read slave values and check alarm
-void master_operation_func(void *arg, int GPIO_INPUT_IO_0_VAL, int GPIO_INPUT_IO_1_VAL)
+void master_operation_func(void *arg)
 {
     esp_err_t err = ESP_OK;
     float value = 0;
@@ -213,18 +213,20 @@ void master_operation_func(void *arg, int GPIO_INPUT_IO_0_VAL, int GPIO_INPUT_IO
                 } else {
                     // Writing the parameter to slave for non-ASCII parameters
                     uint16_t value;
-                    if((GPIO_INPUT_IO_1_VAL == 0)){
-                        value = 0x0226;//writes 55Amps (0x226 = 550)
-                        gpio_set_level(GPIO_OUTPUT_IO_0, 0);
-                        gpio_set_level(GPIO_OUTPUT_IO_1, 1);
-                    }else if(GPIO_INPUT_IO_0_VAL == 0){
+                    if((BATES_DETECTION_IO_VAL == 0)){//If A1 AC detected ==0, or Bates AC is detected
+                        if(INPUT_40AMP_SWITCH_VAL == 1){
+                            value = 0x28;//writes 40amps
+                        }else if(INPUT_50AMP_SWITCH_VAL == 1){
+                            value = 0x32;//writes 50amps
+                        }else if(INPUT_60AMP_SWITCH_VAL == 1){
+                            value = 0x3C;//writes 60amps
+                        }else{
+                            ESP_LOGE(TAG, "Error line 224 where no switch selection for bates charging is detected.");
+                        }
+                    }else if(EDDISON_DETECTION_IO_VAL == 0){//If A0 AC detected, or Eddison AC is detected
                         value = 0x0064;//writes 10Amps (0x0064 = 100)
-                        gpio_set_level(GPIO_OUTPUT_IO_0, 1);
-                        gpio_set_level(GPIO_OUTPUT_IO_1, 0);
-                    }else if(GPIO_INPUT_IO_0_VAL == 1){
+                    }else if(EDDISON_DETECTION_IO_VAL == 1){//IF neither AC is detected
                         value = 0x0000;//writes 0Amps (0x0000 = 0)
-                        gpio_set_level(GPIO_OUTPUT_IO_0, 0);
-                        gpio_set_level(GPIO_OUTPUT_IO_1, 0);
                     }
                     memcpy((void*)temp_data_ptr, &value, sizeof(value));
 //                    ESP_LOGE(TAG, "setting param.");

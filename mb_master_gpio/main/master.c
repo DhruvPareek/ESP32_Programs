@@ -7,23 +7,16 @@
 
 
 #define GPIO_INPUT_PIN_SEL  ((1ULL<<GPIO_INPUT_IO_0) | (1ULL<<GPIO_INPUT_IO_1))
-#define GPIO_OUTPUT_PIN_SEL  (1ULL<<GPIO_OUTPUT_IO_0)
+// #define GPIO_OUTPUT_PIN_SEL  (1ULL<<GPIO_OUTPUT_IO_0)
 
 #define ESP_INTR_FLAG_DEFAULT 0
 
-// Note: Some pins on target chip cannot be assigned for UART communication.
-// See UART documentation for selected board and target to configure pins using Kconfig.
-
-#define EDDISON_DETECTION_IO 10
-#define BATES_DETECTION_IO 11
-#define AC_DETECTION_IN ((1ULL << EDDISON_DETECTION_IO) | (1ULL << BATES_DETECTION_IO))
-
-#define EDDISON_SSR_SELECT_IO 20
-#define BATES_SSR_SELECT_IO 21
-#define SSR_PIN_SEL  ((1ULL << EDDISON_SSR_SELECT_IO) | (1ULL << BATES_SSR_SELECT_IO))
-
 uint8_t EDDISON_DETECTION_IO_VAL = 0; // Initial value for GPIO 11
 uint8_t BATES_DETECTION_IO_VAL = 0; // Initial value for GPIO 12
+
+uint8_t INPUT_40AMP_SWITCH_VAL = 0; // Initial value for GPIO 12
+uint8_t INPUT_50AMP_SWITCH_VAL = 0; // Initial value for GPIO 1
+uint8_t INPUT_60AMP_SWITCH_VAL = 0; // Initial value for GPIO 0
 
 static void IRAM_ATTR gpio_isr_handler(void* arg)
 {
@@ -73,7 +66,7 @@ static void gpio_task_example(void* arg)
                     gpio_set_level(EDDISON_SSR_SELECT_IO, 0); // Set GPIO 20 to high
                     gpio_set_level(BATES_SSR_SELECT_IO, 1); // Set GPIO 21 to low
                 }
-                master_operation_func(NULL, EDDISON_DETECTION_IO_VAL, BATES_DETECTION_IO_VAL/*, &queue*/);
+                master_operation_func(NULL);
             }
 
             gpio_intr_enable(io_num);
@@ -117,9 +110,9 @@ void app_main(void)
 
     printf("Minimum free heap size: %"PRIu32" bytes\n", esp_get_minimum_free_heap_size());
     
-    //Assuming that A0 and A1 start out at 0,0. Mosi and Miso should be set to 0&1
-    gpio_set_level(GPIO_OUTPUT_IO_0, 0);
-    gpio_set_level(GPIO_OUTPUT_IO_1, 1);
+    //Assuming that A0 and A1 start out at 1,1. Mosi and Miso should be set to 0&0
+    gpio_set_level(BATES_SSR_SELECT_IO, 0);
+    gpio_set_level(EDDISON_SSR_SELECT_IO, 0);
 
     // Initialization of device peripheral and objects
     ESP_ERROR_CHECK(master_init());
@@ -131,6 +124,10 @@ void app_main(void)
 
     EDDISON_DETECTION_IO_VAL = gpio_get_level(EDDISON_DETECTION_IO);
     BATES_DETECTION_IO_VAL = gpio_get_level(BATES_DETECTION_IO);
+
+    INPUT_40AMP_SWITCH_VAL = gpio_get_level(INPUT_40AMP_SWITCH);
+    INPUT_50AMP_SWITCH_VAL = gpio_get_level(INPUT_50AMP_SWITCH);
+    INPUT_60AMP_SWITCH_VAL = gpio_get_level(INPUT_60AMP_SWITCH);
 
     // gpio_set_level(EDDISON_SSR_SELECT_IO, 1); // Set GPIO 20 to high
     // gpio_set_level(BATES_SSR_SELECT_IO, 1); // Set GPIO3 21 to low

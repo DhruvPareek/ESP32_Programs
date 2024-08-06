@@ -45,7 +45,7 @@ static const char *TAG = "MASTER_TEST";
 
 // Enumeration of modbus device addresses accessed by master device
 enum {
-    MB_DEVICE_ADDR1 = 1 // Only one slave device used for the test (add other slave addresses here)
+    MB_DEVICE_ADDR1 = 0xC0 // Only one slave device used for the test (add other slave addresses here)
 };
 
 // Enumeration of all supported CIDs for device (used in parameter definition table)
@@ -74,26 +74,7 @@ enum {
 // Access Mode - can be used to implement custom options for processing of characteristic (Read/Write restrictions, factory mode values and etc).
 const mb_parameter_descriptor_t device_parameters[] = {
     // { CID, Param Name, Units, Modbus Slave Addr, Modbus Reg Type, Reg Start, Reg Size, Instance Offset, Data Type, Data Size, Parameter Options, Access Mode}
-    { CID_INP_DATA_0, STR("Data_channel_0"), STR("Volts"), MB_DEVICE_ADDR1, MB_PARAM_INPUT, 0, 2,
-            INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 4, OPTS( -10, 10, 1 ), PAR_PERMS_READ_WRITE_TRIGGER },
-    { CID_HOLD_DATA_0, STR("Humidity_1"), STR("%rH"), MB_DEVICE_ADDR1, MB_PARAM_HOLDING, 0, 2,
-            HOLD_OFFSET(holding_data0), PARAM_TYPE_FLOAT, 4, OPTS( 0, 100, 1 ), PAR_PERMS_READ_WRITE_TRIGGER },
-    { CID_INP_DATA_1, STR("Temperature_1"), STR("C"), MB_DEVICE_ADDR1, MB_PARAM_INPUT, 2, 2,
-            INPUT_OFFSET(input_data1), PARAM_TYPE_FLOAT, 4, OPTS( -40, 100, 1 ), PAR_PERMS_READ_WRITE_TRIGGER },
-    { CID_HOLD_DATA_1, STR("Humidity_2"), STR("%rH"), MB_DEVICE_ADDR1, MB_PARAM_HOLDING, 2, 2,
-            HOLD_OFFSET(holding_data1), PARAM_TYPE_FLOAT, 4, OPTS( 0, 100, 1 ), PAR_PERMS_READ_WRITE_TRIGGER },
-    { CID_INP_DATA_2, STR("Temperature_2"), STR("C"), MB_DEVICE_ADDR1, MB_PARAM_INPUT, 4, 2,
-            INPUT_OFFSET(input_data2), PARAM_TYPE_FLOAT, 4, OPTS( -40, 100, 1 ), PAR_PERMS_READ_WRITE_TRIGGER },
-    { CID_HOLD_DATA_2, STR("Humidity_3"), STR("%rH"), MB_DEVICE_ADDR1, MB_PARAM_HOLDING, 4, 2,
-            HOLD_OFFSET(holding_data2), PARAM_TYPE_FLOAT, 4, OPTS( 0, 100, 1 ), PAR_PERMS_READ_WRITE_TRIGGER },
-    { CID_HOLD_TEST_REG, STR("Test_regs"), STR("__"), MB_DEVICE_ADDR1, MB_PARAM_HOLDING, 10, 58,
-            HOLD_OFFSET(test_regs), PARAM_TYPE_ASCII, 116, OPTS( 0, 100, 1 ), PAR_PERMS_READ_WRITE_TRIGGER },
-    { CID_RELAY_P1, STR("RelayP1"), STR("on/off"), MB_DEVICE_ADDR1, MB_PARAM_COIL, 2, 6,
-            COIL_OFFSET(coils_port0), PARAM_TYPE_U8, 1, OPTS( 0xAA, 0x15, 0 ), PAR_PERMS_READ_WRITE_TRIGGER },
-    { CID_RELAY_P2, STR("RelayP2"), STR("on/off"), MB_DEVICE_ADDR1, MB_PARAM_COIL, 10, 6,
-            COIL_OFFSET(coils_port1), PARAM_TYPE_U8, 1, OPTS( 0x55, 0x2A, 0 ), PAR_PERMS_READ_WRITE_TRIGGER },
-    { CID_DISCR_P1, STR("DiscreteInpP1"), STR("on/off"), MB_DEVICE_ADDR1, MB_PARAM_DISCRETE, 2, 7,
-            DISCR_OFFSET(discrete_input_port1), PARAM_TYPE_U8, 1, OPTS( 0xAA, 0x15, 0 ), PAR_PERMS_READ_WRITE_TRIGGER }
+    { CID_INP_DATA_0, STR("MaxChargeCurr"), STR("%rH"), MB_DEVICE_ADDR1, MB_PARAM_INPUT, 0xB0, 2,  INPUT_OFFSET(input_data2), PARAM_TYPE_U16, 2, OPTS( 0, 0xFFFF, 1 ), PAR_PERMS_READ_WRITE_TRIGGER }, // function code 0x10
 };
 
 // Calculate number of parameters in the table
@@ -191,55 +172,41 @@ static void master_operation_func(void *arg)
                                         (char*)esp_err_to_name(err));
                     }
                 } else {
-                    err = mbc_master_get_parameter(cid, (char*)param_descriptor->param_key,
-                                                        (uint8_t*)temp_data_ptr, &type);
+                    // Writing the parameter to slave for non-ASCII parameters
+                    uint16_t value = 0x1770;//writes 55Amps (0x226 = 550)
+                    //uint16_t value = 0x0064;//writes 10Amps (0x0064 = 100)
+                    //uint16_t value = 0x0032;//writes 5Amps (0x0032 = 50)
+                    memcpy((void*)temp_data_ptr, &value, sizeof(value));
+
+                    err = mbc_master_set_parameter(cid, (char*)param_descriptor->param_key,
+                                                   (uint16_t*)temp_data_ptr, &type);
+
                     if (err == ESP_OK) {
-                        if ((param_descriptor->mb_param_type == MB_PARAM_HOLDING) ||
-                            (param_descriptor->mb_param_type == MB_PARAM_INPUT)) {
-                            value = *(float*)temp_data_ptr;
-                            ESP_LOGI(TAG, "Characteristic #%u %s (%s) value = %f (0x%" PRIx32 ") read successful.",
-                                            param_descriptor->cid,
-                                            param_descriptor->param_key,
-                                            param_descriptor->param_units,
-                                            value,
-                                            *(uint32_t*)temp_data_ptr);
-                            if (((value > param_descriptor->param_opts.max) ||
-                                (value < param_descriptor->param_opts.min))) {
-                                    alarm_state = true;
-                                    break;
-                            }
-                        } else {
-                            uint8_t state = *(uint8_t*)temp_data_ptr;
-                            const char* rw_str = (state & param_descriptor->param_opts.opt1) ? "ON" : "OFF";
-                            if ((state & param_descriptor->param_opts.opt2) == param_descriptor->param_opts.opt2) {
-                                ESP_LOGI(TAG, "Characteristic #%u %s (%s) value = %s (0x%" PRIx8 ") read successful.",
-                                                param_descriptor->cid,
-                                                param_descriptor->param_key,
-                                                param_descriptor->param_units,
-                                                (const char*)rw_str,
-                                                *(uint8_t*)temp_data_ptr);
-                            } else {
-                                ESP_LOGE(TAG, "Characteristic #%u %s (%s) value = %s (0x%" PRIx8 "), unexpected value.",
-                                                param_descriptor->cid,
-                                                param_descriptor->param_key,
-                                                param_descriptor->param_units,
-                                                (const char*)rw_str,
-                                                *(uint8_t*)temp_data_ptr);
-                                alarm_state = true;
-                                break;
-                            }
-                            if (state & param_descriptor->param_opts.opt1) {
-                                alarm_state = true;
-                                break;
-                            }
-                        }
-                    } else {
-                        ESP_LOGE(TAG, "Characteristic #%u (%s) read fail, err = 0x%x (%s).",
+
+                        ESP_LOGI(TAG, "Characteristic #%u %s (%s) value = (0x%" PRIx16 "), write successful.",
+
                                         param_descriptor->cid,
+
                                         param_descriptor->param_key,
+
+                                        param_descriptor->param_units,
+
+                                        *(uint16_t*)temp_data_ptr);
+
+                    } else {
+
+                        ESP_LOGE(TAG, "Characteristic #%u (%s) write fail, err = 0x%x (%s).",
+
+                                        param_descriptor->cid,
+
+                                        param_descriptor->param_key,
+
                                         (int)err,
+
                                         (char*)esp_err_to_name(err));
+
                     }
+
                 }
                 vTaskDelay(POLL_TIMEOUT_TICS); // timeout between polls
             }

@@ -35,8 +35,8 @@
  *
  */
 
-#define GPIO_OUTPUT_IO_0    CONFIG_GPIO_OUTPUT_0
-#define GPIO_OUTPUT_IO_1    CONFIG_GPIO_OUTPUT_1
+#define GPIO_OUTPUT_IO_0    3
+#define GPIO_OUTPUT_IO_1    4
 #define GPIO_OUTPUT_PIN_SEL  ((1ULL<<GPIO_OUTPUT_IO_0) | (1ULL<<GPIO_OUTPUT_IO_1))
 /*
  * Let's say, GPIO_OUTPUT_IO_0=18, GPIO_OUTPUT_IO_1=19
@@ -45,8 +45,8 @@
  * 1ULL<<GPIO_OUTPUT_IO_1 is equal to 0000000000000000000010000000000000000000
  * GPIO_OUTPUT_PIN_SEL                0000000000000000000011000000000000000000
  * */
-#define GPIO_INPUT_IO_0     CONFIG_GPIO_INPUT_0
-#define GPIO_INPUT_IO_1     CONFIG_GPIO_INPUT_1
+#define GPIO_INPUT_IO_0     8
+#define GPIO_INPUT_IO_1     1
 #define GPIO_INPUT_PIN_SEL  ((1ULL<<GPIO_INPUT_IO_0) | (1ULL<<GPIO_INPUT_IO_1))
 /*
  * Let's say, GPIO_INPUT_IO_0=4, GPIO_INPUT_IO_1=5
@@ -119,8 +119,11 @@ void app_main(void)
 
     //remove isr handler for gpio number.
     gpio_isr_handler_remove(GPIO_INPUT_IO_0);
+    // gpio_isr_handler_remove(GPIO_INPUT_IO_1);
+
     //hook isr handler for specific gpio pin again
     gpio_isr_handler_add(GPIO_INPUT_IO_0, gpio_isr_handler, (void*) GPIO_INPUT_IO_0);
+    // gpio_isr_handler_add(GPIO_INPUT_IO_1, gpio_isr_handler, (void*) GPIO_INPUT_IO_1);
 
     printf("Minimum free heap size: %"PRIu32" bytes\n", esp_get_minimum_free_heap_size());
 

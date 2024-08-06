@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "modbus_master",
-    "project_version":    "10c32b0-dirty",
+    "project_version":    "d1117a1-dirty",
     "project_path":       "/Users/dhruv/esp/mb_master_gpio",
     "idf_path":           "/Users/dhruv/esp/esp-idf",
     "build_dir":          "/Users/dhruv/esp/mb_master_gpio/build",
