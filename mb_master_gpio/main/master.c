@@ -108,6 +108,10 @@ void app_main(void)
     gpio_isr_handler_add(EDDISON_DETECTION_IO, gpio_isr_handler, (void*) EDDISON_DETECTION_IO);
     gpio_isr_handler_add(BATES_DETECTION_IO, gpio_isr_handler, (void*) BATES_DETECTION_IO);
 
+    gpio_isr_handler_add(INPUT_40AMP_SWITCH, gpio_isr_handler, (void*) INPUT_40AMP_SWITCH);
+    gpio_isr_handler_add(INPUT_50AMP_SWITCH, gpio_isr_handler, (void*) INPUT_50AMP_SWITCH);
+    gpio_isr_handler_add(INPUT_60AMP_SWITCH, gpio_isr_handler, (void*) INPUT_60AMP_SWITCH);
+
     printf("Minimum free heap size: %"PRIu32" bytes\n", esp_get_minimum_free_heap_size());
     
     //Assuming that A0 and A1 start out at 1,1. Mosi and Miso should be set to 0&0
