@@ -216,22 +216,33 @@ void master_operation_func(void *arg)
                     if((BATES_DETECTION_IO_VAL == 0)){//If A1 AC detected ==0, or Bates AC is detected
                         if(INPUT_40AMP_SWITCH_VAL == 1){
                             value = 0x28;//writes 40amps
-                        }else if(INPUT_50AMP_SWITCH_VAL == 1){
+                            printf("Writing 40 amps\n");
+                        }else if(INPUT_40AMP_SWITCH_VAL == 0 && INPUT_60AMP_SWITCH_VAL == 0){
                             value = 0x32;//writes 50amps
+                            printf("Writing 50 amps\n");
                         }else if(INPUT_60AMP_SWITCH_VAL == 1){
                             value = 0x3C;//writes 60amps
+                            printf("Writing 60 amps\n");
                         }else{
                             ESP_LOGE(TAG, "Error line 224 where no switch selection for bates charging is detected.");
                         }
                     }else if(EDDISON_DETECTION_IO_VAL == 0){//If A0 AC detected, or Eddison AC is detected
                         value = 0x0064;//writes 10Amps (0x0064 = 100)
+                        printf("Writing 10 amps\n");
                     }else if(EDDISON_DETECTION_IO_VAL == 1){//IF neither AC is detected
                         value = 0x0000;//writes 0Amps (0x0000 = 0)
+                        printf("Writing 0 amps\n");
                     }
                     memcpy((void*)temp_data_ptr, &value, sizeof(value));
-//                    ESP_LOGE(TAG, "setting param.");
                     err = mbc_master_set_parameter(cid, (char*)param_descriptor->param_key,
                                                    (uint16_t*)temp_data_ptr, &type);
+
+                    //UNCOMMENT THIS LOOP ONCE INVERTER IS WORKING!!!!!!
+                    // while(err!=ESP_OK){
+                    //     printf("Write failed, retrying...\n");
+                    //     err = mbc_master_set_parameter(cid, (char*)param_descriptor->param_key,
+                    //                                (uint16_t*)temp_data_ptr, &type);
+                    // }
 
                     if (err == ESP_OK) {
 

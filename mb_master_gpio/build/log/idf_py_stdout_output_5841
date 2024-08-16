@@ -1,0 +1,539 @@
+0cnt: 16373
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6f (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c410,len:0xe2c
+load:0x4086e610,len:0x2e24
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug  9 2024 11:50:04[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (84) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0d380h ( 54144) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001d3a8 vaddr=40800000 size=02c70h ( 11376) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=19338h (103224) map[0m
+[0;32mI (130) esp_image: segment 3: paddr=00039360 vaddr=40802c70 size=0bc40h ( 48192) load[0m
+[0;32mI (145) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (146) boot: Disabling RNG early entropy source...[0m
+[0;32mI (157) cpu_start: Unicore app[0m
+[0;33mW (166) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (173) cpu_start: Pro cpu start user code[0m
+[0;32mI (173) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (173) cpu_start: Application information:[0m
+[0;32mI (176) cpu_start: Project name:     modbus_master[0m
+[0;32mI (181) cpu_start: App version:      76e57b8-dirty[0m
+[0;32mI (187) cpu_start: Compile time:     Aug  9 2024 11:49:22[0m
+[0;32mI (193) cpu_start: ELF file SHA256:  61ad8d960...[0m
+[0;32mI (198) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (203) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (208) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (213) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (217) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (225) heap_init: At 4080FE90 len 0006C780 (433 KiB): RAM[0m
+[0;32mI (231) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (237) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (244) spi_flash: detected chip: generic[0m
+[0;32mI (248) spi_flash: flash io: dio[0m
+[0;33mW (252) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (265) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (272) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (279) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (284) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (289) main_task: Started on CPU0[0m
+[0;32mI (289) main_task: Calling app_main()[0m
+[0;32mI (289) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (299) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (309) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (319) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (329) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (339) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Minimum free heap size: 451232 bytes
+[0;32mI (349) uart: queue free spaces: 20[0m
+[0;32mI (409) MASTER_TEST: Modbus master stack initialized...[0m
+Writing 60 amps
+Oscillating
+Finished!
+Writing 10 amps
+[0;31mE (1349) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1349) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Eddison set to high, bates set to low
+cnt: 1
+0cnt: 2
+0cnt: 3
+0cnt: 4
+0cnt: 5
+0cnt: 6
+0cnt: 7
+0cnt: 8
+0cnt: 9
+0cnt: 10
+0cnt: 11
+0cnt: 12
+0cnt: 13
+0cnt: 14
+0cnt: 15
+0cnt: 16
+0cnt: 17
+0cnt: 18
+0cnt: 19
+0cnt: 20
+0cnt: 21
+0cnt: 22
+0cnt: 23
+0cnt: 24
+0cnt: 25
+0cnt: 26
+0cnt: 27
+0cnt: 28
+0cnt: 29
+0cnt: 30
+0cnt: 31
+0cnt: 32
+0cnt: 33
+0cnt: 34
+0cnt: 35
+0cnt: 36
+0cnt: 37
+0cnt: 38
+0cnt: 39
+[0;31mE (1749) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1749) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Oscillating
+Finished!
+Oscillating
+Finished!
+0cnt: 40
+0cnt: 41
+0cnt: 42
+0cnt: 43
+0cnt: 44
+0cnt: 45
+0cnt: 46
+0cnt: 47
+0cnt: 48
+0cnt: 49
+0cnt: 50
+0cnt: 51
+0cnt: 52
+0cnt: 53
+0cnt: 54
+0cnt: 55
+0cnt: 56
+0cnt: 57
+0cnt: 58
+0cnt: 59
+0cnt: 60
+0cnt: 61
+0cnt: 62
+0cnt: 63
+0cnt: 64
+0cnt: 65
+0cnt: 66
+0cnt: 67
+0cnt: 68
+0cnt: 69
+0cnt: 70
+0cnt: 71
+0cnt: 72
+0cnt: 73
+0cnt: 74
+0cnt: 75
+0cnt: 76
+0cnt: 77
+0cnt: 78
+0cnt: 79
+0cnt: 80
+0cnt: 81
+0cnt: 82
+0cnt: 83
+0cnt: 84
+0cnt: 85
+0cnt: 86
+0cnt: 87
+0cnt: 88
+0cnt: 89
+0cnt: 90
+0cnt: 91
+0cnt: 92
+0cnt: 93
+0cnt: 94
+0cnt: 95
+0cnt: 96
+0cnt: 97
+0cnt: 98
+0cnt: 99
+0cnt: 100
+0cnt: 101
+0cnt: 102
+0cnt: 103
+0cnt: 104
+0cnt: 105
+0cnt: 106
+0cnt: 107
+0cnt: 108
+0cnt: 109
+0cnt: 110
+0cnt: 111
+0cnt: 112
+0cnt: 113
+0cnt: 114
+0cnt: 115
+0cnt: 116
+0cnt: 117
+0cnt: 118
+0cnt: 119
+0cnt: 120
+0cnt: 121
+0cnt: 122
+0cnt: 123
+0cnt: 124
+0cnt: 125
+0cnt: 126
+0cnt: 127
+0cnt: 128
+0cnt: 129
+0cnt: 130
+0cnt: 131
+0cnt: 132
+0cnt: 133
+0cnt: 134
+0cnt: 135
+0cnt: 136
+0cnt: 137
+0cnt: 138
+0cnt: 139
+0cnt: 140
+0cnt: 141
+0cnt: 142
+0cnt: 143
+0cnt: 144
+0cnt: 145
+0cnt: 146
+0cnt: 147
+0cnt: 148
+0cnt: 149
+0cnt: 150
+0cnt: 151
+0cnt: 152
+0cnt: 153
+0cnt: 154
+0cnt: 155
+0cnt: 156
+0cnt: 157
+0cnt: 158
+0cnt: 159
+0cnt: 160
+0cnt: 161
+0cnt: 162
+0cnt: 163
+0cnt: 164
+0cnt: 165
+0cnt: 166
+0cnt: 167
+0cnt: 168
+0cnt: 169
+0cnt: 170
+0cnt: 171
+0cnt: 172
+0cnt: 173
+0cnt: 174
+0cnt: 175
+0cnt: 176
+0cnt: 177
+0cnt: 178
+0cnt: 179
+0cnt: 180
+0cnt: 181
+0cnt: 182
+0cnt: 183
+0cnt: 184
+0cnt: 185
+0cnt: 186
+0cnt: 187
+0cnt: 188
+0cnt: 189
+0cnt: 190
+0cnt: 191
+0cnt: 192
+0cnt: 193
+0cnt: 194
+0cnt: 195
+0cnt: 196
+0cnt: 197
+0cnt: 198
+0cnt: 199
+0cnt: 200
+0cnt: 201
+0cnt: 202
+0cnt: 203
+0cnt: 204
+0cnt: 205
+0cnt: 206
+0cnt: 207
+0cnt: 208
+0cnt: 209
+0cnt: 210
+0cnt: 211
+0cnt: 212
+0cnt: 213
+0cnt: 214
+0cnt: 215
+0cnt: 216
+0cnt: 217
+0cnt: 218
+0cnt: 219
+0cnt: 220
+0cnt: 221
+0cnt: 222
+0cnt: 223
+0cnt: 224
+0cnt: 225
+0cnt: 226
+0cnt: 227
+0cnt: 228
+0cnt: 229
+0cnt: 230
+0cnt: 231
+0cnt: 232
+0cnt: 233
+0cnt: 234
+0cnt: 235
+0cnt: 236
+0cnt: 237
+0cnt: 238
+0cnt: 239
+0cnt: 240
+0cnt: 241
+0cnt: 242
+0cnt: 243
+0cnt: 244
+0cnt: 245
+0cnt: 246
+0cnt: 247
+0cnt: 248
+0cnt: 249
+0cnt: 250
+0cnt: 251
+0cnt: 252
+0cnt: 253
+0cnt: 254
+0cnt: 255
+0cnt: 256
+0cnt: 257
+0cnt: 258
+0cnt: 259
+0cnt: 260
+0cnt: 261
+0cnt: 262
+0cnt: 263
+0cnt: 264
+0cnt: 265
+0cnt: 266
+0cnt: 267
+0cnt: 268
+0cnt: 269
+0cnt: 270
+0cnt: 271
+0cnt: 272
+0cnt: 273
+0cnt: 274
+0cnt: 275
+0cnt: 276
+0cnt: 277
+0cnt: 278
+0cnt: 279
+0cnt: 280
+0cnt: 281
+0cnt: 282
+0cnt: 283
+0cnt: 284
+0cnt: 285
+0cnt: 286
+0cnt: 287
+0cnt: 288
+0cnt: 289
+0cnt: 290
+0cnt: 291
+0cnt: 292
+0cnt: 293
+0cnt: 294
+0cnt: 295
+0cnt: 296
+0cnt: 297
+0cnt: 298
+0cnt: 299
+0cnt: 300
+0cnt: 301
+0cnt: 302
+0cnt: 303
+0cnt: 304
+0cnt: 305
+0cnt: 306
+0cnt: 307
+0cnt: 308
+0cnt: 309
+0cnt: 310
+0cnt: 311
+0cnt: 312
+0cnt: 313
+0cnt: 314
+0cnt: 315
+0cnt: 316
+0cnt: 317
+0cnt: 318
+0cnt: 319
+0cnt: 320
+0cnt: 321
+0cnt: 322
+0cnt: 323
+0cnt: 324
+0cnt: 325
+0cnt: 326
+0cnt: 327
+0cnt: 328
+0cnt: 329
+0cnt: 330
+0cnt: 331
+0cnt: 332
+0cnt: 333
+0cnt: 334
+0cnt: 335
+0cnt: 336
+0cnt: 337
+0cnt: 338
+0cnt: 339
+0cnt: 340
+0cnt: 341
+0cnt: 342
+0cnt: 343
+0cnt: 344
+0cnt: 345
+0cnt: 346
+0cnt: 347
+0cnt: 348
+0cnt: 349
+0cnt: 350
+0cnt: 351
+0cnt: 352
+0cnt: 353
+0cnt: 354
+0cnt: 355
+0cnt: 356
+0cnt: 357
+0cnt: 358
+0cnt: 359
+0cnt: 360
+0cnt: 361
+0cnt: 362
+0cnt: 363
+0cnt: 364
+0cnt: 365
+0cnt: 366
+0cnt: 367
+0cnt: 368
+0cnt: 369
+0cnt: 370
+0cnt: 371
+0cnt: 372
+0cnt: 373
+0cnt: 374
+0cnt: 375
+0cnt: 376
+0cnt: 377
+0cnt: 378
+0cnt: 379
+0cnt: 380
+0cnt: 381
+0cnt: 382
+0cnt: 383
+0cnt: 384
+0cnt: 385
+0cnt: 386
+0cnt: 387
+0cnt: 388
+0cnt: 389
+0cnt: 390
+0cnt: 391
+0cnt: 392
+0cnt: 393
+0cnt: 394
+0cnt: 395
+0cnt: 396
+0cnt: 397
+0cnt: 398
+0cnt: 399
+0cnt: 400
+0cnt: 401
+0cnt: 402
+0cnt: 403
+0cnt: 404
+0cnt: 405
+0cnt: 406
+0cnt: 407
+0cnt: 408
+0cnt: 409
+0cnt: 410
+0cnt: 411
+0cnt: 412
+0cnt: 413
+0cnt: 414
+0cnt: 415
+0cnt: 416
+0cnt: 417
+0cnt: 418
+0cnt: 419
+0cnt: 420
+0cnt: 421
+0cnt: 422
+0cnt: 423
+0cnt: 424
+0cnt: 425
+0cnt: 426
+0cnt: 427
+0cnt: 428
+0cnt: 429
+0cnt: 430
+0cnt: 431
+0cnt: 432
+0cnt: 433
+0cnt: 434
+0cnt: 435
+0cnt: 436
+0cnt: 437
+0cnt: 438
+0cnt: 439
+0cnt: 440
+0cnt: 441
+0cnt: 442
+0cnt: 443
+0cnt: 444
+0cnt: 445
+0cnt: 446
+0cnt: 447
+0cnt: 448
+0cnt: 449
+0cnt: 450
+0cnt: 451
+0cnt: 452
+0cnt: 453
+0cnt: 454
+0cnt: 455
+0cnt: 456
+0cnt: 457
+0cnt: 458
+0cnt: 459
+0cnt: 460
+0cnt: 461

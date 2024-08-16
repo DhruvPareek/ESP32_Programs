@@ -1,0 +1,31 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /Users/dhruv/esp/mb_master/build/bootloader/esp-idf/esptool_py && /Users/dhruv/.espressif/python_env/idf5.2_py3.12_env/bin/python /Users/dhruv/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/dhruv/esp/mb_master/build/bootloader/bootloader.bin
+Bootloader binary size 0x54b0 bytes. 0x2b50 bytes (34%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/master.c.obj
+/Users/dhruv/esp/mb_master/main/master.c: In function 'master_operation_func':
+/Users/dhruv/esp/mb_master/main/master.c:184:52: warning: passing argument 3 of 'mbc_master_set_parameter' from incompatible pointer type [-Wincompatible-pointer-types]
+  184 |                                                    (uint16_t*)temp_data_ptr, &type);
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                    |
+      |                                                    uint16_t * {aka short unsigned int *}
+In file included from /Users/dhruv/esp/mb_master/managed_components/espressif__esp-modbus/freemodbus/common/include/mbcontroller.h:20,
+                 from /Users/dhruv/esp/mb_master/main/master.c:10:
+/Users/dhruv/esp/mb_master/managed_components/espressif__esp-modbus/freemodbus/common/include/esp_modbus_master.h:306:71: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  306 | esp_err_t mbc_master_set_parameter(uint16_t cid, char* name, uint8_t* value, uint8_t *type);
+      |                                                              ~~~~~~~~~^~~~~
+/Users/dhruv/esp/mb_master/main/master.c:118:11: warning: unused variable 'value' [-Wunused-variable]
+  118 |     float value = 0;
+      |           ^~~~~
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable modbus_master.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32c6 image...
+Merged 2 ELF sections
+Successfully created esp32c6 image.
+Generated /Users/dhruv/esp/mb_master/build/modbus_master.bin
+[9/9] cd /Users/dhruv/esp/mb_master/build/esp-idf/esptool_py && /Users/dhruv/.espressif/python_env/idf5.2_py3.12_env/bin/python /Users/dhruv/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/dhruv/esp/mb_master/build/partition_table/partition-table.bin /Users/dhruv/esp/mb_master/build/modbus_master.bin
+modbus_master.bin binary size 0x33da0 bytes. Smallest app partition is 0x100000 bytes. 0xcc260 bytes (80%) free.

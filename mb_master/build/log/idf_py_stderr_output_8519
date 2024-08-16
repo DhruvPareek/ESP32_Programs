@@ -1,0 +1,4 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/cu.usbserial-110 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 713adb105f33acc6b4aaaaf87413a0261a0915211aa7651277cf9e369377c1a2[0m
+[0m

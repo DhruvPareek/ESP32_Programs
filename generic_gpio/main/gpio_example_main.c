@@ -127,11 +127,14 @@ void app_main(void)
 
     printf("Minimum free heap size: %"PRIu32" bytes\n", esp_get_minimum_free_heap_size());
 
-    int cnt = 0;
-    while (1) {
-        printf("cnt: %d\n", cnt++);
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-        gpio_set_level(GPIO_OUTPUT_IO_0, cnt % 2);
-        gpio_set_level(GPIO_OUTPUT_IO_1, cnt % 2);
-    }
+    // int cnt = 0;
+    // while (1) {
+    //     printf("cnt: %d\n", cnt++);
+    //     vTaskDelay(1000 / portTICK_PERIOD_MS);
+    //     gpio_set_level(GPIO_OUTPUT_IO_0, cnt % 2);
+    //     gpio_set_level(GPIO_OUTPUT_IO_1, cnt % 2);
+    // }
+    gpio_set_level(GPIO_OUTPUT_IO_0, 1);
+    gpio_set_level(GPIO_OUTPUT_IO_1, 1);
+
 }

@@ -177,10 +177,12 @@ static void master_operation_func(void *arg)
                     //uint16_t value = 0x0064;//writes 10Amps (0x0064 = 100)
                     //uint16_t value = 0x0032;//writes 5Amps (0x0032 = 50)
                     memcpy((void*)temp_data_ptr, &value, sizeof(value));
-
                     err = mbc_master_set_parameter(cid, (char*)param_descriptor->param_key,
                                                    (uint16_t*)temp_data_ptr, &type);
-
+                    while(err!=ESP_OK){
+                        err = mbc_master_set_parameter(cid, (char*)param_descriptor->param_key,
+                                                   (uint16_t*)temp_data_ptr, &type);
+                    }
                     if (err == ESP_OK) {
 
                         ESP_LOGI(TAG, "Characteristic #%u %s (%s) value = (0x%" PRIx16 "), write successful.",

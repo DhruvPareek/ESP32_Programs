@@ -1,0 +1,872 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x2f (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c410,len:0xe2c
+load:0x4086e610,len:0x2e24
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug  9 2024 11:50:04[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (84) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0d368h ( 54120) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001d390 vaddr=40800000 size=02c88h ( 11400) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=19178h (102776) map[0m
+[0;32mI (130) esp_image: segment 3: paddr=000391a0 vaddr=40802c88 size=0bc28h ( 48168) load[0m
+[0;32mI (145) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (146) boot: Disabling RNG early entropy source...[0m
+[0;32mI (157) cpu_start: Unicore app[0m
+[0;33mW (166) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (173) cpu_start: Pro cpu start user code[0m
+[0;32mI (173) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (173) cpu_start: Application information:[0m
+[0;32mI (176) cpu_start: Project name:     modbus_master[0m
+[0;32mI (181) cpu_start: App version:      76e57b8-dirty[0m
+[0;32mI (187) cpu_start: Compile time:     Aug  9 2024 11:49:22[0m
+[0;32mI (193) cpu_start: ELF file SHA256:  217f5719c...[0m
+[0;32mI (198) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (203) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (208) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (212) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (217) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (224) heap_init: At 4080FE90 len 0006C780 (433 KiB): RAM[0m
+[0;32mI (231) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (237) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (244) spi_flash: detected chip: generic[0m
+[0;32mI (248) spi_flash: flash io: dio[0m
+[0;33mW (252) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (265) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (272) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (279) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (284) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (289) main_task: Started on CPU0[0m
+[0;32mI (289) main_task: Calling app_main()[0m
+[0;32mI (289) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (299) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (309) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (319) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (329) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (339) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Minimum free heap size: 451232 bytes
+[0;32mI (349) uart: queue free spaces: 20[0m
+[0;32mI (409) MASTER_TEST: Modbus master stack initialized...[0m
+cnt: 1
+cnt: 2
+cnt: 3
+cnt: 4
+cnt: 5
+cnt: 6
+cnt: 7
+cnt: 8
+cnt: 9
+cnt: 10
+cnt: 11
+cnt: 12
+cnt: 13
+cnt: 14
+cnt: 15
+cnt: 16
+cnt: 17
+cnt: 18
+Writing 10 amps
+[0;31mE (18249) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (18249) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Eddison set to high, bates set to low
+Writing 60 amps
+cnt: 19
+[0;31mE (18769) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (18769) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Eddison set to low, bates set to high
+Writing 10 amps
+cnt: 20
+[0;31mE (19609) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (19609) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Eddison set to high, bates set to low
+cnt: 21
+cnt: 22
+cnt: 23
+cnt: 24
+cnt: 25
+cnt: 26
+cnt: 27
+cnt: 28
+cnt: 29
+cnt: 30
+cnt: 31
+Writing 0 amps
+cnt: 32
+[0;31mE (31569) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (31569) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Eddison set to low, bates set to low
+cnt: 33
+cnt: 34
+cnt: 35
+cnt: 36
+cnt: 37
+cnt: 38
+cnt: 39
+cnt: 40
+cnt: 41
+cnt: 42
+cnt: 43
+cnt: 44
+cnt: 45
+cnt: 46
+cnt: 47
+cnt: 48
+cnt: 49
+cnt: 50
+cnt: 51
+cnt: 52
+cnt: 53
+cnt: 54
+cnt: 55
+cnt: 56
+cnt: 57
+cnt: 58
+cnt: 59
+cnt: 60
+cnt: 61
+cnt: 62
+cnt: 63
+cnt: 64
+cnt: 65
+cnt: 66
+cnt: 67
+cnt: 68
+cnt: 69
+cnt: 70
+cnt: 71
+cnt: 72
+cnt: 73
+cnt: 74
+cnt: 75
+cnt: 76
+cnt: 77
+cnt: 78
+cnt: 79
+cnt: 80
+cnt: 81
+cnt: 82
+cnt: 83
+cnt: 84
+cnt: 85
+cnt: 86
+cnt: 87
+cnt: 88
+cnt: 89
+cnt: 90
+cnt: 91
+cnt: 92
+cnt: 93
+cnt: 94
+cnt: 95
+cnt: 96
+cnt: 97
+cnt: 98
+cnt: 99
+cnt: 100
+cnt: 101
+cnt: 102
+cnt: 103
+cnt: 104
+cnt: 105
+cnt: 106
+cnt: 107
+cnt: 108
+cnt: 109
+cnt: 110
+cnt: 111
+cnt: 112
+cnt: 113
+cnt: 114
+cnt: 115
+cnt: 116
+cnt: 117
+cnt: 118
+cnt: 119
+cnt: 120
+cnt: 121
+cnt: 122
+cnt: 123
+cnt: 124
+cnt: 125
+cnt: 126
+cnt: 127
+cnt: 128
+cnt: 129
+cnt: 130
+cnt: 131
+cnt: 132
+cnt: 133
+cnt: 134
+cnt: 135
+cnt: 136
+cnt: 137
+cnt: 138
+cnt: 139
+cnt: 140
+cnt: 141
+cnt: 142
+cnt: 143
+cnt: 144
+cnt: 145
+cnt: 146
+cnt: 147
+cnt: 148
+cnt: 149
+cnt: 150
+cnt: 151
+cnt: 152
+cnt: 153
+cnt: 154
+cnt: 155
+cnt: 156
+cnt: 157
+cnt: 158
+cnt: 159
+cnt: 160
+cnt: 161
+cnt: 162
+cnt: 163
+cnt: 164
+cnt: 165
+cnt: 166
+cnt: 167
+cnt: 168
+cnt: 169
+cnt: 170
+cnt: 171
+cnt: 172
+cnt: 173
+cnt: 174
+cnt: 175
+cnt: 176
+cnt: 177
+cnt: 178
+cnt: 179
+cnt: 180
+cnt: 181
+cnt: 182
+cnt: 183
+cnt: 184
+cnt: 185
+cnt: 186
+cnt: 187
+cnt: 188
+Writing 60 amps
+[0;31mE (188189) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (188189) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+Eddison set to low, bates set to high
+cnt: 189
+Writing 0 amps
+[0;31mE (188999) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (188999) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Eddison set to low, bates set to low
+cnt: 190
+Writing 10 amps
+cnt: 191
+[0;31mE (190879) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (190879) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Eddison set to high, bates set to low
+Writing 60 amps
+[0;31mE (191389) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (191389) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Eddison set to low, bates set to high
+cnt: 192
+Writing 60 amps
+[0;31mE (191999) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (191999) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+Eddison set to low, bates set to high
+Writing 0 amps
+cnt: 193
+[0;31mE (192509) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (192509) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Eddison set to low, bates set to low
+cnt: 194
+Writing 10 amps
+cnt: 195
+[0;31mE (194659) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (194659) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Eddison set to high, bates set to low
+Writing 60 amps
+[0;31mE (195169) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (195169) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Eddison set to low, bates set to high
+Writing 60 amps
+cnt: 196
+[0;31mE (195879) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (195879) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+Eddison set to low, bates set to high
+Writing 0 amps
+[0;31mE (196389) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (196389) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Eddison set to low, bates set to low
+cnt: 197
+cnt: 198
+cnt: 199
+cnt: 200
+cnt: 201
+Writing 10 amps
+[0;31mE (201149) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (201149) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Eddison set to high, bates set to low
+Writing 60 amps
+cnt: 202
+[0;31mE (201669) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (201669) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Eddison set to low, bates set to high
+Writing 60 amps
+[0;31mE (202379) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (202379) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+Eddison set to low, bates set to high
+Writing 0 amps
+cnt: 203
+[0;31mE (202889) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (202889) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Eddison set to low, bates set to low
+cnt: 204
+cnt: 205
+Writing 60 amps
+[0;31mE (204919) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (204919) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+Eddison set to low, bates set to high
+Writing 60 amps
+cnt: 206
+[0;31mE (205629) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (205629) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Eddison set to low, bates set to high
+cnt: 207
+cnt: 208
+cnt: 209
+cnt: 210
+cnt: 211
+cnt: 212
+cnt: 213
+cnt: 214
+cnt: 215
+cnt: 216
+cnt: 217
+cnt: 218
+cnt: 219
+cnt: 220
+cnt: 221
+cnt: 222
+cnt: 223
+cnt: 224
+cnt: 225
+Writing 10 amps
+[0;31mE (225089) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (225089) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Eddison set to high, bates set to low
+Writing 0 amps
+cnt: 226
+[0;31mE (225709) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (225709) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Eddison set to low, bates set to low
+cnt: 227
+Writing 10 amps
+cnt: 228
+[0;31mE (227719) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (227719) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Eddison set to high, bates set to low
+Writing 60 amps
+[0;31mE (228229) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (228229) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Eddison set to low, bates set to high
+cnt: 229
+Writing 60 amps
+[0;31mE (228939) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (228939) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+Eddison set to low, bates set to high
+cnt: 230
+cnt: 231
+cnt: 232
+cnt: 233
+cnt: 234
+cnt: 235
+cnt: 236
+cnt: 237
+Writing 0 amps
+[0;31mE (237169) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (237169) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Eddison set to low, bates set to low
+cnt: 238
+cnt: 239
+cnt: 240
+cnt: 241
+cnt: 242
+cnt: 243
+cnt: 244
+cnt: 245
+cnt: 246
+cnt: 247
+cnt: 248
+cnt: 249
+cnt: 250
+cnt: 251
+cnt: 252
+cnt: 253
+cnt: 254
+cnt: 255
+cnt: 256
+cnt: 257
+cnt: 258
+cnt: 259
+cnt: 260
+cnt: 261
+cnt: 262
+cnt: 263
+cnt: 264
+cnt: 265
+cnt: 266
+cnt: 267
+cnt: 268
+cnt: 269
+cnt: 270
+cnt: 271
+cnt: 272
+cnt: 273
+cnt: 274
+cnt: 275
+cnt: 276
+cnt: 277
+cnt: 278
+cnt: 279
+cnt: 280
+cnt: 281
+cnt: 282
+cnt: 283
+cnt: 284
+cnt: 285
+cnt: 286
+cnt: 287
+cnt: 288
+cnt: 289
+cnt: 290
+cnt: 291
+cnt: 292
+cnt: 293
+cnt: 294
+cnt: 295
+cnt: 296
+cnt: 297
+cnt: 298
+cnt: 299
+cnt: 300
+Writing 60 amps
+[0;31mE (300089) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (300089) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+Eddison set to low, bates set to high
+Writing 60 amps
+cnt: 301
+[0;31mE (300799) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (300799) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Eddison set to low, bates set to high
+cnt: 302
+Writing 10 amps
+[0;31mE (301959) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (301959) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Eddison set to high, bates set to low
+cnt: 303
+cnt: 304
+cnt: 305
+cnt: 306
+cnt: 307
+cnt: 308
+Writing 60 amps
+[0;31mE (308289) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (308289) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Eddison set to low, bates set to high
+cnt: 309
+cnt: 310
+cnt: 311
+cnt: 312
+cnt: 313
+cnt: 314
+Writing 10 amps
+[0;31mE (314469) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (314469) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Eddison set to high, bates set to low
+cnt: 315
+cnt: 316
+cnt: 317
+cnt: 318
+cnt: 319
+cnt: 320
+cnt: 321
+Writing 60 amps
+[0;31mE (321279) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (321279) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Eddison set to low, bates set to high
+cnt: 322
+cnt: 323
+cnt: 324
+cnt: 325
+cnt: 326
+Writing 10 amps
+[0;31mE (326309) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (326309) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Eddison set to high, bates set to low
+cnt: 327
+cnt: 328
+Writing 60 amps
+cnt: 329
+[0;31mE (328669) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (328669) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Eddison set to low, bates set to high
+cnt: 330
+cnt: 331
+Writing 10 amps
+cnt: 332
+[0;31mE (331839) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (331839) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Eddison set to high, bates set to low
+cnt: 333
+Writing 60 amps
+cnt: 334
+[0;31mE (333609) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (333609) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Eddison set to low, bates set to high
+cnt: 335
+cnt: 336
+Writing 10 amps
+[0;31mE (336009) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (336009) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Eddison set to high, bates set to low
+cnt: 337
+Writing 60 amps
+cnt: 338
+[0;31mE (337639) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (337639) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Eddison set to low, bates set to high
+cnt: 339
+cnt: 340
+cnt: 341
+cnt: 342
+cnt: 343
+cnt: 344
+cnt: 345
+cnt: 346
+cnt: 347
+cnt: 348
+cnt: 349
+cnt: 350
+cnt: 351
+Writing 10 amps
+cnt: 352
+[0;31mE (351599) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (351599) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Eddison set to high, bates set to low
+Writing 0 amps
+[0;31mE (352219) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (352219) MASTER_TEST: Characteristic #0 (Curve_CC) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Eddison set to low, bates set to low
+cnt: 353
+cnt: 354
+cnt: 355
+cnt: 356
+cnt: 357
+cnt: 358
+cnt: 359
+cnt: 360
+cnt: 361
+cnt: 362
+cnt: 363
+cnt: 364
+cnt: 365
+cnt: 366
+cnt: 367
+cnt: 368
+cnt: 369
+cnt: 370
+cnt: 371
+cnt: 372
+cnt: 373
+cnt: 374
+cnt: 375
+cnt: 376
+cnt: 377
+cnt: 378
+cnt: 379
+cnt: 380
+cnt: 381
+cnt: 382
+cnt: 383
+cnt: 384
+cnt: 385
+cnt: 386
+cnt: 387
+cnt: 388
+cnt: 389
+cnt: 390
+cnt: 391
+cnt: 392
+cnt: 393
+cnt: 394
+cnt: 395
+cnt: 396
+cnt: 397
+cnt: 398
+cnt: 399
+cnt: 400
+cnt: 401
+cnt: 402
+cnt: 403
+cnt: 404
+cnt: 405
+cnt: 406
+cnt: 407
+cnt: 408
+cnt: 409
+cnt: 410
+cnt: 411
+cnt: 412
+cnt: 413
+cnt: 414
+cnt: 415
+cnt: 416
+cnt: 417
+cnt: 418
+cnt: 419
+cnt: 420
+cnt: 421
+cnt: 422
+cnt: 423
+cnt: 424
+cnt: 425
+cnt: 426
+cnt: 427
+cnt: 428
+cnt: 429
+cnt: 430
+cnt: 431
+cnt: 432
+cnt: 433
+cnt: 434
+cnt: 435
+cnt: 436
+cnt: 437
+cnt: 438
+cnt: 439
+cnt: 440
+cnt: 441
+cnt: 442
+cnt: 443
+cnt: 444
+cnt: 445
+cnt: 446
+cnt: 447
+cnt: 448
+cnt: 449
+cnt: 450
+cnt: 451
+cnt: 452
+cnt: 453
+cnt: 454
+cnt: 455
+cnt: 456
+cnt: 457
+cnt: 458
+cnt: 459
+cnt: 460
+cnt: 461
+cnt: 462
+cnt: 463
+cnt: 464
+cnt: 465
+cnt: 466
+cnt: 467
+cnt: 468
+cnt: 469
+cnt: 470
+cnt: 471
+cnt: 472
+cnt: 473
+cnt: 474
+cnt: 475
+cnt: 476
+cnt: 477
+cnt: 478
+cnt: 479
+cnt: 480
+cnt: 481
+cnt: 482
+cnt: 483
+cnt: 484
+cnt: 485
+cnt: 486
+cnt: 487
+cnt: 488
+cnt: 489
+cnt: 490
+cnt: 491
+cnt: 492
+cnt: 493
+cnt: 494
+cnt: 495
+cnt: 496
+cnt: 497
+cnt: 498
+cnt: 499
+cnt: 500
+cnt: 501
+cnt: 502
+cnt: 503
+cnt: 504
+cnt: 505
+cnt: 506
+cnt: 507
+cnt: 508
+cnt: 509
+cnt: 510
+cnt: 511
+cnt: 512
+cnt: 513
+cnt: 514
+cnt: 515
+cnt: 516
+cnt: 517
+cnt: 518
+cnt: 519
+cnt: 520
+cnt: 521
+cnt: 522
+cnt: 523
+cnt: 524
+cnt: 525
+cnt: 526
+cnt: 527
+cnt: 528
+cnt: 529
+cnt: 530
+cnt: 531
+cnt: 532
+cnt: 533
+cnt: 534
+cnt: 535
+cnt: 536
+cnt: 537
+cnt: 538
+cnt: 539
+cnt: 540
+cnt: 541
+cnt: 542
+cnt: 543
+cnt: 544
+cnt: 545
+cnt: 546
+cnt: 547
+cnt: 548
+cnt: 549
+cnt: 550
+cnt: 551
+cnt: 552
+cnt: 553
+cnt: 554
+cnt: 555
+cnt: 556
+cnt: 557
+cnt: 558
+cnt: 559
+cnt: 560
+cnt: 561
+cnt: 562
+cnt: 563
+cnt: 564
+cnt: 565
+cnt: 566
+cnt: 567
+cnt: 568
+cnt: 569
+cnt: 570
+cnt: 571
+cnt: 572
+cnt: 573
+cnt: 574
+cnt: 575
+cnt: 576
+cnt: 577
+cnt: 578
+cnt: 579
+cnt: 580
+cnt: 581
+cnt: 582
+cnt: 583
+cnt: 584
+cnt: 585
+cnt: 586
+cnt: 587
+cnt: 588
+cnt: 589
+cnt: 590
+cnt: 591
+cnt: 592
+cnt: 593
+cnt: 594
+cnt: 595
+cnt: 596
+cnt: 597
+cnt: 598
+cnt: 599
+cnt: 600
+cnt: 601
+cnt: 602
+cnt: 603
+cnt: 604
+cnt: 605
+cnt: 606
+cnt: 607
+cnt: 608
+cnt: 609

@@ -16,23 +16,24 @@
 #include "freertos/queue.h"
 #include "driver/gpio.h"
 
-#define INPUT_40AMP_SWITCH  8 //GPIO 12
-#define INPUT_50AMP_SWITCH  1 //GPIO 12
-#define INPUT_60AMP_SWITCH  0 //GPIO 12
+#define INPUT_40AMP_SWITCH  0 //GPIO 12
+// #define INPUT_50AMP_SWITCH  1 //GPIO 12
+#define INPUT_60AMP_SWITCH  1 //GPIO 12
+#define INPUT_SWITCH ((1ULL << INPUT_40AMP_SWITCH) | (1ULL << INPUT_60AMP_SWITCH))
 
 #define EDDISON_DETECTION_IO 18
 #define BATES_DETECTION_IO 19
 #define AC_DETECTION_IN ((1ULL << EDDISON_DETECTION_IO) | (1ULL << BATES_DETECTION_IO))
 
-#define EDDISON_SSR_SELECT_IO 12
-#define BATES_SSR_SELECT_IO 13
+#define EDDISON_SSR_SELECT_IO 13
+#define BATES_SSR_SELECT_IO 12
 #define SSR_PIN_SEL  ((1ULL << EDDISON_SSR_SELECT_IO) | (1ULL << BATES_SSR_SELECT_IO))
 
 extern uint8_t EDDISON_DETECTION_IO_VAL; // Initial value for GPIO 11
 extern uint8_t BATES_DETECTION_IO_VAL; // Initial value for GPIO 12
 
 extern uint8_t INPUT_40AMP_SWITCH_VAL; // Initial value for GPIO 8
-extern uint8_t INPUT_50AMP_SWITCH_VAL; // Initial value for GPIO 1
+// extern uint8_t INPUT_50AMP_SWITCH_VAL; // Initial value for GPIO 1
 extern uint8_t INPUT_60AMP_SWITCH_VAL; // Initial value for GPIO 0
 
 extern QueueHandle_t gpio_evt_queue;

@@ -1,0 +1,30 @@
+0cnt: 4047
+0c�ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6f (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c410,len:0xe2c
+load:0x4086e610,len:0x2e24
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug  9 2024 11:50:04[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (68) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (75) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (83) boot: End of partition table[0m
+[0;32mI (84) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0d380h ( 54144) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001d3a8 vaddr=40800000 size=02c70h ( 11376) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=19338h (103224) map[0m
+[0;32mI (142) esp_image: segment 3: paddr=00039360 vaddr=40802c70 size=0bc40h ( 48192) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Unicore app[0m

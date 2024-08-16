@@ -5,7 +5,7 @@
  */
 #include "modbus.h"
 
-
+#define DEBOUNCE_TIME_MS 500
 #define GPIO_INPUT_PIN_SEL  ((1ULL<<GPIO_INPUT_IO_0) | (1ULL<<GPIO_INPUT_IO_1))
 // #define GPIO_OUTPUT_PIN_SEL  (1ULL<<GPIO_OUTPUT_IO_0)
 
@@ -15,7 +15,7 @@ uint8_t EDDISON_DETECTION_IO_VAL = 0; // Initial value for GPIO 11
 uint8_t BATES_DETECTION_IO_VAL = 0; // Initial value for GPIO 12
 
 uint8_t INPUT_40AMP_SWITCH_VAL = 0; // Initial value for GPIO 12
-uint8_t INPUT_50AMP_SWITCH_VAL = 0; // Initial value for GPIO 1
+// uint8_t INPUT_50AMP_SWITCH_VAL = 0; // Initial value for GPIO 1
 uint8_t INPUT_60AMP_SWITCH_VAL = 0; // Initial value for GPIO 0
 
 static void IRAM_ATTR gpio_isr_handler(void* arg)
@@ -25,52 +25,123 @@ static void IRAM_ATTR gpio_isr_handler(void* arg)
     xQueueSendFromISR(gpio_evt_queue, &gpio_num, NULL);
 }
 
-static void gpio_task_example(void* arg)
+// static void gpio_task_example(void* arg)
+// {
+//     uint32_t io_num;
+//     for (;;) {
+//         if (xQueueReceive(gpio_evt_queue, &io_num, portMAX_DELAY)) {
+//             int level = gpio_get_level(io_num);
+//             bool stable = false;
+//             vTaskDelay(100/ portTICK_PERIOD_MS);
+
+//             if(io_num == EDDISON_DETECTION_IO){
+//                 stable = (EDDISON_DETECTION_IO_VAL != level);
+//                 EDDISON_DETECTION_IO_VAL = level;
+//             } else if (io_num == BATES_DETECTION_IO) {
+//                 stable = (BATES_DETECTION_IO_VAL != level);
+//                 BATES_DETECTION_IO_VAL = level;
+//             }
+
+//             if(stable){
+//                 master_operation_func(NULL);
+//                 // NEITHER PLUGGED IN
+//                 if(EDDISON_DETECTION_IO_VAL && BATES_DETECTION_IO_VAL){
+//                     printf("Eddison and Bates register HIGH (NEITHER PLUGGED IN) \n");
+//                     printf("Eddison set to low, bates set to low\n");
+//                     gpio_set_level(EDDISON_SSR_SELECT_IO, 0); 
+//                     gpio_set_level(BATES_SSR_SELECT_IO, 0); 
+//                 }
+//                 //
+//                 else if(EDDISON_DETECTION_IO_VAL && !BATES_DETECTION_IO_VAL){
+//                     printf("Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)\n");
+//                     printf("Eddison set to low, bates set to high\n");
+//                     gpio_set_level(EDDISON_SSR_SELECT_IO, 0); // Set GPIO 20 to high
+//                     gpio_set_level(BATES_SSR_SELECT_IO, 1); // Set GPIO 21 to low
+//                 }
+//                 else if(!EDDISON_DETECTION_IO_VAL && BATES_DETECTION_IO_VAL){
+//                     printf("Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)\n");
+//                     printf("Eddison set to high, bates set to low\n");
+//                     gpio_set_level(EDDISON_SSR_SELECT_IO, 1); // Set GPIO 20 to high
+//                     gpio_set_level(BATES_SSR_SELECT_IO, 0); // Set GPIO 21 to low
+//                 }
+//                 // BOTH PLUGGED IN
+//                 else if (!EDDISON_DETECTION_IO_VAL && !BATES_DETECTION_IO_VAL){
+//                     printf("Eddison and Bates registers LOW (BOTH PLUGGED IN) \n");
+//                     printf("Eddison set to low, bates set to high\n");
+//                     gpio_set_level(EDDISON_SSR_SELECT_IO, 0); // Set GPIO 20 to high
+//                     gpio_set_level(BATES_SSR_SELECT_IO, 1); // Set GPIO 21 to low
+//                 }
+//             }
+
+//             gpio_intr_enable(io_num);
+            
+//         }
+//     }
+// }
+
+static bool debounce(uint32_t io_num, uint8_t *last_val)
+{
+
+    uint8_t stable_val = gpio_get_level(io_num);
+    // TickType_t og_start_tick = xTaskGetTickCount();
+    TickType_t start_tick = xTaskGetTickCount();
+    printf("Oscillating\n");
+    // int num_oscillations = 0;
+    // bool succesful = true;
+    while ((xTaskGetTickCount() - start_tick) < pdMS_TO_TICKS(DEBOUNCE_TIME_MS))
+    {
+        uint8_t current_val = gpio_get_level(io_num);
+        if (current_val != stable_val)
+        {
+            stable_val = current_val;
+            vTaskDelay(1);                    // Neccessary to free up other tasks
+            start_tick = xTaskGetTickCount(); // Restart debounce timer
+        }
+        // Exit if its been X seconds since we've started debouncing. Important, but can lead to bug where it is plugged/unplugged but exits as the other, and doesnt re-trigger
+        // if(xTaskGetTickCount() - og_start_tick > pdMS_TO_TICKS(DEBOUNCE_TIME_MS * 5)){
+        //     succesful = false;
+        //     break;
+        // }
+    }
+    printf("Finished!\n");
+
+    if (stable_val != *last_val)
+    {
+        *last_val = stable_val;
+        return true;
+    }
+    return false;
+}
+
+static void gpio_task_example(void *arg)
 {
     uint32_t io_num;
-    for (;;) {
-        if (xQueueReceive(gpio_evt_queue, &io_num, portMAX_DELAY)) {
-            int level = gpio_get_level(io_num);
+    for (;;)
+    {
+        if (xQueueReceive(gpio_evt_queue, &io_num, portMAX_DELAY))
+        {
             bool stable = false;
-            vTaskDelay(100/ portTICK_PERIOD_MS);
-
-            if(io_num == EDDISON_DETECTION_IO){
-                stable = (EDDISON_DETECTION_IO_VAL != level);
-                EDDISON_DETECTION_IO_VAL = level;
-            } else if (io_num == BATES_DETECTION_IO) {
-                stable = (BATES_DETECTION_IO_VAL != level);
-                BATES_DETECTION_IO_VAL = level;
+            if (io_num == INPUT_40AMP_SWITCH)
+            {
+                stable = debounce(io_num, &INPUT_40AMP_SWITCH_VAL);
             }
-
-            if(stable){
-                // NEITHER PLUGGED IN
-                if(EDDISON_DETECTION_IO_VAL && BATES_DETECTION_IO_VAL){
-                    printf("Eddison and Bates register HIGH (NEITHER PLUGGED IN) \n");
-                    gpio_set_level(EDDISON_SSR_SELECT_IO, 0); // Set GPIO 20 to high
-                    gpio_set_level(BATES_SSR_SELECT_IO, 0); // Set GPIO 21 to low
-                }
-                //
-                else if(EDDISON_DETECTION_IO_VAL && !BATES_DETECTION_IO_VAL){
-                    printf("Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)\n");
-                    gpio_set_level(EDDISON_SSR_SELECT_IO, 0); // Set GPIO 20 to high
-                    gpio_set_level(BATES_SSR_SELECT_IO, 1); // Set GPIO 21 to low
-                }
-                else if(!EDDISON_DETECTION_IO_VAL && BATES_DETECTION_IO_VAL){
-                    printf("Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)\n");
-                    gpio_set_level(EDDISON_SSR_SELECT_IO, 1); // Set GPIO 20 to high
-                    gpio_set_level(BATES_SSR_SELECT_IO, 0); // Set GPIO 21 to low
-                }
-                // BOTH PLUGGED IN
-                else if (!EDDISON_DETECTION_IO_VAL && !BATES_DETECTION_IO_VAL){
-                    printf("Eddison and Bates registers LOW (BOTH PLUGGED IN) \n");
-                    gpio_set_level(EDDISON_SSR_SELECT_IO, 0); // Set GPIO 20 to high
-                    gpio_set_level(BATES_SSR_SELECT_IO, 1); // Set GPIO 21 to low
-                }
+            if (io_num == INPUT_60AMP_SWITCH)
+            {
+                stable = debounce(io_num, &INPUT_60AMP_SWITCH_VAL);
+            }
+            if (io_num == EDDISON_DETECTION_IO)
+            {
+                stable = debounce(io_num, &EDDISON_DETECTION_IO_VAL);
+            }
+            else if (io_num == BATES_DETECTION_IO)
+            {
+                stable = debounce(io_num, &BATES_DETECTION_IO_VAL);
+            }
+            gpio_intr_enable(io_num);
+            if (stable)
+            {
                 master_operation_func(NULL);
             }
-
-            gpio_intr_enable(io_num);
-            
         }
     }
 }
@@ -86,6 +157,15 @@ void app_main(void)
     io_conf.pull_down_en = 1;
     io_conf.pull_up_en = 0;
     gpio_config(&io_conf);
+
+    // Configure GPIO 11 as input with pull-up and interrupts on any edge
+    io_conf.intr_type = GPIO_INTR_ANYEDGE;
+    io_conf.mode = GPIO_MODE_INPUT;
+    io_conf.pin_bit_mask = INPUT_SWITCH;
+    io_conf.pull_down_en = 1;
+    io_conf.pull_up_en = 0;
+    gpio_config(&io_conf);
+
 
     // Configure GPIO 20 and 21 as outputs
     io_conf.intr_type = GPIO_INTR_DISABLE;
@@ -109,7 +189,7 @@ void app_main(void)
     gpio_isr_handler_add(BATES_DETECTION_IO, gpio_isr_handler, (void*) BATES_DETECTION_IO);
 
     gpio_isr_handler_add(INPUT_40AMP_SWITCH, gpio_isr_handler, (void*) INPUT_40AMP_SWITCH);
-    gpio_isr_handler_add(INPUT_50AMP_SWITCH, gpio_isr_handler, (void*) INPUT_50AMP_SWITCH);
+    // gpio_isr_handler_add(INPUT_50AMP_SWITCH, gpio_isr_handler, (void*) INPUT_50AMP_SWITCH);
     gpio_isr_handler_add(INPUT_60AMP_SWITCH, gpio_isr_handler, (void*) INPUT_60AMP_SWITCH);
 
     printf("Minimum free heap size: %"PRIu32" bytes\n", esp_get_minimum_free_heap_size());
@@ -130,14 +210,21 @@ void app_main(void)
     BATES_DETECTION_IO_VAL = gpio_get_level(BATES_DETECTION_IO);
 
     INPUT_40AMP_SWITCH_VAL = gpio_get_level(INPUT_40AMP_SWITCH);
-    INPUT_50AMP_SWITCH_VAL = gpio_get_level(INPUT_50AMP_SWITCH);
     INPUT_60AMP_SWITCH_VAL = gpio_get_level(INPUT_60AMP_SWITCH);
 
-    // gpio_set_level(EDDISON_SSR_SELECT_IO, 1); // Set GPIO 20 to high
-    // gpio_set_level(BATES_SSR_SELECT_IO, 1); // Set GPIO3 21 to low
+
+
     while(1){
         cnt++;
         printf("cnt: %d\n", cnt);
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        vTaskDelay(10 / portTICK_PERIOD_MS);
+        if (gpio_get_level(EDDISON_DETECTION_IO))
+        {
+            printf(" 1 ");
+        }
+        else
+        {
+            printf(" 0 ");
+        }
     }
 }

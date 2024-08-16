@@ -1,0 +1,7 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/cu.usbmodem1101 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33mConnection to /dev/cu.usbmodem1101 failed. Available ports:
+/dev/cu.wlan-debug
+/dev/cu.Bluetooth-Incoming-Port
+/dev/cu.usbserial-110[0m
+[0m

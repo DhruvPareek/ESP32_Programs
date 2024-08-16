@@ -9,7 +9,8 @@
 #include <stdio.h>
 #include "driver/gpio.h"
 
-#define GPIO_OUTPUT_IO    1    // GPIO number to use
+#define GPIO_OUTPUT1_IO    1    // GPIO number to use
+#define GPIO_OUTPUT2_IO    2    // GPIO number to use
 
 void app_main(void)
 {
@@ -29,5 +30,8 @@ void app_main(void)
     gpio_config(&io_conf);
 
     // Set the GPIO pin to high
-    gpio_set_level(GPIO_OUTPUT_IO, 1);
+    gpio_set_level(GPIO_OUTPUT1_IO, 1);
+    // Set the GPIO pin to high
+    gpio_set_level(GPIO_OUTPUT2_IO, 1);
+
 }
