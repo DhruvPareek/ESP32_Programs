@@ -5913,6 +5913,119 @@
     {
         "children": [
             {
+                "children": [],
+                "depends_on": null,
+                "help": null,
+                "id": "GPIO_RANGE_MAX",
+                "name": "GPIO_RANGE_MAX",
+                "range": null,
+                "title": null,
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "Pin Number to be used as the MISO SPI signal.",
+                "id": "MISO_GPIO",
+                "name": "MISO_GPIO",
+                "range": [
+                    0,
+                    30
+                ],
+                "title": "MISO GPIO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "Pin Number to be used as the SCK SPI signal.",
+                "id": "SCK_GPIO",
+                "name": "SCK_GPIO",
+                "range": [
+                    0,
+                    30
+                ],
+                "title": "SCK GPIO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "Pin Number to be used as the MOSI SPI signal.",
+                "id": "MOSI_GPIO",
+                "name": "MOSI_GPIO",
+                "range": [
+                    0,
+                    30
+                ],
+                "title": "MOSI GPIO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "Pin Number where the NCS pin of the LoRa module is connected to.",
+                "id": "CS_GPIO",
+                "name": "CS_GPIO",
+                "range": [
+                    0,
+                    30
+                ],
+                "title": "NSS GPIO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "Pin Number where the NRST pin of the LoRa module is connected to.",
+                "id": "RST_GPIO",
+                "name": "RST_GPIO",
+                "range": [
+                    0,
+                    30
+                ],
+                "title": "RST GPIO",
+                "type": "int"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": "<choice SPI_HOST>",
+                        "help": "Use SPI2_HOST. This is also called HSPI_HOST.",
+                        "id": "SPI2_HOST",
+                        "name": "SPI2_HOST",
+                        "range": null,
+                        "title": "SPI2_HOST",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "(IDF_TARGET_ESP32 || IDF_TARGET_ESP32S2 || IDF_TARGET_ESP32S3) && <choice SPI_HOST>",
+                        "help": "USE SPI3_HOST. This is also called VSPI_HOST",
+                        "id": "SPI3_HOST",
+                        "name": "SPI3_HOST",
+                        "range": null,
+                        "title": "SPI3_HOST",
+                        "type": "bool"
+                    }
+                ],
+                "depends_on": null,
+                "help": "Select SPI peripheral that controls this bus.",
+                "id": "lora-configuration-spi-peripheral-that-controls-this-bus",
+                "name": "SPI_HOST",
+                "title": "SPI peripheral that controls this bus",
+                "type": "choice"
+            }
+        ],
+        "depends_on": null,
+        "id": "lora-configuration",
+        "title": "LoRa Configuration",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
                 "children": [
                     {
                         "children": [],

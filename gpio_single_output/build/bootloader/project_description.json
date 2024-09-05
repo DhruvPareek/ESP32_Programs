@@ -942,6 +942,18 @@
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
         },
+        "lora": {
+            "alias": "idf::lora",
+            "target": "___idf_lora",
+            "prefix": "idf",
+            "dir": "/Users/dhruv/esp/esp-idf/components/lora",
+            "lib": "__idf_lora",
+            "reqs": [],
+            "priv_reqs": [ "driver" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
         "lwip": {
             "alias": "idf::lwip",
             "target": "___idf_lwip",

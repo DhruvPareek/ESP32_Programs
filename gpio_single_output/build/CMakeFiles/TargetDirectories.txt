@@ -583,6 +583,13 @@
 /Users/dhruv/esp/gpio_single_output/build/esp-idf/json/CMakeFiles/install.dir
 /Users/dhruv/esp/gpio_single_output/build/esp-idf/json/CMakeFiles/install/local.dir
 /Users/dhruv/esp/gpio_single_output/build/esp-idf/json/CMakeFiles/install/strip.dir
+/Users/dhruv/esp/gpio_single_output/build/esp-idf/lora/CMakeFiles/__idf_lora.dir
+/Users/dhruv/esp/gpio_single_output/build/esp-idf/lora/CMakeFiles/edit_cache.dir
+/Users/dhruv/esp/gpio_single_output/build/esp-idf/lora/CMakeFiles/rebuild_cache.dir
+/Users/dhruv/esp/gpio_single_output/build/esp-idf/lora/CMakeFiles/list_install_components.dir
+/Users/dhruv/esp/gpio_single_output/build/esp-idf/lora/CMakeFiles/install.dir
+/Users/dhruv/esp/gpio_single_output/build/esp-idf/lora/CMakeFiles/install/local.dir
+/Users/dhruv/esp/gpio_single_output/build/esp-idf/lora/CMakeFiles/install/strip.dir
 /Users/dhruv/esp/gpio_single_output/build/esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir
 /Users/dhruv/esp/gpio_single_output/build/esp-idf/mqtt/CMakeFiles/edit_cache.dir
 /Users/dhruv/esp/gpio_single_output/build/esp-idf/mqtt/CMakeFiles/rebuild_cache.dir
