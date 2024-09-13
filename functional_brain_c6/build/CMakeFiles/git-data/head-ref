@@ -1,0 +1,12 @@
+0000000000000000000000000000000000000000 3ce81212fec96850cb54140cb15689cf59e87193 DhruvP <dhruvpareek883@gmail.com> 1722275259 -0700	commit (initial): Initial Commit
+3ce81212fec96850cb54140cb15689cf59e87193 aebfc67eb51193035ba1e32c4df7d55f822ee5fb DhruvP <dhruvpareek883@gmail.com> 1722275739 -0700	commit: Added another basic GPIO project
+aebfc67eb51193035ba1e32c4df7d55f822ee5fb 10c32b072f7f1db9dfcc1a6c78879edd18fd4819 DhruvP <dhruvpareek883@gmail.com> 1722276101 -0700	commit: Finalized GPIO project for purpose
+10c32b072f7f1db9dfcc1a6c78879edd18fd4819 54f2d3a2a3153cbb1733e1a3109754ff5e49dee8 DhruvP <dhruvpareek883@gmail.com> 1722448070 -0700	commit: Renamed mb_master
+54f2d3a2a3153cbb1733e1a3109754ff5e49dee8 d1117a1f61ee240d2332bbafa3a70b1867b30814 DhruvP <dhruvpareek883@gmail.com> 1722448173 -0700	commit: Added a clean mb_master
+d1117a1f61ee240d2332bbafa3a70b1867b30814 1ca7c7f5ed3677f836c61cb4872c2d2dda0a22a8 DhruvP <dhruvpareek883@gmail.com> 1722963190 -0700	commit: Updated master_modbus to include Bates charging current switch
+1ca7c7f5ed3677f836c61cb4872c2d2dda0a22a8 93cfa5e5155493e074786debe7214161b1037800 DhruvP <dhruvpareek883@gmail.com> 1722964822 -0700	commit: Updated pins in modbus_master
+93cfa5e5155493e074786debe7214161b1037800 76e57b8adf7e5ba46736a245e99a7d9d14371d74 DhruvP <dhruvpareek883@gmail.com> 1722966556 -0700	commit: Call interrupt upon switch being changed
+76e57b8adf7e5ba46736a245e99a7d9d14371d74 a7cead5f9e30b3a8061b70722dba4a6fc7594914 DhruvP <dhruvpareek883@gmail.com> 1723767913 -0700	commit: Added lora
+a7cead5f9e30b3a8061b70722dba4a6fc7594914 6cccf011363c112fb1b1690f4c6a0ba602937caa DhruvP <dhruvpareek883@gmail.com> 1725060475 -0700	commit: redid lora code
+6cccf011363c112fb1b1690f4c6a0ba602937caa cdcc427e874de87082b53e525e4bde04be0f54f1 DhruvP <dhruvpareek883@gmail.com> 1725569788 -0700	commit: Fixed simple gpio code
+cdcc427e874de87082b53e525e4bde04be0f54f1 5333c1310559daabeef1064b959ef479691c4667 DhruvP <dhruvpareek883@gmail.com> 1726246103 -0700	commit: Added new sd card, msc, and finalized c6 code

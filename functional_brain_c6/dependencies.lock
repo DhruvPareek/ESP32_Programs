@@ -1,0 +1,21 @@
+dependencies:
+  espressif/esp-modbus:
+    component_hash: 2168e6b4cbda4d0281a2a2d1a40a3848e231473b2690d73217e3600fd2c98c12
+    source:
+      service_url: https://api.components.espressif.com/
+      type: service
+    version: 1.0.16
+  idf:
+    component_hash: null
+    source:
+      type: idf
+    version: 5.2.2
+  mb_example_common:
+    component_hash: null
+    source:
+      path: /Users/dhruv/esp/esp-idf/examples/protocols/modbus/mb_example_common
+      type: local
+    version: '*'
+manifest_hash: d2755d9abdd56e62f2ce52e051d0f861d489f0b060973c9599daff8d149dd370
+target: esp32c6
+version: 1.0.0
