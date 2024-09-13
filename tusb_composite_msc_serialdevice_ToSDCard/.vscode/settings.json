@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "tusb_msc_storage.h": "c",
+        "tinyusb.h": "c"
+    },
+    "idf.adapterTargetName": "esp32s3"
+}
