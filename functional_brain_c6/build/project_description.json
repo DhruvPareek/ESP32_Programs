@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "modbus_master",
-    "project_version":    "5333c131-dirty",
+    "project_version":    "bc88d670-dirty",
     "project_path":       "/Users/dhruv/esp/functional_brain_c6",
     "idf_path":           "/Users/dhruv/esp/esp-idf",
     "build_dir":          "/Users/dhruv/esp/functional_brain_c6/build",

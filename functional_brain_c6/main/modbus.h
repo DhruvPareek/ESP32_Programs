@@ -24,8 +24,8 @@
 // Input
 #define EDDISON_DETECTION_IO 18
 #define BATES_DETECTION_IO 19
-#define INPUT_40AMP_SWITCH 0
-#define INPUT_60AMP_SWITCH 1
+#define INPUT_40AMP_SWITCH 1
+#define INPUT_60AMP_SWITCH 0
 // Output
 #define EDDISON_SSR_SELECT_IO 13
 #define BATES_SSR_SELECT_IO 12
@@ -55,6 +55,5 @@ void master_operation_func(void *arg, int EDDISON_VAL, int BATES_VAL, OperationT
 void get_time_string(char *time_str, size_t max_len);
 void set_time_manually(int year, int month, int day, int hour, int minute, int second);
 void set_value(int edd_val, int bates_val, uint16_t *val);
-void set_ssrs(int edd_val, int bates_val);
 
 #endif

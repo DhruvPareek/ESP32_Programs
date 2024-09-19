@@ -334,37 +334,6 @@ void set_value(int edd_val, int bates_val, uint16_t *val)
     }
 }
 
-void set_ssrs(int edd_val, int bates_val)
-{
-    // NEITHER PLUGGED IN
-    if (edd_val && bates_val)
-    {
-        gpio_set_level(EDDISON_SSR_SELECT_IO, 1);
-        gpio_set_level(BATES_SSR_SELECT_IO, 0);
-        printf("Eddison and Bates register HIGH (NEITHER PLUGGED IN) \n");
-    }
-    //
-    else if (edd_val && !bates_val)
-    {
-        gpio_set_level(EDDISON_SSR_SELECT_IO, 0);
-        gpio_set_level(BATES_SSR_SELECT_IO, 1);
-        printf("Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)\n");
-    }
-    else if (!edd_val && bates_val)
-    {
-        gpio_set_level(EDDISON_SSR_SELECT_IO, 1);
-        gpio_set_level(BATES_SSR_SELECT_IO, 0);
-        printf("Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)\n");
-    }
-    // BOTH PLUGGED IN
-    else if (!edd_val && !bates_val)
-    {
-        gpio_set_level(EDDISON_SSR_SELECT_IO, 0);
-        gpio_set_level(BATES_SSR_SELECT_IO, 1);
-        printf("Eddison and Bates registers LOW (BOTH PLUGGED IN) \n");
-    }
-}
-
 // User operation function to read slave values and check alarm
 void master_operation_func(void *arg, int EDDISON_VAL, int BATES_VAL, OperationType op_type, Queue *queue)
 {
@@ -411,6 +380,7 @@ void master_operation_func(void *arg, int EDDISON_VAL, int BATES_VAL, OperationT
                     uint16_t value;
 
                     set_value(EDDISON_VAL, BATES_VAL, &value);
+                    printf("Amps being written: %u\n", value);
 
                     memcpy((void *)temp_data_ptr, &value, sizeof(value));
                     err = mbc_master_set_parameter(cid, (char *)param_descriptor->param_key,
@@ -431,7 +401,6 @@ void master_operation_func(void *arg, int EDDISON_VAL, int BATES_VAL, OperationT
                         char value_str[20];
                         snprintf(value_str, sizeof(value_str), "%u", value);
                         tempData.data = strdup(value_str);
-                        set_ssrs(EDDISON_VAL, BATES_VAL);
                     }
                     else
                     {

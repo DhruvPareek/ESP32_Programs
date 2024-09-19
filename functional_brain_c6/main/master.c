@@ -299,14 +299,38 @@ void app_main(void)
             master_operation_func(NULL, EDDISON_DETECTION_IO_VAL, BATES_DETECTION_IO_VAL, READ_MEANWELL, &q);
             cnt = 1;
         }
-        if (gpio_get_level(EDDISON_DETECTION_IO))
+        
+        int edd_val = gpio_get_level(EDDISON_DETECTION_IO);
+        int bates_val = gpio_get_level(BATES_DETECTION_IO);
+
+        //SSR's must be set in the master.c file and not modbus.c because the gpio pins high/low are not able to be changed in modbus.c
+        if (edd_val && bates_val)
         {
-            printf("1");
+            gpio_set_level(EDDISON_SSR_SELECT_IO, 0);
+            gpio_set_level(BATES_SSR_SELECT_IO, 0);
+            printf("Eddison and Bates register HIGH (NEITHER PLUGGED IN) \n");
         }
-        else
+        //bates plugged in
+        else if (edd_val && !bates_val)
         {
-            printf("0");
+            gpio_set_level(EDDISON_SSR_SELECT_IO, 0);
+            gpio_set_level(BATES_SSR_SELECT_IO, 1);
+            printf("Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)\n");
+        }//edisson plugged in
+        else if (!edd_val && bates_val)
+        {
+            gpio_set_level(EDDISON_SSR_SELECT_IO, 1);
+            gpio_set_level(BATES_SSR_SELECT_IO, 0);
+            printf("Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)\n");
         }
+        // BOTH PLUGGED IN
+        else if (!edd_val && !bates_val)
+        {
+            gpio_set_level(EDDISON_SSR_SELECT_IO, 0);
+            gpio_set_level(BATES_SSR_SELECT_IO, 1);
+            printf("Eddison and Bates registers LOW (BOTH PLUGGED IN) \n");
+        }
+            
         if (card_initialized)
         {
             ret = s_paste_data_queue_file(file_data, &q);
