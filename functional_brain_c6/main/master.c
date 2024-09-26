@@ -102,7 +102,7 @@ static void gpio_task_example(void *arg)
             gpio_intr_enable(io_num);
             if (stable)
             {
-                master_operation_func(NULL, EDDISON_DETECTION_IO_VAL, BATES_DETECTION_IO_VAL, WRITE_DATA, &q);
+                master_operation_func(NULL, EDDISON_DETECTION_IO_VAL, BATES_DETECTION_IO_VAL, WRITE_CURVE_CC, &q);
             }
         }
     }
@@ -247,17 +247,15 @@ void app_main(void)
 
     gpio_set_level(INPUT_60AMP_SWITCH, 0);
 
-    // Hook isr handler for specific gpio pin
+    // Hook isr (interrupt service routine) handler for specific gpio pin
     gpio_isr_handler_add(EDDISON_DETECTION_IO, gpio_isr_handler, (void *)EDDISON_DETECTION_IO);
     gpio_isr_handler_add(BATES_DETECTION_IO, gpio_isr_handler, (void *)BATES_DETECTION_IO);
-
     gpio_isr_handler_add(INPUT_40AMP_SWITCH, gpio_isr_handler, (void *)INPUT_40AMP_SWITCH);
-    // gpio_isr_handler_add(INPUT_50AMP_SWITCH, gpio_isr_handler, (void*) INPUT_50AMP_SWITCH);
     gpio_isr_handler_add(INPUT_60AMP_SWITCH, gpio_isr_handler, (void *)INPUT_60AMP_SWITCH);
 
     printf("Minimum free heap size: %" PRIu32 " bytes\n", esp_get_minimum_free_heap_size());
 
-    // Assuming that A0 and A1 start out at 0,0. Mosi and Miso should be set to 0&1
+    // Assuming that Bates and Edison detection start out at 0,0. Mosi and Miso should be set to 0&1
     gpio_set_level(EDDISON_SSR_SELECT_IO, 1);
     gpio_set_level(BATES_SSR_SELECT_IO, 0);
 
@@ -267,6 +265,7 @@ void app_main(void)
 
     int cnt = 0;
 
+    // Read the initial values of the GPIO inputs
     EDDISON_DETECTION_IO_VAL = gpio_get_level(EDDISON_DETECTION_IO);
     BATES_DETECTION_IO_VAL = gpio_get_level(BATES_DETECTION_IO);
     INPUT_40AMP_SWITCH_VAL = gpio_get_level(INPUT_40AMP_SWITCH);
@@ -282,31 +281,43 @@ void app_main(void)
 
     ESP_LOGI(TAG, "Time set manually");
 
-    // Get and print current time
-    // char time_string[64];
-    // get_time_string(time_string, sizeof(time_string));
-    // ESP_LOGI(TAG, "Current time: %s", time_string);
-
-    master_operation_func(NULL, EDDISON_DETECTION_IO_VAL, BATES_DETECTION_IO_VAL, READ_MEANWELL, &q); // Set og Current
+    // Read initial values of the inverter settings and readings
+    master_operation_func(NULL, EDDISON_DETECTION_IO_VAL, BATES_DETECTION_IO_VAL, READ_MEANWELL, &q); // Read MEAN WELL VALUES
+    // Write initial inverter operation setting based on vBAT register from inverter
+    master_operation_func(NULL, EDDISON_DETECTION_IO_VAL, BATES_DETECTION_IO_VAL, WRITE_INV_OPERATION, &q); // Proper Inverter Operation register
+    // Write initial charge current
+    bool write_success = master_operation_func(NULL, EDDISON_DETECTION_IO_VAL, BATES_DETECTION_IO_VAL, WRITE_CURVE_CC, &q); //Write initial charge current
 
     while (1)
     {
         cnt++;
         printf("cnt: %d\n", cnt);
         vTaskDelay(1000 / portTICK_PERIOD_MS);
+
+        //Read all values from inverter every 30 seconds
         if (cnt % 30 == 0)
         {
-            master_operation_func(NULL, EDDISON_DETECTION_IO_VAL, BATES_DETECTION_IO_VAL, READ_MEANWELL, &q);
+            write_success = master_operation_func(NULL, EDDISON_DETECTION_IO_VAL, BATES_DETECTION_IO_VAL, READ_MEANWELL, &q);
             cnt = 1;
         }
         
+        //Change the Inverter Operation setting register (INV_OPERATION) to the correct value based on battery voltage (the value stored in READ_VBAT)
+        write_success = master_operation_func(NULL, EDDISON_DETECTION_IO_VAL, BATES_DETECTION_IO_VAL, WRITE_INV_OPERATION, &q);
+
+        //Read Edison and Bates Detection IO values
         int edd_val = gpio_get_level(EDDISON_DETECTION_IO);
         int bates_val = gpio_get_level(BATES_DETECTION_IO);
 
         //SSR's must be set in the master.c file and not modbus.c because the gpio pins high/low are not able to be changed in modbus.c
-        if (edd_val && bates_val)
-        {
+        if(!write_success){
             gpio_set_level(EDDISON_SSR_SELECT_IO, 0);
+            gpio_set_level(BATES_SSR_SELECT_IO, 0);
+            printf("Mosbud write to inverter failed, both SSR's set LOW \n");
+        }
+        //NEITHER bates nor edison plugged in
+        else if (edd_val && bates_val)
+        {
+            gpio_set_level(EDDISON_SSR_SELECT_IO, 1);
             gpio_set_level(BATES_SSR_SELECT_IO, 0);
             printf("Eddison and Bates register HIGH (NEITHER PLUGGED IN) \n");
         }
@@ -323,7 +334,7 @@ void app_main(void)
             gpio_set_level(BATES_SSR_SELECT_IO, 0);
             printf("Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)\n");
         }
-        // BOTH PLUGGED IN
+        // BOTH  bates and edison PLUGGED IN
         else if (!edd_val && !bates_val)
         {
             gpio_set_level(EDDISON_SSR_SELECT_IO, 0);
@@ -339,7 +350,7 @@ void app_main(void)
                 printf("\nFailed Upload to SD Card!\n");
             } 
         }
-        // printf("\n\n%s\n\n", stringify_data_point(q.items[0]));
+
 
         if (is_stable_connection() && card_initialized)
         {

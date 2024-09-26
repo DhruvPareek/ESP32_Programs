@@ -1,0 +1,300 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /Users/dhruv/esp/functional_brain_c6/build/bootloader/esp-idf/esptool_py && /Users/dhruv/.espressif/python_env/idf5.2_py3.12_env/bin/python /Users/dhruv/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/dhruv/esp/functional_brain_c6/build/bootloader/bootloader.bin
+Bootloader binary size 0x54b0 bytes. 0x2b50 bytes (34%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/modbus.c.obj
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:57:108: warning: excess elements in struct initializer
+   57 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:57:108: note: (near initialization for 'device_parameters[0]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:59:108: warning: excess elements in struct initializer
+   59 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:59:108: note: (near initialization for 'device_parameters[1]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:61:108: warning: excess elements in struct initializer
+   61 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:61:108: note: (near initialization for 'device_parameters[2]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:63:108: warning: excess elements in struct initializer
+   63 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:63:108: note: (near initialization for 'device_parameters[3]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:65:108: warning: excess elements in struct initializer
+   65 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 10},
+      |                                                                                                            ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:65:108: note: (near initialization for 'device_parameters[4]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:67:108: warning: excess elements in struct initializer
+   67 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 10},
+      |                                                                                                            ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:67:108: note: (near initialization for 'device_parameters[5]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:69:108: warning: excess elements in struct initializer
+   69 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 10},
+      |                                                                                                            ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:69:108: note: (near initialization for 'device_parameters[6]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:71:108: warning: excess elements in struct initializer
+   71 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 10},
+      |                                                                                                            ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:71:108: note: (near initialization for 'device_parameters[7]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:74:108: warning: excess elements in struct initializer
+   74 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 10},
+      |                                                                                                            ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:74:108: note: (near initialization for 'device_parameters[8]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:76:108: warning: excess elements in struct initializer
+   76 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 10},
+      |                                                                                                            ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:76:108: note: (near initialization for 'device_parameters[9]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:78:108: warning: excess elements in struct initializer
+   78 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 10},
+      |                                                                                                            ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:78:108: note: (near initialization for 'device_parameters[10]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:80:108: warning: excess elements in struct initializer
+   80 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 10},
+      |                                                                                                            ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:80:108: note: (near initialization for 'device_parameters[11]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:82:108: warning: excess elements in struct initializer
+   82 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .01},
+      |                                                                                                            ^~~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:82:108: note: (near initialization for 'device_parameters[12]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:85:108: warning: excess elements in struct initializer
+   85 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:85:108: note: (near initialization for 'device_parameters[13]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:87:108: warning: excess elements in struct initializer
+   87 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:87:108: note: (near initialization for 'device_parameters[14]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:89:108: warning: excess elements in struct initializer
+   89 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:89:108: note: (near initialization for 'device_parameters[15]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:91:108: warning: excess elements in struct initializer
+   91 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:91:108: note: (near initialization for 'device_parameters[16]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:93:108: warning: excess elements in struct initializer
+   93 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:93:108: note: (near initialization for 'device_parameters[17]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:95:108: warning: excess elements in struct initializer
+   95 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:95:108: note: (near initialization for 'device_parameters[18]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:97:108: warning: excess elements in struct initializer
+   97 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:97:108: note: (near initialization for 'device_parameters[19]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:99:108: warning: excess elements in struct initializer
+   99 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:99:108: note: (near initialization for 'device_parameters[20]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:101:108: warning: excess elements in struct initializer
+  101 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:101:108: note: (near initialization for 'device_parameters[21]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:103:108: warning: excess elements in struct initializer
+  103 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:103:108: note: (near initialization for 'device_parameters[22]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:105:108: warning: excess elements in struct initializer
+  105 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:105:108: note: (near initialization for 'device_parameters[23]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:107:108: warning: excess elements in struct initializer
+  107 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:107:108: note: (near initialization for 'device_parameters[24]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:109:108: warning: excess elements in struct initializer
+  109 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:109:108: note: (near initialization for 'device_parameters[25]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:111:108: warning: excess elements in struct initializer
+  111 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:111:108: note: (near initialization for 'device_parameters[26]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:113:108: warning: excess elements in struct initializer
+  113 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:113:108: note: (near initialization for 'device_parameters[27]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:115:108: warning: excess elements in struct initializer
+  115 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:115:108: note: (near initialization for 'device_parameters[28]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:118:108: warning: excess elements in struct initializer
+  118 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .01},
+      |                                                                                                            ^~~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:118:108: note: (near initialization for 'device_parameters[29]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:120:108: warning: excess elements in struct initializer
+  120 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:120:108: note: (near initialization for 'device_parameters[30]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:129:108: warning: excess elements in struct initializer
+  129 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:129:108: note: (near initialization for 'device_parameters[31]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:131:108: warning: excess elements in struct initializer
+  131 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:131:108: note: (near initialization for 'device_parameters[32]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:134:109: warning: excess elements in struct initializer
+  134 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .01},
+      |                                                                                                             ^~~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:134:109: note: (near initialization for 'device_parameters[33]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:136:109: warning: excess elements in struct initializer
+  136 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .01},
+      |                                                                                                             ^~~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:136:109: note: (near initialization for 'device_parameters[34]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:138:109: warning: excess elements in struct initializer
+  138 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                             ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:138:109: note: (near initialization for 'device_parameters[35]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:140:109: warning: excess elements in struct initializer
+  140 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                             ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:140:109: note: (near initialization for 'device_parameters[36]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:142:109: warning: excess elements in struct initializer
+  142 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .01},
+      |                                                                                                             ^~~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:142:109: note: (near initialization for 'device_parameters[37]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:144:109: warning: excess elements in struct initializer
+  144 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
+      |                                                                                                             ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:144:109: note: (near initialization for 'device_parameters[38]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:146:109: warning: excess elements in struct initializer
+  146 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                             ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:146:109: note: (near initialization for 'device_parameters[39]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:148:109: warning: excess elements in struct initializer
+  148 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
+      |                                                                                                             ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:148:109: note: (near initialization for 'device_parameters[40]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:150:109: warning: excess elements in struct initializer
+  150 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
+      |                                                                                                             ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:150:109: note: (near initialization for 'device_parameters[41]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:152:109: warning: excess elements in struct initializer
+  152 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
+      |                                                                                                             ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:152:109: note: (near initialization for 'device_parameters[42]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:154:109: warning: excess elements in struct initializer
+  154 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
+      |                                                                                                             ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:154:109: note: (near initialization for 'device_parameters[43]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:156:107: warning: excess elements in struct initializer
+  156 |      INPUT_OFFSET(input_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .01},
+      |                                                                                                           ^~~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:156:107: note: (near initialization for 'device_parameters[44]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:158:109: warning: excess elements in struct initializer
+  158 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .01},
+      |                                                                                                             ^~~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:158:109: note: (near initialization for 'device_parameters[45]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:160:109: warning: excess elements in struct initializer
+  160 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                             ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:160:109: note: (near initialization for 'device_parameters[46]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:162:109: warning: excess elements in struct initializer
+  162 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                             ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:162:109: note: (near initialization for 'device_parameters[47]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:164:109: warning: excess elements in struct initializer
+  164 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                             ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:164:109: note: (near initialization for 'device_parameters[48]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:166:109: warning: excess elements in struct initializer
+  166 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
+      |                                                                                                             ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:166:109: note: (near initialization for 'device_parameters[49]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:168:109: warning: excess elements in struct initializer
+  168 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
+      |                                                                                                             ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:168:109: note: (near initialization for 'device_parameters[50]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:170:109: warning: excess elements in struct initializer
+  170 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
+      |                                                                                                             ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:170:109: note: (near initialization for 'device_parameters[51]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:172:109: warning: excess elements in struct initializer
+  172 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
+      |                                                                                                             ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:172:109: note: (near initialization for 'device_parameters[52]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:174:109: warning: excess elements in struct initializer
+  174 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
+      |                                                                                                             ^~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:174:109: note: (near initialization for 'device_parameters[53]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:177:108: warning: excess elements in struct initializer
+  177 |      HOLD_OFFSET(holding_data1), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:177:108: note: (near initialization for 'device_parameters[54]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:180:109: warning: excess elements in struct initializer
+  180 |      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .01},
+      |                                                                                                             ^~~
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:180:109: note: (near initialization for 'device_parameters[55]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:183:108: warning: excess elements in struct initializer
+  183 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:183:108: note: (near initialization for 'device_parameters[56]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:186:108: warning: excess elements in struct initializer
+  186 |      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+      |                                                                                                            ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:186:108: note: (near initialization for 'device_parameters[57]')
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c: In function 'master_operation_func':
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:371:31: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  371 |                 tempData.name = param_descriptor->param_key;
+      |                               ^
+/Users/dhruv/esp/functional_brain_c6/main/modbus.c:372:32: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  372 |                 tempData.units = param_descriptor->param_units;
+      |                                ^
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable modbus_master.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32c6 image...
+Merged 1 ELF section
+Successfully created esp32c6 image.
+Generated /Users/dhruv/esp/functional_brain_c6/build/modbus_master.bin
+[9/10] cd /Users/dhruv/esp/functional_brain_c6/build/esp-idf/esptool_py && /Users/dhruv/.espressif/python_env/idf5.2_py3.12_env/bin/python /Users/dhruv/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/dhruv/esp/functional_brain_c6/build/partition_table/partition-table.bin /Users/dhruv/esp/functional_brain_c6/build/modbus_master.bin
+modbus_master.bin binary size 0x4caf0 bytes. Smallest app partition is 0x100000 bytes. 0xb3510 bytes (70%) free.
+[9/10] cd /Users/dhruv/esp/esp-idf/components/esptool_py && /usr/local/Cellar/cmake/3.29.5/bin/cmake -D IDF_PATH=/Users/dhruv/esp/esp-idf -D "SERIAL_TOOL=/Users/dhruv/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/Users/dhruv/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c6" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/dhruv/esp/functional_brain_c6/build -P /Users/dhruv/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32c6 -p /dev/cu.usbserial-110 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 modbus_master.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/cu.usbserial-110
+Connecting....
+Chip is ESP32-C6 (QFN40) (revision v0.0)
+Features: WiFi 6, BT 5, IEEE802.15.4
+Crystal is 40MHz
+MAC: 40:4c:ca:ff:fe:4e:0e:e0
+BASE MAC: 40:4c:ca:4e:0e:e0
+MAC_EXT: ff:fe
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0005cfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 21680 bytes to 13070...
+Writing at 0x00000000... (100 %)
+Wrote 21680 bytes (13070 compressed) at 0x00000000 in 0.6 seconds (effective 309.2 kbit/s)...
+Hash of data verified.
+Compressed 314096 bytes to 156046...
+Writing at 0x00010000... (10 %)
+Writing at 0x0001da47... (20 %)
+Writing at 0x00026140... (30 %)
+Writing at 0x0002cf8a... (40 %)
+Writing at 0x00033b77... (50 %)
+Writing at 0x0003b771... (60 %)
+Writing at 0x00043813... (70 %)
+Writing at 0x0004ab10... (80 %)
+Writing at 0x000515fb... (90 %)
+Writing at 0x0005896c... (100 %)
+Wrote 314096 bytes (156046 compressed) at 0x00010000 in 4.1 seconds (effective 616.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 219.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

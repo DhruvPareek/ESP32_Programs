@@ -31,28 +31,16 @@
 
 const char *TAG = "MASTER_TEST";
 
+uint32_t prev_vBAT = 100;
+
 // Enumeration of modbus device addresses accessed by master device
 enum
 {
-    MEANWELL_ID = 192, // Only one slave device used for the test (add other slave addresses here)
+    MEANWELL1_ID = 192, // Only one slave device used for the test (add other slave addresses here)
+    MEANWELL2_ID = 193,
     JBD_ID = 1
 };
 
-// Enumeration of all supported CIDs for device (used in parameter definition table)
-enum
-{
-    CID_INP_DATA_0 = 0,
-    CID_HOLD_DATA_0,
-    CID_INP_DATA_1,
-    CID_HOLD_DATA_1,
-    CID_INP_DATA_2,
-    CID_HOLD_DATA_2,
-    CID_HOLD_TEST_REG,
-    CID_RELAY_P1,
-    CID_RELAY_P2,
-    CID_DISCR_P1,
-    CID_COUNT
-};
 
 // Example Data (Object) Dictionary for Modbus parameters:
 // The CID field in the table must be unique.
@@ -132,59 +120,70 @@ const mb_parameter_descriptor_t device_parameters[] = {
      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
 
     // Meanwell Stuff
-    // {0, STR("READ_VIN"), STR("mV"), MEANWELL_ID, MB_PARAM_INPUT, 0x50, 1,
+    // {0, STR("READ_VIN"), STR("mV"), MEANWELL1_ID, MB_PARAM_INPUT, 0x50, 1,
     //  INPUT_OFFSET(input_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
-    // {1, STR("READ_VIN"), STR("mA"), MEANWELL_ID, MB_PARAM_INPUT, 0x53, 1,
+    // {1, STR("READ_VIN"), STR("mA"), MEANWELL1_ID, MB_PARAM_INPUT, 0x53, 1,
     //  INPUT_OFFSET(input_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
 
-    {31, STR("CURVE_CC"), STR("__"), MEANWELL_ID, MB_PARAM_HOLDING, 0xB0, 1,
+    {31, STR("CURVE_CC_1"), STR("__"), MEANWELL1_ID, MB_PARAM_HOLDING, 0xB0, 1,
      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
-    {32, STR("CHG_STATUS_2"), STR("__"), MEANWELL_ID, MB_PARAM_HOLDING, 0xB1, 1,
+    {32, STR("CHG_STATUS_2"), STR("__"), MEANWELL1_ID, MB_PARAM_HOLDING, 0xB1, 1,
      HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
 
-    {33, STR("READ_FREQ"), STR("Hz"), MEANWELL_ID, MB_PARAM_INPUT, 0x56, 1,
+    {33, STR("READ_FREQ"), STR("Hz"), MEANWELL1_ID, MB_PARAM_INPUT, 0x56, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .01},
-    {34, STR("READ_ TEMPERATURE_1"), STR("__"), MEANWELL_ID, MB_PARAM_INPUT, 0x62, 1,
+    {34, STR("READ_ TEMPERATURE_1"), STR("__"), MEANWELL1_ID, MB_PARAM_INPUT, 0x62, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .01},
-    {35, STR("READ_FAN_SPEED_1"), STR("__"), MEANWELL_ID, MB_PARAM_INPUT, 0x70, 1,
+    {35, STR("READ_FAN_SPEED_1"), STR("__"), MEANWELL1_ID, MB_PARAM_INPUT, 0x70, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
-    {36, STR("READ_FAN_SPEED_2"), STR("__"), MEANWELL_ID, MB_PARAM_INPUT, 0x71, 1,
+    {36, STR("READ_FAN_SPEED_2"), STR("__"), MEANWELL1_ID, MB_PARAM_INPUT, 0x71, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
-    {37, STR("READ_AC_FOUT"), STR("Hz"), MEANWELL_ID, MB_PARAM_INPUT, 0x105, 1,
+    {37, STR("READ_AC_FOUT"), STR("Hz"), MEANWELL1_ID, MB_PARAM_INPUT, 0x105, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .01},
-    {38, STR("READ_AC_VOUT"), STR("mV"), MEANWELL_ID, MB_PARAM_INPUT, 0x108, 1,
+    {38, STR("READ_AC_VOUT"), STR("mV"), MEANWELL1_ID, MB_PARAM_INPUT, 0x108, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
-    {39, STR("READ_OP_LD_PCNT"), STR("%%"), MEANWELL_ID, MB_PARAM_INPUT, 0x10B, 1,
+    {39, STR("READ_OP_LD_PCNT"), STR("%%"), MEANWELL1_ID, MB_PARAM_INPUT, 0x10B, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
-    {40, STR("READ_OP_WATT_HI"), STR("W"), MEANWELL_ID, MB_PARAM_INPUT, 0x10E, 1,
+    {40, STR("READ_OP_WATT_HI"), STR("W"), MEANWELL1_ID, MB_PARAM_INPUT, 0x10E, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
-    {41, STR("READ_OP_WATT_LO"), STR("W"), MEANWELL_ID, MB_PARAM_INPUT, 0x10F, 1,
+    {41, STR("READ_OP_WATT_LO"), STR("W"), MEANWELL1_ID, MB_PARAM_INPUT, 0x10F, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
-    {42, STR("READ_OP_VA_HI"), STR("VA"), MEANWELL_ID, MB_PARAM_INPUT, 0x114, 1,
+    {42, STR("READ_OP_VA_HI"), STR("VA"), MEANWELL1_ID, MB_PARAM_INPUT, 0x114, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
-    {43, STR("READ_OP_VA_LO"), STR("VA"), MEANWELL_ID, MB_PARAM_INPUT, 0x115, 1,
+    {43, STR("READ_OP_VA_LO"), STR("VA"), MEANWELL1_ID, MB_PARAM_INPUT, 0x115, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
-    {44, STR("READ_VBAT"), STR("mV"), MEANWELL_ID, MB_PARAM_INPUT, 0x11A, 1,
+    {44, STR("READ_VBAT1"), STR("mV"), MEANWELL1_ID, MB_PARAM_INPUT, 0x11A, 1,
+     INPUT_OFFSET(input_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .01},
+    {45, STR("READ_CHG_CURR"), STR("mA"), MEANWELL1_ID, MB_PARAM_INPUT, 0x11B, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .01},
-    {45, STR("READ_CHG_CURR"), STR("mA"), MEANWELL_ID, MB_PARAM_INPUT, 0x11B, 1,
-     INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .01},
-    {46, STR("BAT_CAPACITY"), STR("%%"), MEANWELL_ID, MB_PARAM_INPUT, 0x11C, 1,
+    {46, STR("BAT_CAPACITY"), STR("%%"), MEANWELL1_ID, MB_PARAM_INPUT, 0x11C, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
-    {47, STR("INV_STATUS"), STR("__"), MEANWELL_ID, MB_PARAM_INPUT, 0x11D, 1,
+    {47, STR("INV_STATUS"), STR("__"), MEANWELL1_ID, MB_PARAM_INPUT, 0x11D, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
-    {48, STR("INV_FAULT"), STR("__"), MEANWELL_ID, MB_PARAM_INPUT, 0x11E, 1,
+    {48, STR("INV_FAULT"), STR("__"), MEANWELL1_ID, MB_PARAM_INPUT, 0x11E, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
-    {49, STR("READ_BP_WATT_HI"), STR("W"), MEANWELL_ID, MB_PARAM_INPUT, 0x11F, 1,
+    {49, STR("READ_BP_WATT_HI"), STR("W"), MEANWELL1_ID, MB_PARAM_INPUT, 0x11F, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
-    {50, STR("READ_BP_WATT_LO"), STR("W"), MEANWELL_ID, MB_PARAM_INPUT, 0x120, 1,
+    {50, STR("READ_BP_WATT_LO"), STR("W"), MEANWELL1_ID, MB_PARAM_INPUT, 0x120, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
-    {51, STR("READ_BP_VA_HI"), STR("VA"), MEANWELL_ID, MB_PARAM_INPUT, 0x125, 1,
+    {51, STR("READ_BP_VA_HI"), STR("VA"), MEANWELL1_ID, MB_PARAM_INPUT, 0x125, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
-    {52, STR("READ_BP_VA_LO"), STR("VA"), MEANWELL_ID, MB_PARAM_INPUT, 0x126, 1,
+    {52, STR("READ_BP_VA_LO"), STR("VA"), MEANWELL1_ID, MB_PARAM_INPUT, 0x126, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
-    {53, STR("READ_AC_IOUT"), STR("Hz"), MEANWELL_ID, MB_PARAM_INPUT, 0x12B, 1,
+    {53, STR("READ_AC_IOUT"), STR("Hz"), MEANWELL1_ID, MB_PARAM_INPUT, 0x12B, 1,
      INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .1},
 
+    {54, STR("CURVE_CC_2"), STR("__"), MEANWELL2_ID, MB_PARAM_HOLDING, 0xB0, 1,
+     HOLD_OFFSET(holding_data1), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+
+    {55, STR("READ_VBAT2"), STR("mV"), MEANWELL2_ID, MB_PARAM_INPUT, 0x11A, 1,
+     INPUT_OFFSET(input_data0), PARAM_TYPE_FLOAT, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, .01},
+
+    {56, STR("SET_INV_OPERATION1"), STR(".."), MEANWELL1_ID, MB_PARAM_HOLDING, 0x0100, 1,
+     HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
+
+    {57, STR("SET_INV_OPERATION2"), STR(".."), MEANWELL2_ID, MB_PARAM_HOLDING, 0x0100, 1,
+     HOLD_OFFSET(holding_data0), PARAM_TYPE_U16, 2, OPTS(0x0000, 0xFFFF, 1), PAR_PERMS_READ_WRITE_TRIGGER, 1},
 };
 
 // Calculate number of parameters in the table
@@ -271,12 +270,13 @@ void *master_get_param_data(const mb_parameter_descriptor_t *param_descriptor)
     return instance_ptr;
 }
 
+//I'm pretty sure this function can be deleted because this file is unable to set GPIO PINS, so we do it from master.c
 void set_value(int edd_val, int bates_val, uint16_t *val)
 {
     // NEITHER PLUGGED IN
     if (edd_val && bates_val)
     {
-        *val = 0;
+        *val = 0x514;//13amps or 1300
         printf("Eddison and Bates register HIGH (NEITHER PLUGGED IN) \n");
     }
     //
@@ -285,17 +285,17 @@ void set_value(int edd_val, int bates_val, uint16_t *val)
         printf("Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)\n");
         if (INPUT_40AMP_SWITCH_VAL == 1)
         {
-            *val = 4000; // writes 40amps
+            *val = 0xFA0; // writes 40amps or 4000
             printf("Writing 40 amps\n");
         }
         else if (INPUT_40AMP_SWITCH_VAL == 0 && INPUT_60AMP_SWITCH_VAL == 0)
         {
-            *val = 5000; // writes 50amps
+            *val = 0x1388; // writes 50amps or 5000
             printf("Writing 50 amps\n");
         }
         else if (INPUT_60AMP_SWITCH_VAL == 1)
         {
-            *val = 6000; // writes 60amps
+            *val = 0x1770; // writes 60amps or 6000
             printf("Writing 60 amps\n");
         }
         else
@@ -305,7 +305,7 @@ void set_value(int edd_val, int bates_val, uint16_t *val)
     }
     else if (!edd_val && bates_val)
     {
-        *val = 1300;
+        *val = 0x514; // writes 13amps
         printf("Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)\n");
     }
     // BOTH PLUGGED IN
@@ -314,17 +314,17 @@ void set_value(int edd_val, int bates_val, uint16_t *val)
         printf("Eddison and Bates registers LOW (BOTH PLUGGED IN) \n");
         if (INPUT_40AMP_SWITCH_VAL == 1)
         {
-            *val = 4000; // writes 40amps
+            *val = 0xFA0; // writes 40amps
             printf("Writing 40 amps\n");
         }
         else if (INPUT_40AMP_SWITCH_VAL == 0 && INPUT_60AMP_SWITCH_VAL == 0)
         {
-            *val = 5000; // writes 50amps
+            *val = 0x1388; // writes 50amps
             printf("Writing 50 amps\n");
         }
         else if (INPUT_60AMP_SWITCH_VAL == 1)
         {
-            *val = 6000; // writes 60amps
+            *val = 0x1770; // writes 60amps
             printf("Writing 60 amps\n");
         }
         else
@@ -334,8 +334,15 @@ void set_value(int edd_val, int bates_val, uint16_t *val)
     }
 }
 
-// User operation function to read slave values and check alarm
-void master_operation_func(void *arg, int EDDISON_VAL, int BATES_VAL, OperationType op_type, Queue *queue)
+/*
+This function will: 
+    1. Read the parameters if the operation type is op_type == READ_MEANWELL
+    2. Write the a new inverter charge current if the operation type is op_type == WRITE_CURVE_CC
+    3. Read the VBAT from the inverter and set the correspondin INV_OPERATION if the operation type is op_type == WRITE_INV_OPERATION
+
+    The function will return true if the operation was successful and false if the operation was not successful. (Currently only works for reads and charge current writes)
+*/ 
+bool master_operation_func(void *arg, int EDDISON_VAL, int BATES_VAL, OperationType op_type, Queue *queue)
 {
     
     esp_err_t err = ESP_OK;
@@ -343,9 +350,14 @@ void master_operation_func(void *arg, int EDDISON_VAL, int BATES_VAL, OperationT
     bool alarm_state = false;
     const mb_parameter_descriptor_t *param_descriptor = NULL;
 
-    //    ESP_LOGI(TAG, "Start modbus test...");
+
+    bool write_meanwell_success = true;
+    bool read_from_meanwell_success = true;
 
     bool reading_from_meanwell = true;
+
+    uint32_t vBAT = 0;
+    bool needToUpdateSecondInverter = false;
 
     for (uint16_t retry = 0; retry <= MASTER_MAX_RETRY && (!alarm_state); retry++)
     {
@@ -373,7 +385,7 @@ void master_operation_func(void *arg, int EDDISON_VAL, int BATES_VAL, OperationT
                 // char time_string[64];
                 // get_time_string(time_string, sizeof(time_string));
 
-                if (op_type == WRITE_DATA && cid == 31)
+                if (op_type == WRITE_CURVE_CC && (cid == 31 || cid == 54))
                 {
                     tempData.command = "write";
                     // Writing the parameter to slave for non-ASCII parameters
@@ -383,57 +395,104 @@ void master_operation_func(void *arg, int EDDISON_VAL, int BATES_VAL, OperationT
                     printf("Amps being written: %u\n", value);
 
                     memcpy((void *)temp_data_ptr, &value, sizeof(value));
+
                     err = mbc_master_set_parameter(cid, (char *)param_descriptor->param_key,
-                                                   (uint8_t *)temp_data_ptr, &type);
+                                                (uint8_t *)temp_data_ptr, &type);
 
                     if (err == ESP_OK)
                     {
-
                         ESP_LOGI(TAG, "Characteristic #%u %s (%s) value = (0x%" PRIx16 "), write successful.",
 
-                                 param_descriptor->cid,
+                                param_descriptor->cid,
 
-                                 param_descriptor->param_key,
+                                param_descriptor->param_key,
 
-                                 param_descriptor->param_units,
+                                param_descriptor->param_units,
 
-                                 *(uint16_t *)temp_data_ptr);
+                                *(uint16_t *)temp_data_ptr);
                         char value_str[20];
                         snprintf(value_str, sizeof(value_str), "%u", value);
                         tempData.data = strdup(value_str);
                     }
                     else
                     {
-
+                        write_meanwell_success = false;
                         ESP_LOGE(TAG, "Characteristic #%u (%s) write fail, err = 0x%x (%s).",
 
-                                 param_descriptor->cid,
+                                param_descriptor->cid,
 
-                                 param_descriptor->param_key,
+                                param_descriptor->param_key,
 
-                                 (int)err,
+                                (int)err,
 
-                                 (char *)esp_err_to_name(err));
+                                (char *)esp_err_to_name(err));
                         char value_str[20];
                         snprintf(value_str, sizeof(value_str), "ERROR WRITING %u", value);
                         tempData.data = strdup(value_str);
                     }
                     valid_push = true;
-                    // Read value after it's written (For Debug)
-                    // err = mbc_master_get_parameter(cid, (char *)param_descriptor->param_key,
-                    //                                (uint8_t *)temp_data_ptr, &type);
-                    // if (err == ESP_OK)
-                    // {
-                    //     value = *(float *)temp_data_ptr;
-                    //     printf("Reading value written: %" PRIx32 "\n", *(uint32_t *)temp_data_ptr);
-                    // }
-                    // else
-                    // {
-                    //     printf("Failed to read value written :(\n");
-                    // }
-                }
-                else if (op_type == READ_MEANWELL && param_descriptor->mb_slave_addr == MEANWELL_ID && reading_from_meanwell)
-                {
+
+                } else if (op_type == WRITE_INV_OPERATION && (cid == 44 || cid == 55)) {
+                    //This section does not write to the inverter. It reads the VBAT from the inverter and sets the variable vBAT to the lower vBAT from both inverters.
+
+                    tempData.command = "read";
+                    err = mbc_master_get_parameter(cid, (char*)param_descriptor->param_key,
+                                                        (uint8_t*)temp_data_ptr, &type);
+                                                        
+                    if (err == ESP_OK) {
+                        if(cid == 44){
+                            vBAT = *(uint16_t*)temp_data_ptr;
+                        }else {
+                            vBAT = vBAT < *(uint16_t*)temp_data_ptr ? vBAT : *(uint16_t*)temp_data_ptr;
+                        }
+
+                        if ((param_descriptor->mb_param_type == MB_PARAM_HOLDING) ||
+                            (param_descriptor->mb_param_type == MB_PARAM_INPUT)) {
+                            value = *(float*)temp_data_ptr;
+                            ESP_LOGI(TAG, "Characteristic #%u %s (%s) value = %f (0x%" PRIx32 ") read successful.",
+                                            param_descriptor->cid,
+                                            param_descriptor->param_key,
+                                            param_descriptor->param_units,
+                                            value,
+                                            *(uint32_t*)temp_data_ptr);
+                            if (((value > param_descriptor->param_opts.max) ||
+                                (value < param_descriptor->param_opts.min))) {
+                                    alarm_state = true;
+                                    break;
+                            }
+                        } else {
+                            uint8_t state = *(uint8_t*)temp_data_ptr;
+                            const char* rw_str = (state & param_descriptor->param_opts.opt1) ? "ON" : "OFF";
+                            if ((state & param_descriptor->param_opts.opt2) == param_descriptor->param_opts.opt2) {
+                                ESP_LOGI(TAG, "Characteristic #%u %s (%s) value = %s (0x%" PRIx8 ") read successful.",
+                                                param_descriptor->cid,
+                                                param_descriptor->param_key,
+                                                param_descriptor->param_units,
+                                                (const char*)rw_str,
+                                                *(uint8_t*)temp_data_ptr);
+                            } else {
+                                ESP_LOGE(TAG, "Characteristic #%u %s (%s) value = %s (0x%" PRIx8 "), unexpected value.",
+                                                param_descriptor->cid,
+                                                param_descriptor->param_key,
+                                                param_descriptor->param_units,
+                                                (const char*)rw_str,
+                                                *(uint8_t*)temp_data_ptr);
+                                alarm_state = true;
+                                break;
+                            }
+                            if (state & param_descriptor->param_opts.opt1) {
+                                alarm_state = true;
+                                break;
+                            }
+                        }
+                    }else {
+                        write_meanwell_success = false;
+                    }
+                    vTaskDelay(100);
+                } else if (op_type == READ_MEANWELL && 
+                            param_descriptor->mb_slave_addr == MEANWELL1_ID && 
+                            reading_from_meanwell) {
+
                     tempData.command = "read";
 
                     err = mbc_master_get_parameter(cid, (char *)param_descriptor->param_key,
@@ -454,6 +513,7 @@ void master_operation_func(void *arg, int EDDISON_VAL, int BATES_VAL, OperationT
                     }
                     else
                     {
+                        read_from_meanwell_success = false;
                         ESP_LOGE(TAG, "Characteristic #%u (%s) read fail, err = 0x%x (%s).",
                                  param_descriptor->cid,
                                  param_descriptor->param_key,
@@ -469,26 +529,130 @@ void master_operation_func(void *arg, int EDDISON_VAL, int BATES_VAL, OperationT
                         }
                     }
                     valid_push = true;
-                }
+
+                } else if (op_type == WRITE_INV_OPERATION && 
+                            (cid == 56) && 
+                            ((prev_vBAT <= 4700 && vBAT > 4700) || (prev_vBAT >= 4650 && vBAT < 4650))) {
+                    // This section writes to the inverter. It checks the lower vBAT from both inverters and writes the appropriate value to the 
+                    
+                    tempData.command = "write";
+                    // Writing the parameter to slave for non-ASCII parameters
+                    uint16_t value = 0;
+
+                    needToUpdateSecondInverter = true;
+                    if(vBAT >= 4700){
+                        value = 0x5;
+                        prev_vBAT = vBAT;
+                        printf("CID 56, Value writing to 0x0100 is 0x5, vBAT >= 4700");
+                    }else { 
+                        value = 0x6;
+                        prev_vBAT = vBAT;
+                        printf("CID 56, Value writing to 0x0100 is 0x6, vBAT < 4650");
+                    }
+
+                    memcpy((void *)temp_data_ptr, &value, sizeof(value));
+                    err = mbc_master_set_parameter(cid, (char *)param_descriptor->param_key,
+                                                (uint8_t *)temp_data_ptr, &type);//set first inverter
+
+                        if (err == ESP_OK)
+                        {
+                            ESP_LOGI(TAG, "Characteristic #%u %s (%s) value = (0x%" PRIx16 "), write successful.",
+
+                                    param_descriptor->cid,
+
+                                    param_descriptor->param_key,
+
+                                    param_descriptor->param_units,
+
+                                    *(uint16_t *)temp_data_ptr);
+                            char value_str[20];
+                            snprintf(value_str, sizeof(value_str), "%u", value);
+                            tempData.data = strdup(value_str);
+                        }
+                        else
+                        {
+                            write_meanwell_success = false;
+                            ESP_LOGE(TAG, "Characteristic #%u (%s) write fail, err = 0x%x (%s).",
+
+                                    param_descriptor->cid,
+
+                                    param_descriptor->param_key,
+
+                                    (int)err,
+
+                                    (char *)esp_err_to_name(err));
+                            char value_str[20];
+                            snprintf(value_str, sizeof(value_str), "ERROR WRITING %u", value);
+                            tempData.data = strdup(value_str);
+                        }
+                        valid_push = true;
+                    
+            }else if (op_type == WRITE_INV_OPERATION && 
+                            (cid == 57 && needToUpdateSecondInverter)) {
+                    // This section writes to the inverter. It checks the lower vBAT from both inverters and writes the appropriate value to the 
+                    
+                    needToUpdateSecondInverter = false;
+                    tempData.command = "write";
+                    // Writing the parameter to slave for non-ASCII parameters
+                    uint16_t value = 0;
+
+                    if(prev_vBAT >= 4700){
+                        value = 0x5;
+                        printf("CID 57, Value writing to 0x0100 is 0x5, vBAT >= 4700");
+                    }else {
+                        value = 0x6;
+                        printf("CID 57, Value writing to 0x0100 is 0x6, vBAT < 4650");
+                    }
+
+                    memcpy((void *)temp_data_ptr, &value, sizeof(value));
+                    err = mbc_master_set_parameter(cid, (char *)param_descriptor->param_key,
+                                                (uint8_t *)temp_data_ptr, &type);//set first inverter
+
+                        if (err == ESP_OK)
+                        {
+                            ESP_LOGI(TAG, "Characteristic #%u %s (%s) value = (0x%" PRIx16 "), write successful.",
+
+                                    param_descriptor->cid,
+
+                                    param_descriptor->param_key,
+
+                                    param_descriptor->param_units,
+
+                                    *(uint16_t *)temp_data_ptr);
+                            char value_str[20];
+                            snprintf(value_str, sizeof(value_str), "%u", value);
+                            tempData.data = strdup(value_str);
+                        }
+                        else
+                        {
+                            write_meanwell_success = false;
+
+                            ESP_LOGE(TAG, "Characteristic #%u (%s) write fail, err = 0x%x (%s).",
+
+                                    param_descriptor->cid,
+
+                                    param_descriptor->param_key,
+
+                                    (int)err,
+
+                                    (char *)esp_err_to_name(err));
+                            char value_str[20];
+                            snprintf(value_str, sizeof(value_str), "ERROR WRITING %u", value);
+                            tempData.data = strdup(value_str);
+                        }
+                        valid_push = true;
+                    }
                 // If we have found a CID that works
                 if (valid_push)
                 {
                     push(queue, createDataPoint(&tempData));
                 }
 
-                //                vTaskDelay(POLL_TIMEOUT_TICS); // timeout between polls
             }
         }
         //        vTaskDelay(UPDATE_CIDS_TIMEOUT_TICS);
     }
-
-    //    if (alarm_state) {
-    //        ESP_LOGI(TAG, "Alarm triggered by cid #%u.", param_descriptor->cid);
-    //    } else {
-    //        ESP_LOGE(TAG, "Alarm is not triggered after %u retries.", MASTER_MAX_RETRY);
-    //    }
-    //    ESP_LOGI(TAG, "Destroy master...");
-    //    ESP_ERROR_CHECK(mbc_master_destroy());
+    return write_meanwell_success && read_from_meanwell_success;
 }
 
 void get_time_string(char *time_str, size_t max_len)

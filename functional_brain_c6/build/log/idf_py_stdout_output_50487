@@ -1,0 +1,1530 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x4d (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c410,len:0xe2c
+load:0x4086e610,len:0x2e24
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2024 10:48:08[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (84) esp_image: segment 0: paddr=00010020 vaddr=42030020 size=12d10h ( 77072) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=00022d38 vaddr=40800000 size=052e0h ( 21216) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=29458h (169048) map[0m
+[0;32mI (150) esp_image: segment 3: paddr=00051480 vaddr=408052e0 size=09d9ch ( 40348) load[0m
+[0;32mI (160) esp_image: segment 4: paddr=0005b224 vaddr=4080f080 size=01b10h (  6928) load[0m
+[0;32mI (166) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Unicore app[0m
+[0;33mW (189) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (195) cpu_start: Pro cpu start user code[0m
+[0;32mI (195) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (196) cpu_start: Application information:[0m
+[0;32mI (198) cpu_start: Project name:     modbus_master[0m
+[0;32mI (204) cpu_start: App version:      e10bbbaa-dirty[0m
+[0;32mI (209) cpu_start: Compile time:     Sep 23 2024 10:47:31[0m
+[0;32mI (215) cpu_start: ELF file SHA256:  a4bf265f8...[0m
+[0;32mI (221) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (226) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (230) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (235) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (240) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (247) heap_init: At 40812550 len 0006A0C0 (424 KiB): RAM[0m
+[0;32mI (253) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (259) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (266) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (294) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (301) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (307) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (312) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) MASTER_TEST: Initializing SD card[0m
+[0;32mI (322) MASTER_TEST: Using SPI peripheral[0m
+[0;32mI (322) MASTER_TEST: Mounting filesystem[0m
+[0;32mI (332) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (362) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[0;32mI (362) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (362) MASTER_TEST: Failed to initialize the card (ESP_ERR_TIMEOUT). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (372) MASTER_TEST: Filesystem mounted[0m
+Name: 
+Type: SDSC
+Speed: N/A
+Size: 346779MB
+CSD: ver=-1515870810, sector_size=1082216384, capacity=336 read_bl_len=5
+SSR: bus_width=1
+[0;32mI (392) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (402) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (412) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (422) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (432) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (432) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Minimum free heap size: 440556 bytes
+[0;32mI (452) uart: queue free spaces: 20[0m
+[0;32mI (502) MASTER_TEST: Modbus master stack initialized...[0m
+[0;32mI (602) MASTER_TEST: Time set manually[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;31mE (1002) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1002) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1412) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1412) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1822) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1822) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c410,len:0xe2c
+load:0x4086e610,len:0x2e24
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2024 10:48:08[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=42030020 size=12d10h ( 77072) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=00022d38 vaddr=40800000 size=052e0h ( 21216) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=29458h (169048) map[0m
+[0;32mI (149) esp_image: segment 3: paddr=00051480 vaddr=408052e0 size=09d9ch ( 40348) load[0m
+[0;32mI (160) esp_image: segment 4: paddr=0005b224 vaddr=4080f080 size=01b10h (  6928) load[0m
+[0;32mI (165) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Unicore app[0m
+[0;33mW (188) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (195) cpu_start: Pro cpu start user code[0m
+[0;32mI (195) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (195) cpu_start: Application information:[0m
+[0;32mI (198) cpu_start: Project name:     modbus_master[0m
+[0;32mI (204) cpu_start: App version:      e10bbbaa-dirty[0m
+[0;32mI (209) cpu_start: Compile time:     Sep 23 2024 10:47:31[0m
+[0;32mI (215) cpu_start: ELF file SHA256:  a4bf265f8...[0m
+[0;32mI (221) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (225) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (230) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (235) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (240) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (247) heap_init: At 40812550 len 0006A0C0 (424 KiB): RAM[0m
+[0;32mI (253) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (259) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (266) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (294) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (301) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (307) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (312) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) MASTER_TEST: Initializing SD card[0m
+[0;32mI (322) MASTER_TEST: Using SPI peripheral[0m
+[0;32mI (322) MASTER_TEST: Mounting filesystem[0m
+[0;32mI (332) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (362) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[0;32mI (362) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (362) MASTER_TEST: Failed to initialize the card (ESP_ERR_TIMEOUT). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (372) MASTER_TEST: Filesystem mounted[0m
+Name: 
+Type: SDSC
+Speed: N/A
+Size: 346779MB
+CSD: ver=-1515870810, sector_size=1082216384, capacity=336 read_bl_len=5
+SSR: bus_width=1
+[0;32mI (392) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (402) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (412) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (422) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (432) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (432) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Minimum free heap size: 440556 bytes
+[0;32mI (452) uart: queue free spaces: 20[0m
+[0;32mI (502) MASTER_TEST: Modbus master stack initialized...[0m
+[0;32mI (602) MASTER_TEST: Time set manually[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;31mE (1002) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1002) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1412) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1412) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1822) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1822) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2232) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2232) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2642) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2642) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;31mE (3062) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3062) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3472) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3472) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3882) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3882) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4292) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4292) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4702) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4702) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (5112) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (5112) MASTER_TEST: Characteristic #31 (CURVE_CC_1) read fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;32mI (5122) MASTER_TEST: Timeout error occurred. Skipping all other CID's.[0m
+[0;31mE (5532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (6932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+cnt: 1
+[0;31mE (9332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (10732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+Oscillating
+Finished!
+Oscillating
+Finished!
+[0;31mE (13132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (14532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;31mE (16932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (18332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;31mE (20732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (22132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;31mE (24532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (25932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;31mE (28332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (29732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;31mE (32132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (33532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;31mE (35932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (37332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;31mE (39732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (41132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;31mE (43532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (44932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;31mE (47332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (48732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;31mE (51132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (52532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;31mE (54932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (56332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;31mE (58732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c410,len:0xe2c
+load:0x4086e610,len:0x2e24
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2024 10:48:08[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=42030020 size=12d10h ( 77072) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=00022d38 vaddr=40800000 size=052e0h ( 21216) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=29458h (169048) map[0m
+[0;32mI (149) esp_image: segment 3: paddr=00051480 vaddr=408052e0 size=09d9ch ( 40348) load[0m
+[0;32mI (160) esp_image: segment 4: paddr=0005b224 vaddr=4080f080 size=01b10h (  6928) load[0m
+[0;32mI (165) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Unicore app[0m
+[0;33mW (188) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (195) cpu_start: Pro cpu start user code[0m
+[0;32mI (195) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (195) cpu_start: Application information:[0m
+[0;32mI (198) cpu_start: Project name:     modbus_master[0m
+[0;32mI (204) cpu_start: App version:      e10bbbaa-dirty[0m
+[0;32mI (209) cpu_start: Compile time:     Sep 23 2024 10:47:31[0m
+[0;32mI (215) cpu_start: ELF file SHA256:  a4bf265f8...[0m
+[0;32mI (221) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (225) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (230) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (235) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (240) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (247) heap_init: At 40812550 len 0006A0C0 (424 KiB): RAM[0m
+[0;32mI (253) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (259) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (266) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (294) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (301) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (307) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (312) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) MASTER_TEST: Initializing SD card[0m
+[0;32mI (322) MASTER_TEST: Using SPI peripheral[0m
+[0;32mI (322) MASTER_TEST: Mounting filesystem[0m
+[0;32mI (332) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (362) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[0;32mI (362) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (362) MASTER_TEST: Failed to initialize the card (ESP_ERR_TIMEOUT). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (372) MASTER_TEST: Filesystem mounted[0m
+Name: 
+Type: SDSC
+Speed: N/A
+Size: 346779MB
+CSD: ver=-1515870810, sector_size=1082216384, capacity=336 read_bl_len=5
+SSR: bus_width=1
+[0;32mI (392) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (402) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (412) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (422) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (432) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (432) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Minimum free heap size: 440556 bytes
+[0;32mI (452) uart: queue free spaces: 20[0m
+[0;32mI (502) MASTER_TEST: Modbus master stack initialized...[0m
+[0;32mI (602) MASTER_TEST: Time set manually[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;31mE (1002) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1002) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1412) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1412) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1822) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1822) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2232) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2232) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2642) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2642) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;31mE (3062) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3062) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3472) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3472) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3882) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3882) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4292) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4292) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4702) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4702) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (5112) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (5112) MASTER_TEST: Characteristic #31 (CURVE_CC_1) read fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;32mI (5122) MASTER_TEST: Timeout error occurred. Skipping all other CID's.[0m
+[0;31mE (5532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (6932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+cnt: 1
+[0;31mE (9332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (10732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+Oscillating
+Finished!
+Oscillating
+Finished!
+[0;31mE (13132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (14532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;31mE (16932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (18332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;31mE (20732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (22132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;31mE (24532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (25932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;31mE (28332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (29732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;31mE (32132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (33532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;31mE (35932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (37332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;31mE (39732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (41132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;31mE (43532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (44932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;31mE (47332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (48732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;31mE (51132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (52532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;31mE (54932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (56332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;31mE (58732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (60132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;31mE (62532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (63932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;31mE (66332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (67732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;31mE (70132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (71532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+[0;31mE (73932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (75332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;31mE (77732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (79132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 20
+[0;31mE (81532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (82932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 21
+[0;31mE (85332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (86732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 22
+[0;31mE (89132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (90532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 23
+[0;31mE (92932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (94332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 24
+[0;31mE (96732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (98132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 25
+[0;31mE (100532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (101932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 26
+[0;31mE (104332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (105732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 27
+[0;31mE (108132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (109532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 28
+[0;31mE (111932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (113332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 29
+[0;31mE (115732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (117132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 30
+[0;31mE (119532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (119532) MASTER_TEST: Characteristic #31 (CURVE_CC_1) read fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;32mI (119542) MASTER_TEST: Timeout error occurred. Skipping all other CID's.[0m
+[0;31mE (119952) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (121352) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+[0;31mE (123752) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (125152) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;31mE (127552) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (128952) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;31mE (131352) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (132752) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;31mE (135152) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (136552) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;31mE (138952) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (140352) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;31mE (142752) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (144152) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;31mE (146552) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (147952) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;31mE (150352) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (151752) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;31mE (154152) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (155552) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;31mE (157952) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (159352) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;31mE (161752) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (163152) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;31mE (165552) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (166952) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;31mE (169352) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (170752) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;31mE (173152) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (174552) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;31mE (176952) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (178352) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;31mE (180752) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (182152) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+[0;31mE (184552) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (185952) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;31mE (188352) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (189752) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 20
+[0;31mE (192152) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (193552) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 21
+[0;31mE (195952) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (197352) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 22
+[0;31mE (199752) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (201152) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 23
+[0;31mE (203552) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (204952) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 24
+[0;31mE (207352) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (208752) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 25
+[0;31mE (211152) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (212552) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 26
+[0;31mE (214952) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (216352) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 27
+[0;31mE (218752) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (220152) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 28
+[0;31mE (222552) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (223952) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 29
+[0;31mE (226352) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (227752) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 30
+[0;31mE (230152) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (230152) MASTER_TEST: Characteristic #31 (CURVE_CC_1) read fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;32mI (230162) MASTER_TEST: Timeout error occurred. Skipping all other CID's.[0m
+[0;31mE (230572) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (231972) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+[0;31mE (234372) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (235772) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;31mE (238172) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (239572) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;31mE (241972) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (243372) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;31mE (245772) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (247172) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;31mE (249572) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (250972) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;31mE (253372) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (254772) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;31mE (257172) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (258572) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;31mE (260972) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (262372) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;31mE (264772) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (266172) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;31mE (268572) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (269972) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;31mE (272372) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (273772) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;31mE (276172) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (277572) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;31mE (279972) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (281372) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;31mE (283772) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (285172) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;31mE (287572) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (288972) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;31mE (291372) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (292772) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+[0;31mE (295172) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (296572) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;31mE (298972) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (300372) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 20
+[0;31mE (302772) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (304172) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 21
+Oscillating
+Finished!
+Oscillating
+Finished!
+[0;31mE (306572) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (307972) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 22
+[0;31mE (310372) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (311772) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 23
+[0;31mE (314172) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (315572) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 24
+[0;31mE (317972) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (319372) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 25
+[0;31mE (321772) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (323172) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 26
+[0;31mE (325572) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (326972) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 27
+[0;31mE (329372) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (330772) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 28
+[0;31mE (333172) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (334572) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 29
+[0;31mE (336972) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (338372) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 30
+[0;31mE (340772) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (340772) MASTER_TEST: Characteristic #31 (CURVE_CC_1) read fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;32mI (340782) MASTER_TEST: Timeout error occurred. Skipping all other CID's.[0m
+[0;31mE (341192) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (342592) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+[0;31mE (344992) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (346392) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;31mE (348792) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (350192) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;31mE (352592) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (353992) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;31mE (356392) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (357792) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;31mE (360192) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (361592) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;31mE (363992) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (365392) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;31mE (367792) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (369192) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;31mE (371592) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (372992) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;31mE (375392) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (376792) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;31mE (379192) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (380592) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;31mE (382992) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (384392) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;31mE (386792) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (388192) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;31mE (390592) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (391992) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;31mE (394392) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (395792) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;31mE (398192) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (399592) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;31mE (401992) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (403392) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+[0;31mE (405792) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (407192) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;31mE (409592) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (410992) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 20
+[0;31mE (413392) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (414792) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 21
+[0;31mE (417192) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (418592) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 22
+[0;31mE (420992) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (422392) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 23
+[0;31mE (424792) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (426192) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 24
+[0;31mE (428592) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (429992) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 25
+[0;31mE (432392) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (433792) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 26
+[0;31mE (436192) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (437592) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 27
+[0;31mE (439992) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (441392) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 28
+[0;31mE (443792) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (445192) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 29
+[0;31mE (447592) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (448992) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 30
+[0;31mE (451392) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (451392) MASTER_TEST: Characteristic #31 (CURVE_CC_1) read fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;32mI (451402) MASTER_TEST: Timeout error occurred. Skipping all other CID's.[0m
+[0;31mE (451812) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (453212) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+[0;31mE (455612) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (457012) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;31mE (459412) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (460812) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;31mE (463212) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (464612) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;31mE (467012) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (468412) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;31mE (470812) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (472212) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;31mE (474612) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (476012) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;31mE (478412) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (479812) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;31mE (482212) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (483612) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;31mE (486012) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (487412) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;31mE (489812) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (491212) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;31mE (493612) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (495012) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;31mE (497412) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (498812) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;31mE (501212) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (502612) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;31mE (505012) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (506412) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;31mE (508812) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (510212) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;31mE (512612) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (514012) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+[0;31mE (516412) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (517812) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;31mE (520212) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (521612) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 20
+[0;31mE (524012) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (525412) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 21
+[0;31mE (527812) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (529212) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 22
+[0;31mE (531612) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (533012) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 23
+[0;31mE (535412) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (536812) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 24
+[0;31mE (539212) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (540612) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 25
+[0;31mE (543012) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (544412) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 26
+[0;31mE (546812) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (548212) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 27
+[0;31mE (550612) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (552012) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 28
+[0;31mE (554412) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (555812) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 29
+[0;31mE (558212) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (559612) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 30
+[0;31mE (562012) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (562012) MASTER_TEST: Characteristic #31 (CURVE_CC_1) read fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;32mI (562022) MASTER_TEST: Timeout error occurred. Skipping all other CID's.[0m
+[0;31mE (562432) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (563832) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+[0;31mE (566232) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (567632) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;31mE (570032) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (571432) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;31mE (573832) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (575232) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;31mE (577632) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (579032) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;31mE (581432) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (582832) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;31mE (585232) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (586632) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;31mE (589032) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (590432) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;31mE (592832) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (594232) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;31mE (596632) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (598032) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;31mE (600432) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (601832) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;31mE (604232) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (605632) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;31mE (608032) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (609432) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;31mE (611832) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (613232) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;31mE (615632) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (617032) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;31mE (619432) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (620832) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;31mE (623232) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (624632) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+Oscillating
+Finished!
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+Writing 40 amps
+Amps being written: 4000
+[0;31mE (626112) MB_PORT_COMMON: Drop data received outside of transaction (626113377)[0m
+[0;31mE (626512) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (626512) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (626922) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (626922) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (627342) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (627342) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (627752) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (627752) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (628162) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (628162) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+Writing 40 amps
+Amps being written: 4000
+[0;31mE (628582) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (628582) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (628992) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (628992) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (629402) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (629402) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (629812) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (629812) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (630222) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (630222) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Oscillating
+Finished!
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Writing 40 amps
+Amps being written: 4000
+[0;31mE (630642) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (630642) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (631062) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (631062) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (631472) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (631472) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (631632) MB_PORT_COMMON: xMBMasterRunResTake(171): xMBMasterRunResTake: Resource take failure.[0m
+[0;31mE (631632) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x103) (ESP_ERR_INVALID_STATE).[0m
+[0;31mE (631882) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (631882) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (632292) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (632292) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Writing 40 amps
+Amps being written: 4000
+[0;31mE (632712) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (632712) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (633122) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (633122) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (633532) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (633532) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (633942) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (633942) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (634352) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (634352) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Oscillating
+Finished!
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Writing 50 amps
+Amps being written: 5000
+[0;31mE (634772) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (634782) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (635192) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (635192) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (635602) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (635602) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (636012) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (636012) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (636422) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (636422) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Writing 50 amps
+Amps being written: 5000
+[0;31mE (636842) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (636842) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (637252) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (637252) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (637642) MB_PORT_COMMON: xMBMasterRunResTake(171): xMBMasterRunResTake: Resource take failure.[0m
+[0;31mE (637642) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x103) (ESP_ERR_INVALID_STATE).[0m
+[0;31mE (637662) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (637662) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (638072) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (638072) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (638482) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (638482) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Oscillating
+Finished!
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+Writing 50 amps
+Amps being written: 5000
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;31mE (638912) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (638912) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (639322) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (639322) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (639732) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (639732) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (640142) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (640142) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c410,len:0xe2c
+load:0x4086e610,len:0x2e24
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2024 10:48:08[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=42030020 size=12d10h ( 77072) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=00022d38 vaddr=40800000 size=052e0h ( 21216) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=29458h (169048) map[0m
+[0;32mI (149) esp_image: segment 3: paddr=00051480 vaddr=408052e0 size=09d9ch ( 40348) load[0m
+[0;32mI (160) esp_image: segment 4: paddr=0005b224 vaddr=4080f080 size=01b10h (  6928) load[0m
+[0;32mI (165) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Unicore app[0m
+[0;33mW (188) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (195) cpu_start: Pro cpu start user code[0m
+[0;32mI (195) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (195) cpu_start: Application information:[0m
+[0;32mI (198) cpu_start: Project name:     modbus_master[0m
+[0;32mI (204) cpu_start: App version:      e10bbbaa-dirty[0m
+[0;32mI (209) cpu_start: Compile time:     Sep 23 2024 10:47:31[0m
+[0;32mI (215) cpu_start: ELF file SHA256:  a4bf265f8...[0m
+[0;32mI (221) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (225) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (230) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (235) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (240) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (247) heap_init: At 40812550 len 0006A0C0 (424 KiB): RAM[0m
+[0;32mI (253) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (259) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (266) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (294) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (301) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (307) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (312) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) MASTER_TEST: Initializing SD card[0m
+[0;32mI (322) MASTER_TEST: Using SPI peripheral[0m
+[0;32mI (322) MASTER_TEST: Mounting filesystem[0m
+[0;32mI (332) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (362) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[0;32mI (362) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (362) MASTER_TEST: Failed to initialize the card (ESP_ERR_TIMEOUT). Make sur�ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c410,len:0xe2c
+load:0x4086e610,len:0x2e24
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2024 10:48:08[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=42030020 size=12d10h ( 77072) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=00022d38 vaddr=40800000 size=052e0h ( 21216) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=29458h (169048) map[0m
+[0;32mI (149) esp_image: segment 3: paddr=00051480 vaddr=408052e0 size=09d9ch ( 40348) load[0m
+[0;32mI (160) esp_image: segment 4: paddr=0005b224 vaddr=4080f080 size=01b10h (  6928) load[0m
+[0;32mI (165) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Unicore app[0m
+[0;33mW (188) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (195) cpu_start: Pro cpu start user code[0m
+[0;32mI (195) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (195) cpu_start: Application information:[0m
+[0;32mI (198) cpu_start: Project name:     modbus_master[0m
+[0;32mI (204) cpu_start: App version:      e10bbbaa-dirty[0m
+[0;32mI (209) cpu_start: Compile time:     Sep 23 2024 10:47:31[0m
+[0;32mI (215) cpu_start: ELF file SHA256:  a4bf265f8...[0m
+[0;32mI (221) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (225) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (230) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (235) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (240) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (247) heap_init: At 40812550 len 0006A0C0 (424 KiB): RAM[0m
+[0;32mI (253) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (259) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (266) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (294) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (301) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (307) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (312) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) MASTER_TEST: Initializing SD card[0m
+[0;32mI (322) MASTER_TEST: Using SPI peripheral[0m
+[0;32mI (322) MASTER_TEST: Mounting filesystem[0m
+[0;32mI (332) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (362) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[0;32mI (362) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (362) MASTER_TEST: Failed to initialize the card (ESP_ERR_TIMEOUT). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (372) MASTER_TEST: Filesystem mounted[0m
+Name: 
+Type: SDSC
+Speed: N/A
+Size: 346779MB
+CSD: ver=-1515870810, sector_size=1082216384, capacity=336 read_bl_len=5
+SSR: bus_width=1
+[0;32mI (392) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (402) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (412) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (422) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (432) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (432) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Minimum free heap size: 440556 bytes
+[0;32mI (452) uart: queue free spaces: 20[0m
+[0;32mI (502) MASTER_TEST: Modbus master stack initialized...[0m
+[0;32mI (602) MASTER_TEST: Time set manually[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;31mE (1002) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1002) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1412) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1412) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1822) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1822) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2232) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2232) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2642) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2642) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;31mE (3062) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3062) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3472) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3472) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3882) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3882) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4292) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4292) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4702) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4702) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (5112) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (5112) MASTER_TEST: Characteristic #31 (CURVE_CC_1) read fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;32mI (5122) MASTER_TEST: Timeout error occurred. Skipping all other CID's.[0m
+[0;31mE (5532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (6932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+cnt: 1
+[0;31mE (9332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (10732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+Oscillating
+Finished!
+Oscillating
+Finished!
+[0;31mE (13132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (14532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;31mE (16932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (18332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;31mE (20732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (22132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;31mE (24532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Oscillating
+Finished!
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Amps being written: 1300
+[0;31mE (25932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (25932) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (25952) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (26362) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (26362) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (26772) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (26772) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;31mE (27182) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (27182) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (27592) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (27592) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Amps being written: 1300
+[0;31mE (28012) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (28012) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (28422) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (28422) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (28832) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (28832) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (29242) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (29242) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (29652) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (29652) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Oscillating
+Finished!
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Writing 40 amps
+Amps being written: 4000
+[0;31mE (30072) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (30072) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (30482) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (30492) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (30902) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (30902) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (31312) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (31312) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (31722) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (31722) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Writing 40 amps
+Amps being written: 4000
+[0;31mE (32142) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (32142) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (32552) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (32552) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (32962) MB_PORT_COMMON: xMBMasterRunResTake(171): xMBMasterRunResTake: Resource take failure.[0m
+[0;31mE (32962) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x103) (ESP_ERR_INVALID_STATE).[0m
+[0;31mE (32962) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (32982) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (33392) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (33392) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (33802) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (33802) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Oscillating
+Finished!
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Writing 50 amps
+Amps being written: 5000
+[0;31mE (34222) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (34222) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (34632) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (34632) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (35042) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (35042) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (35452) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (35452) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (35862) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (35862) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Writing 50 amps
+Amps being written: 5000
+[0;31mE (36282) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (36282) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (36692) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (36702) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (37112) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (37112) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (37522) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (37522) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (37932) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (37932) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (38342) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;31mE (40742) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (42142) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;31mE (44542) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (45942) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;31mE (48342) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (49742) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;31mE (52142) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (53542) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;31mE (55942) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (57342) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;31mE (59742) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (61142) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;31mE (63542) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (64942) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;31mE (67342) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (68742) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;31mE (71142) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (72542) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;31mE (74942) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (76342) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;31mE (78742) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (80142) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+[0;31mE (82542) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (83942) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;31mE (86342) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (87742) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 20
+[0;31mE (90142) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (91542) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 21
+[0;31mE (93942) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (95342) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 22
+[0;31mE (97742) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (99142) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 23
+[0;31mE (101542) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (102942) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 24
+[0;31mE (105342) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (106742) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 25
+[0;31mE (109142) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (110542) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 26
+[0;31mE (112942) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (114342) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 27
+[0;31mE (116742) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (118142) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 28
+[0;31mE (120542) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (121942) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 29
+[0;31mE (124342) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (125742) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 30
+[0;31mE (128142) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (128142) MASTER_TEST: Characteristic #31 (CURVE_CC_1) read fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;32mI (128152) MASTER_TEST: Timeout error occurred. Skipping all other CID's.[0m
+[0;31mE (128562) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (129962) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+[0;31mE (132362) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m

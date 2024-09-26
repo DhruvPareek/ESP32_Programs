@@ -1,0 +1,2100 @@
+[0;32mI (382) sdspi_transaction: cmd=5, R1 response: command no[0m
+[0;32mI (402) MASTER�ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c410,len:0xe2c
+load:0x4086e610,len:0x2e24
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2024 10:48:08[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=42030020 size=12d10h ( 77072) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=00022d38 vaddr=40800000 size=052e0h ( 21216) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=29458h (169048) map[0m
+[0;32mI (149) esp_image: segment 3: paddr=00051480 vaddr=408052e0 size=09d9ch ( 40348) load[0m
+[0;32mI (160) esp_image: segment 4: paddr=0005b224 vaddr=4080f080 size=01b10h (  6928) load[0m
+[0;32mI (165) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Unicore app[0m
+[0;33mW (188) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (195) cpu_start: Pro cpu start user code[0m
+[0;32mI (195) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (195) cpu_start: Application information:[0m
+[0;32mI (198) cpu_start: Project name:     modbus_master[0m
+[0;32mI (204) cpu_start: App version:      e10bbbaa-dirty[0m
+[0;32mI (209) cpu_start: Compile time:     Sep 23 2024 10:47:31[0m
+[0;32mI (215) cpu_start: ELF file SHA256:  a4bf265f8...[0m
+[0;32mI (221) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (225) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (230) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (235) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (240) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (247) heap_init: At 40812550 len 0006A0C0 (424 KiB): RAM[0m
+[0;32mI (253) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (259) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (266) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (294) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (301) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (307) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (312) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) MASTER_TEST: Initializing SD card[0m
+[0;32mI (322) MASTER_TEST: Using SPI peripheral[0m
+[0;32mI (322) MASTER_TEST: Mounting filesystem[0m
+[0;32mI (332) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (342) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (382) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (402) MASTER_TEST: Filesystem mounted[0m
+Name: SD16G
+Type: SDHC/SDXC
+Speed: 20.00 MHz (limit: 20.00 MHz)
+Size: 7620MB
+CSD: ver=2, sector_size=512, capacity=15605760 read_bl_len=9
+SSR: bus_width=1
+[0;32mI (402) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (412) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (422) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (432) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (442) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (452) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Minimum free heap size: 411752 bytes
+[0;32mI (462) uart: queue free spaces: 20[0m
+[0;32mI (522) MASTER_TEST: Modbus master stack initialized...[0m
+[0;32mI (622) MASTER_TEST: Time set manually[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;32mI (622) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (632) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (642) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (652) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (652) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;32mI (672) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0x514), write successful.[0m
+[0;32mI (682) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = 1300.00 (0x0514) read successful.[0m
+[0;32mI (692) MASTER_TEST: Characteristic #32 CHG_STATUS_2 (__) value = 5600.00 (0x15E0) read successful.[0m
+[0;32mI (702) MASTER_TEST: Characteristic #33 READ_FREQ (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (712) MASTER_TEST: Characteristic #34 READ_ TEMPERATURE_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (722) MASTER_TEST: Characteristic #35 READ_FAN_SPEED_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (732) MASTER_TEST: Characteristic #36 READ_FAN_SPEED_2 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (742) MASTER_TEST: Characteristic #37 READ_AC_FOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (752) MASTER_TEST: Characteristic #38 READ_AC_VOUT (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (762) MASTER_TEST: Characteristic #39 READ_OP_LD_PCNT (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (772) MASTER_TEST: Characteristic #40 READ_OP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (782) MASTER_TEST: Characteristic #41 READ_OP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (792) MASTER_TEST: Characteristic #42 READ_OP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (802) MASTER_TEST: Characteristic #43 READ_OP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (802) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 4621.00 (0x120D) read successful.[0m
+[0;32mI (812) MASTER_TEST: Characteristic #45 READ_CHG_CURR (mA) value = 4621.00 (0x120D) read successful.[0m
+[0;32mI (822) MASTER_TEST: Characteristic #46 BAT_CAPACITY (%%) value = 4621.00 (0x120D) read successful.[0m
+[0;32mI (832) MASTER_TEST: Characteristic #47 INV_STATUS (__) value = 4621.00 (0x120D) read successful.[0m
+[0;32mI (842) MASTER_TEST: Characteristic #48 INV_FAULT (__) value = 4621.00 (0x120D) read successful.[0m
+[0;32mI (852) MASTER_TEST: Characteristic #49 READ_BP_WATT_HI (W) value = 4621.00 (0x120D) read successful.[0m
+[0;32mI (862) MASTER_TEST: Characteristic #50 READ_BP_WATT_LO (W) value = 4621.00 (0x120D) read successful.[0m
+[0;32mI (872) MASTER_TEST: Characteristic #51 READ_BP_VA_HI (VA) value = 4621.00 (0x120D) read successful.[0m
+[0;32mI (882) MASTER_TEST: Characteristic #52 READ_BP_VA_LO (VA) value = 4621.00 (0x120D) read successful.[0m
+[0;32mI (892) MASTER_TEST: Characteristic #53 READ_AC_IOUT (Hz) value = 4621.00 (0x120D) read successful.[0m
+[0;32mI (902) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (1922) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+cnt: 1
+[0;32mI (3922) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120d) read successful.[0m
+[0;32mI (4922) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120d) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 2
+[0;32mI (7342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (8342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 3
+[0;32mI (10342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (11342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 4
+[0;32mI (13342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120d) read successful.[0m
+[0;32mI (14342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120d) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 5
+[0;32mI (16342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120d) read successful.[0m
+[0;32mI (17342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120d) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 6
+[0;32mI (19342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120d) read successful.[0m
+[0;32mI (20342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120d) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 7
+[0;32mI (22342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (23342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 8
+[0;32mI (25342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120d) read successful.[0m
+[0;32mI (26342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120d) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 9
+[0;32mI (28342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120d) read successful.[0m
+[0;32mI (29342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120d) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 10
+[0;32mI (31342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120d) read successful.[0m
+[0;32mI (32342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120d) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 11
+[0;32mI (34342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120d) read successful.[0m
+[0;32mI (35342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120d) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 12
+[0;32mI (37342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120b) read successful.[0m
+[0;32mI (38342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120b) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 13
+[0;32mI (40342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (41342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 14
+[0;32mI (43342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (44342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 15
+[0;32mI (46342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (47342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 16
+[0;32mI (49342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (50342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 17
+[0;32mI (52342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120b) read successful.[0m
+[0;32mI (53342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120b) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 18
+[0;32mI (55342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (56342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 19
+[0;32mI (58342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (59342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 20
+[0;32mI (61342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (62342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 21
+[0;32mI (64342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120b) read successful.[0m
+[0;32mI (65342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120b) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 22
+[0;32mI (67342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (68342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 23
+[0;32mI (70342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (71342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 24
+[0;32mI (73342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (74342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 25
+[0;32mI (76342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (77342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 26
+[0;32mI (79342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120b) read successful.[0m
+[0;32mI (80342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120b) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 27
+[0;32mI (82342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (83342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 28
+[0;32mI (85342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (86342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 29
+[0;32mI (88342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (89342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 30
+[0;32mI (91342) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = 1300.00 (0x0514) read successful.[0m
+[0;32mI (91342) MASTER_TEST: Characteristic #32 CHG_STATUS_2 (__) value = 5600.00 (0x15E0) read successful.[0m
+[0;32mI (91352) MASTER_TEST: Characteristic #33 READ_FREQ (Hz) value = 4620.00 (0x120C) read successful.[0m
+[0;32mI (91362) MASTER_TEST: Characteristic #34 READ_ TEMPERATURE_1 (__) value = 4620.00 (0x120C) read successful.[0m
+[0;32mI (91372) MASTER_TEST: Characteristic #35 READ_FAN_SPEED_1 (__) value = 4620.00 (0x120C) read successful.[0m
+[0;32mI (91382) MASTER_TEST: Characteristic #36 READ_FAN_SPEED_2 (__) value = 4620.00 (0x120C) read successful.[0m
+[0;32mI (91392) MASTER_TEST: Characteristic #37 READ_AC_FOUT (Hz) value = 4620.00 (0x120C) read successful.[0m
+[0;32mI (91402) MASTER_TEST: Characteristic #38 READ_AC_VOUT (mV) value = 4620.00 (0x120C) read successful.[0m
+[0;32mI (91412) MASTER_TEST: Characteristic #39 READ_OP_LD_PCNT (%%) value = 4620.00 (0x120C) read successful.[0m
+[0;32mI (91422) MASTER_TEST: Characteristic #40 READ_OP_WATT_HI (W) value = 4620.00 (0x120C) read successful.[0m
+[0;32mI (91432) MASTER_TEST: Characteristic #41 READ_OP_WATT_LO (W) value = 4620.00 (0x120C) read successful.[0m
+[0;32mI (91442) MASTER_TEST: Characteristic #42 READ_OP_VA_HI (VA) value = 4620.00 (0x120C) read successful.[0m
+[0;32mI (91452) MASTER_TEST: Characteristic #43 READ_OP_VA_LO (VA) value = 4620.00 (0x120C) read successful.[0m
+[0;32mI (91462) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 4618.00 (0x120A) read successful.[0m
+[0;32mI (91472) MASTER_TEST: Characteristic #45 READ_CHG_CURR (mA) value = 4618.00 (0x120A) read successful.[0m
+[0;32mI (91482) MASTER_TEST: Characteristic #46 BAT_CAPACITY (%%) value = 4618.00 (0x120A) read successful.[0m
+[0;32mI (91492) MASTER_TEST: Characteristic #47 INV_STATUS (__) value = 4618.00 (0x120A) read successful.[0m
+[0;32mI (91502) MASTER_TEST: Characteristic #48 INV_FAULT (__) value = 4618.00 (0x120A) read successful.[0m
+[0;32mI (91512) MASTER_TEST: Characteristic #49 READ_BP_WATT_HI (W) value = 4618.00 (0x120A) read successful.[0m
+[0;32mI (91522) MASTER_TEST: Characteristic #50 READ_BP_WATT_LO (W) value = 4618.00 (0x120A) read successful.[0m
+[0;32mI (91532) MASTER_TEST: Characteristic #51 READ_BP_VA_HI (VA) value = 4618.00 (0x120A) read successful.[0m
+[0;32mI (91542) MASTER_TEST: Characteristic #52 READ_BP_VA_LO (VA) value = 4618.00 (0x120A) read successful.[0m
+[0;32mI (91552) MASTER_TEST: Characteristic #53 READ_AC_IOUT (Hz) value = 4618.00 (0x120A) read successful.[0m
+[0;32mI (91562) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (91572) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (92582) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 2
+[0;32mI (95102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120b) read successful.[0m
+[0;32mI (96102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120b) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 3
+[0;32mI (98102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (99102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 4
+[0;32mI (101102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (102102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 5
+[0;32mI (104102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120b) read successful.[0m
+[0;32mI (105102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120b) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 6
+[0;32mI (107102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120b) read successful.[0m
+[0;32mI (108102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120b) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 7
+[0;32mI (110102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120a) read successful.[0m
+[0;32mI (111102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120a) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 8
+[0;32mI (113102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1209) read successful.[0m
+[0;32mI (114102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1209) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 9
+[0;32mI (116102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1208) read successful.[0m
+[0;32mI (117102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1208) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 10
+[0;32mI (119102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1209) read successful.[0m
+[0;32mI (120102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1209) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 11
+[0;32mI (122102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1209) read successful.[0m
+[0;32mI (123102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1209) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 12
+[0;32mI (125102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1209) read successful.[0m
+[0;32mI (126102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1209) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 13
+[0;32mI (128102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1207) read successful.[0m
+[0;32mI (129102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1207) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 14
+[0;32mI (131102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1208) read successful.[0m
+[0;32mI (132102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1208) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 15
+[0;32mI (134102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1208) read successful.[0m
+[0;32mI (135102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1208) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 16
+[0;32mI (137102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1208) read successful.[0m
+[0;32mI (138102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1208) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 17
+[0;32mI (140102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1208) read successful.[0m
+[0;32mI (141102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1208) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 18
+[0;32mI (143102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1206) read successful.[0m
+[0;32mI (144102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1206) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 19
+[0;32mI (146102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1207) read successful.[0m
+[0;32mI (147102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1207) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 20
+[0;32mI (149102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1207) read successful.[0m
+[0;32mI (150102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1207) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 21
+[0;32mI (152102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1206) read successful.[0m
+[0;32mI (153102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1206) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 22
+Oscillating
+Finished!
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Amps being written: 1300
+[0;32mI (154702) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (154712) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (154712) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (154722) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (154732) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Amps being written: 1300
+[0;32mI (154752) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0x514), write successful.[0m
+[0;32mI (155102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1206) read successful.[0m
+[0;32mI (156102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1206) read successful.[0m
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 23
+Oscillating
+Finished!
+[0;32mI (158312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1206) read successful.[0m
+[0;32mI (159312) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1206) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 24
+[0;32mI (161312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1205) read successful.[0m
+[0;32mI (162312) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1205) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 25
+[0;32mI (164312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1205) read successful.[0m
+[0;32mI (165312) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1205) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 26
+[0;32mI (167312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1204) read successful.[0m
+[0;32mI (168312) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1204) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 27
+[0;32mI (170312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1204) read successful.[0m
+[0;32mI (171312) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1204) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 28
+[0;32mI (173312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1204) read successful.[0m
+[0;32mI (174312) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1204) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 29
+[0;32mI (176312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1203) read successful.[0m
+[0;32mI (177312) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1203) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 30
+[0;32mI (179312) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = 1300.00 (0x0514) read successful.[0m
+[0;32mI (179312) MASTER_TEST: Characteristic #32 CHG_STATUS_2 (__) value = 5600.00 (0x15E0) read successful.[0m
+[0;32mI (179322) MASTER_TEST: Characteristic #33 READ_FREQ (Hz) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179332) MASTER_TEST: Characteristic #34 READ_ TEMPERATURE_1 (__) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179342) MASTER_TEST: Characteristic #35 READ_FAN_SPEED_1 (__) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179352) MASTER_TEST: Characteristic #36 READ_FAN_SPEED_2 (__) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179362) MASTER_TEST: Characteristic #37 READ_AC_FOUT (Hz) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179372) MASTER_TEST: Characteristic #38 READ_AC_VOUT (mV) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179382) MASTER_TEST: Characteristic #39 READ_OP_LD_PCNT (%%) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179392) MASTER_TEST: Characteristic #40 READ_OP_WATT_HI (W) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179402) MASTER_TEST: Characteristic #41 READ_OP_WATT_LO (W) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179412) MASTER_TEST: Characteristic #42 READ_OP_VA_HI (VA) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179422) MASTER_TEST: Characteristic #43 READ_OP_VA_LO (VA) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179432) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179442) MASTER_TEST: Characteristic #45 READ_CHG_CURR (mA) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179452) MASTER_TEST: Characteristic #46 BAT_CAPACITY (%%) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179462) MASTER_TEST: Characteristic #47 INV_STATUS (__) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179472) MASTER_TEST: Characteristic #48 INV_FAULT (__) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179482) MASTER_TEST: Characteristic #49 READ_BP_WATT_HI (W) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179492) MASTER_TEST: Characteristic #50 READ_BP_WATT_LO (W) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179502) MASTER_TEST: Characteristic #51 READ_BP_VA_HI (VA) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179512) MASTER_TEST: Characteristic #52 READ_BP_VA_LO (VA) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179522) MASTER_TEST: Characteristic #53 READ_AC_IOUT (Hz) value = 4611.00 (0x1203) read successful.[0m
+[0;32mI (179532) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (179542) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (180552) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 2
+[0;32mI (182972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1204) read successful.[0m
+[0;32mI (183972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1204) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 3
+[0;32mI (185972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (186972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 4
+[0;32mI (188972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1203) read successful.[0m
+[0;32mI (189972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1203) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 5
+[0;32mI (191972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1203) read successful.[0m
+[0;32mI (192972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1203) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 6
+[0;32mI (194972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (195972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 7
+[0;32mI (197972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1203) read successful.[0m
+[0;32mI (198972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1203) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 8
+[0;32mI (200972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (201972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 9
+[0;32mI (203972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1203) read successful.[0m
+[0;32mI (204972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1203) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 10
+[0;32mI (206972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (207972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 11
+[0;32mI (209972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (210972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 12
+[0;32mI (212972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (213972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 13
+[0;32mI (215972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (216972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 14
+[0;32mI (218972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (219972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 15
+[0;32mI (221972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (222972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 16
+[0;32mI (224972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (225972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 17
+[0;32mI (227972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (228972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 18
+[0;32mI (230972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (231972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 19
+[0;32mI (233972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (234972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 20
+[0;32mI (236972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+Oscillating
+Finished!
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;32mI (237102) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (237102) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (237112) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (237122) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (237132) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;32mI (237152) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0x514), write successful.[0m
+Oscillating
+Finished!
+[0;32mI (237972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 21
+[0;32mI (240182) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (241182) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 22
+[0;32mI (243182) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (244182) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 23
+[0;32mI (246182) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (247182) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 24
+[0;32mI (249182) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (250182) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 25
+[0;32mI (252182) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1203) read successful.[0m
+[0;32mI (253182) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1203) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 26
+[0;32mI (255182) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (256182) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 27
+[0;32mI (258182) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (259182) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 28
+[0;32mI (261182) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1203) read successful.[0m
+[0;32mI (262182) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1203) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 29
+[0;32mI (264182) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (265182) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 30
+[0;32mI (267182) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = 1300.00 (0x0514) read successful.[0m
+[0;32mI (267182) MASTER_TEST: Characteristic #32 CHG_STATUS_2 (__) value = 5600.00 (0x15E0) read successful.[0m
+[0;32mI (267192) MASTER_TEST: Characteristic #33 READ_FREQ (Hz) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267202) MASTER_TEST: Characteristic #34 READ_ TEMPERATURE_1 (__) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267212) MASTER_TEST: Characteristic #35 READ_FAN_SPEED_1 (__) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267222) MASTER_TEST: Characteristic #36 READ_FAN_SPEED_2 (__) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267232) MASTER_TEST: Characteristic #37 READ_AC_FOUT (Hz) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267242) MASTER_TEST: Characteristic #38 READ_AC_VOUT (mV) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267252) MASTER_TEST: Characteristic #39 READ_OP_LD_PCNT (%%) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267262) MASTER_TEST: Characteristic #40 READ_OP_WATT_HI (W) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267272) MASTER_TEST: Characteristic #41 READ_OP_WATT_LO (W) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267282) MASTER_TEST: Characteristic #42 READ_OP_VA_HI (VA) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267292) MASTER_TEST: Characteristic #43 READ_OP_VA_LO (VA) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267302) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267312) MASTER_TEST: Characteristic #45 READ_CHG_CURR (mA) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267322) MASTER_TEST: Characteristic #46 BAT_CAPACITY (%%) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267332) MASTER_TEST: Characteristic #47 INV_STATUS (__) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267342) MASTER_TEST: Characteristic #48 INV_FAULT (__) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267352) MASTER_TEST: Characteristic #49 READ_BP_WATT_HI (W) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267362) MASTER_TEST: Characteristic #50 READ_BP_WATT_LO (W) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267372) MASTER_TEST: Characteristic #51 READ_BP_VA_HI (VA) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267382) MASTER_TEST: Characteristic #52 READ_BP_VA_LO (VA) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267392) MASTER_TEST: Characteristic #53 READ_AC_IOUT (Hz) value = 4610.00 (0x1202) read successful.[0m
+[0;32mI (267402) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (267412) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1203) read successful.[0m
+[0;32mI (268422) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1203) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 2
+[0;32mI (271252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (272252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 3
+[0;32mI (274252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (275252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 4
+[0;32mI (277252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (278252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 5
+[0;32mI (280252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1203) read successful.[0m
+[0;32mI (281252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1203) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 6
+[0;32mI (283252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (284252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 7
+[0;32mI (286252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (287252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 8
+[0;32mI (289252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (290252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 9
+[0;32mI (292252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (293252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 10
+[0;32mI (295252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (296252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 11
+[0;32mI (298252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (299252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 12
+[0;32mI (301252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (302252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 13
+[0;32mI (304252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (305252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 14
+[0;32mI (307252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (308252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 15
+[0;32mI (310252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (311252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 16
+[0;32mI (313252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (314252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 17
+[0;32mI (316252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (317252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 18
+[0;32mI (319252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (320252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 19
+[0;32mI (322252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (323252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 20
+[0;32mI (325252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (326252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 21
+[0;32mI (328252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (329252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 22
+[0;32mI (331252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (332252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 23
+[0;32mI (334252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (335252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 24
+[0;32mI (337252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (338252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 25
+[0;32mI (340252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (341252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 26
+[0;32mI (343252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (344252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 27
+[0;32mI (346252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (347252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 28
+[0;32mI (349252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (350252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 29
+[0;32mI (352252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (353252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 30
+[0;32mI (355252) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = 1300.00 (0x0514) read successful.[0m
+[0;32mI (355252) MASTER_TEST: Characteristic #32 CHG_STATUS_2 (__) value = 5600.00 (0x15E0) read successful.[0m
+[0;32mI (355262) MASTER_TEST: Characteristic #33 READ_FREQ (Hz) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355272) MASTER_TEST: Characteristic #34 READ_ TEMPERATURE_1 (__) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355282) MASTER_TEST: Characteristic #35 READ_FAN_SPEED_1 (__) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355292) MASTER_TEST: Characteristic #36 READ_FAN_SPEED_2 (__) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355302) MASTER_TEST: Characteristic #37 READ_AC_FOUT (Hz) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355312) MASTER_TEST: Characteristic #38 READ_AC_VOUT (mV) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355322) MASTER_TEST: Characteristic #39 READ_OP_LD_PCNT (%%) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355332) MASTER_TEST: Characteristic #40 READ_OP_WATT_HI (W) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355342) MASTER_TEST: Characteristic #41 READ_OP_WATT_LO (W) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355352) MASTER_TEST: Characteristic #42 READ_OP_VA_HI (VA) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355362) MASTER_TEST: Characteristic #43 READ_OP_VA_LO (VA) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355372) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355382) MASTER_TEST: Characteristic #45 READ_CHG_CURR (mA) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355392) MASTER_TEST: Characteristic #46 BAT_CAPACITY (%%) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355402) MASTER_TEST: Characteristic #47 INV_STATUS (__) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355412) MASTER_TEST: Characteristic #48 INV_FAULT (__) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355422) MASTER_TEST: Characteristic #49 READ_BP_WATT_HI (W) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355432) MASTER_TEST: Characteristic #50 READ_BP_WATT_LO (W) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355442) MASTER_TEST: Characteristic #51 READ_BP_VA_HI (VA) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355452) MASTER_TEST: Characteristic #52 READ_BP_VA_LO (VA) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355462) MASTER_TEST: Characteristic #53 READ_AC_IOUT (Hz) value = 4609.00 (0x1201) read successful.[0m
+[0;32mI (355472) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (355482) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (356492) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 2
+[0;32mI (358912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (359912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 3
+[0;32mI (361912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (362912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 4
+[0;32mI (364912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x11ff) read successful.[0m
+[0;32mI (365912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x11ff) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 5
+[0;32mI (367912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (368912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 6
+[0;32mI (370912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (371912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 7
+[0;32mI (373912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (374912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 8
+[0;32mI (376912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (377912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 9
+[0;32mI (379912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (380912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 10
+[0;32mI (382912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (383912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 11
+[0;32mI (385912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (386912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 12
+[0;32mI (388912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (389912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 13
+[0;32mI (391912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (392912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 14
+[0;32mI (394912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (395912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 15
+[0;32mI (397912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (398912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 16
+[0;32mI (400912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (401912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 17
+[0;32mI (403912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (404912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 18
+[0;32mI (406912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x11ff) read successful.[0m
+[0;32mI (407912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x11ff) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 19
+[0;32mI (409912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (410912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 20
+[0;32mI (412912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;32mI (413912) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1200) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 21
+[0;32mI (415912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;31mE (417312) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 22
+[0;32mI (419312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;31mE (420712) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 23
+[0;32mI (422712) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x11ff) read successful.[0m
+[0;31mE (424112) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 24
+[0;32mI (426112) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1200) read successful.[0m
+[0;31mE (427512) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 25
+[0;32mI (429512) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x11ff) read successful.[0m
+[0;31mE (430912) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 26
+[0;32mI (432912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x11ff) read successful.[0m
+[0;31mE (434312) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 27
+[0;32mI (436312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x11ff) read successful.[0m
+[0;31mE (437712) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 28
+[0;32mI (439712) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x11ff) read successful.[0m
+[0;31mE (441112) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 29
+[0;32mI (443112) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x11ff) read successful.[0m
+[0;31mE (444512) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 30
+[0;31mE (446912) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (446912) MASTER_TEST: Characteristic #31 (CURVE_CC_1) read fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;32mI (446922) MASTER_TEST: Timeout error occurred. Skipping all other CID's.[0m
+[0;31mE (447332) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (448732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 2
+[0;31mE (451342) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (452742) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 3
+[0;31mE (455142) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (456542) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 4
+[0;31mE (458942) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (460342) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Amps being written: 1300
+[0;31mE (460912) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (460912) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (461322) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (461322) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 5
+[0;31mE (461732) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (461732) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (462142) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (462142) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (462552) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (462552) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Amps being written: 1300
+[0;31mE (462972) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (462972) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (463382) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (463382) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (463792) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (463792) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (464202) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (464202) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (464612) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (464622) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (465032) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (466432) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 6
+[0;31mE (469042) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (470442) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 7
+[0;31mE (472842) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (474242) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 8
+[0;31mE (476642) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (478042) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 9
+[0;31mE (480442) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (481842) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 10
+[0;31mE (484242) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (485642) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 11
+[0;31mE (488042) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (489442) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 12
+[0;31mE (491842) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (493242) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 13
+[0;31mE (495642) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (497042) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 14
+[0;31mE (499442) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (500842) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 15
+[0;31mE (503242) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (504642) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 16
+[0;31mE (507042) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (508442) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 17
+[0;31mE (510842) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (512242) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 18
+[0;31mE (514642) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (516042) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 19
+[0;31mE (518442) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (519842) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 20
+[0;31mE (522242) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (523642) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 21
+[0;31mE (526042) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (527442) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 22
+[0;31mE (529842) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (531242) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 23
+[0;31mE (533642) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (535042) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 24
+[0;31mE (537442) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (538842) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 25
+[0;31mE (541242) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (542642) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 26
+[0;31mE (545042) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (546442) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 27
+[0;31mE (548842) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c410,len:0xe2c
+load:0x4086e610,len:0x2e24
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2024 10:48:08[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=42030020 size=12d10h ( 77072) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=00022d38 vaddr=40800000 size=052e0h ( 21216) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=29458h (169048) map[0m
+[0;32mI (149) esp_image: segment 3: paddr=00051480 vaddr=408052e0 size=09d9ch ( 40348) load[0m
+[0;32mI (160) esp_image: segment 4: paddr=0005b224 vaddr=4080f080 size=01b10h (  6928) load[0m
+[0;32mI (165) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Unicore app[0m
+[0;33mW (188) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (195) cpu_start: Pro cpu start user code[0m
+[0;32mI (195) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (195) cpu_start: Application information:[0m
+[0;32mI (198) cpu_start: Project name:     modbus_master[0m
+[0;32mI (204) cpu_start: App version:      e10bbbaa-dirty[0m
+[0;32mI (209) cpu_start: Compile time:     Sep 23 2024 10:47:31[0m
+[0;32mI (215) cpu_start: ELF file SHA256:  a4bf265f8...[0m
+[0;32mI (221) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (225) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (230) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (235) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (240) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (247) heap_init: At 40812550 len 0006A0C0 (424 KiB): RAM[0m
+[0;32mI (253) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (259) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (266) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (294) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (301) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (307) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (312) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) MASTER_TEST: Initializing SD card[0m
+[0;32mI (322) MASTER_TEST: Using SPI peripheral[0m
+[0;32mI (322) MASTER_TEST: Mounting filesystem[0m
+[0;32mI (332) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (342) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (382) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (402) MASTER_TEST: Filesystem mounted[0m
+Name: SD16G
+Type: SDHC/SDXC
+Speed: 20.00 MHz (limit: 20.00 MHz)
+Size: 7620MB
+CSD: ver=2, sector_size=512, capacity=15605760 read_bl_len=9
+SSR: bus_width=1
+[0;32mI (402) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (412) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (422) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (432) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (442) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (452) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Minimum free heap size: 411752 bytes
+Oscillating
+Finished!
+[0;31mE (472) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (472) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (482) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (492) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (512) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (522) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (532) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (542) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (552) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (562) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (572) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (582) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (592) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (602) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (612) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (622) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (632) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (642) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (652) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (662) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (672) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (682) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (692) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (702) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (712) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (722) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (732) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (742) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (752) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (762) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (772) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (782) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (792) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (802) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (812) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (822) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (832) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (842) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (852) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (862) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (872) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (882) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (892) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (902) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (912) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (932) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (942) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (952) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (962) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (972) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (982) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (992) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (1002) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (1012) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (1022) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (1032) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (1042) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;31mE (1052) MB_CONTROLLER_MASTER: mbc_master_get_cid_info(47): Master interface is not correctly initialized.[0m
+[0;32mI (1062) uart: queue free spaces: 20[0m
+[0;32mI (1112) MASTER_TEST: Modbus master stack initialized...[0m
+[0;32mI (1212) MASTER_TEST: Time set manually[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Amps being written: 1300
+[0;31mE (1612) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1612) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2022) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2022) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2432) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2432) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2842) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2842) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3252) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3252) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Amps being written: 1300
+[0;31mE (3672) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3672) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4082) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4082) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4492) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4492) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4902) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (4902) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (5312) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (5312) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (5722) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (5722) MASTER_TEST: Characteristic #31 (CURVE_CC_1) read fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;32mI (5732) MASTER_TEST: Timeout error occurred. Skipping all other CID's.[0m
+[0;31mE (6142) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (7542) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+cnt: 1
+[0;31mE (9942) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (11342) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+Oscillating
+Finished!
+Oscillating
+Finished!
+cnt: 2
+[0;31mE (14072) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (15472) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;31mE (17872) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (19272) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;31mE (21672) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (23072) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;31mE (25472) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (26872) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;31mE (29272) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (30672) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;31mE (33072) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (34472) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;31mE (36872) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (38272) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;31mE (40672) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (42072) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;31mE (44472) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (45872) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;31mE (48272) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (49672) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;31mE (52072) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (53472) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;31mE (55872) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (57272) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;31mE (59672) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (61072) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;31mE (63472) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (64872) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;31mE (67272) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (68672) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;31mE (71072) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (72472) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+[0;31mE (74872) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (76272) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;31mE (78672) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (80072) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 20
+[0;31mE (82472) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (83872) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 21
+[0;31mE (86272) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (87672) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 22
+[0;31mE (90072) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Writing 40 amps
+Amps being written: 4000
+[0;32mI (90952) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (90962) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (90962) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (90972) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (90982) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Writing 40 amps
+Amps being written: 4000
+[0;31mE (91402) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (91402) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (91812) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (91812) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (92222) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (92222) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (92632) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (92632) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (93042) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (93042) MASTER_TEST: Characteristic #54 (CURVE_CC_2) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Oscillating
+[0;31mE (93452) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 23
+[0;32mI (95662) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x11f7) read successful.[0m
+[0;31mE (97062) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 24
+[0;32mI (99062) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x11f8) read successful.[0m
+Finished!
+Oscillating
+Finished!
+Oscillating
+[0;32mI (100062) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x11f8) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 25
+[0;32mI (102062) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x11f7) read successful.[0m
+[0;32mI (103062) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x11f7) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 26
+[0;32mI (105062) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x11f7) read successful.[0m
+[0;32mI (106062) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x11f7) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 27
+[0;32mI (108062) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1235) read successful.[0m
+[0;32mI (109062) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1235) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 28
+[0;32mI (111062) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x121a) read successful.[0m
+[0;32mI (112062) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x121a) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 29
+[0;32mI (114062) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x120c) read successful.[0m
+[0;32mI (115062) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x120c) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 30
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c410,len:0xe2c
+load:0x4086e610,len:0x2e24
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2024 10:48:08[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=42030020 size=12d10h ( 77072) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=00022d38 vaddr=40800000 size=052e0h ( 21216) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=29458h (169048) map[0m
+[0;32mI (149) esp_image: segment 3: paddr=00051480 vaddr=408052e0 size=09d9ch ( 40348) load[0m
+[0;32mI (160) esp_image: segment 4: paddr=0005b224 vaddr=4080f080 size=01b10h (  6928) load[0m
+[0;32mI (165) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Unicore app[0m
+[0;33mW (188) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (195) cpu_start: Pro cpu start user code[0m
+[0;32mI (195) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (195) cpu_start: Application information:[0m
+[0;32mI (198) cpu_start: Project name:     modbus_master[0m
+[0;32mI (204) cpu_start: App version:      e10bbbaa-dirty[0m
+[0;32mI (209) cpu_start: Compile time:     Sep 23 2024 10:47:31[0m
+[0;32mI (215) cpu_start: ELF file SHA256:  a4bf265f8...[0m
+[0;32mI (221) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (225) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (230) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (235) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (240) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (247) heap_init: At 40812550 len 0006A0C0 (424 KiB): RAM[0m
+[0;32mI (253) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (259) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (266) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (294) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (301) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (307) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (312) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) MASTER_TEST: Initializing SD card[0m
+[0;32mI (322) MASTER_TEST: Using SPI peripheral[0m
+[0;32mI (322) MASTER_TEST: Mounting filesystem[0m
+[0;32mI (332) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (342) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (382) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (402) MASTER_TEST: Filesystem mounted[0m
+Name: SD16G
+Type: SDHC/SDXC
+Speed: 20.00 MHz (limit: 20.00 MHz)
+Size: 7620MB
+CSD: ver=2, sector_size=512, capacity=15605760 read_bl_len=9
+SSR: bus_width=1
+[0;32mI (402) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (412) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (422) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (432) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (442) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (452) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Minimum free heap size: 411752 bytes
+[0;32mI (462) uart: queue free spaces: 20[0m
+[0;32mI (522) MASTER_TEST: Modbus master stack initialized...[0m
+[0;32mI (622) MASTER_TEST: Time set manually[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;32mI (622) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (632) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (642) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (652) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (662) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;32mI (672) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0x514), write successful.[0m
+[0;32mI (682) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = 1300.00 (0x0514) read successful.[0m
+[0;32mI (692) MASTER_TEST: Characteristic #32 CHG_STATUS_2 (__) value = 5600.00 (0x15E0) read successful.[0m
+[0;32mI (702) MASTER_TEST: Characteristic #33 READ_FREQ (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (712) MASTER_TEST: Characteristic #34 READ_ TEMPERATURE_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (722) MASTER_TEST: Characteristic #35 READ_FAN_SPEED_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (732) MASTER_TEST: Characteristic #36 READ_FAN_SPEED_2 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (742) MASTER_TEST: Characteristic #37 READ_AC_FOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (752) MASTER_TEST: Characteristic #38 READ_AC_VOUT (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (762) MASTER_TEST: Characteristic #39 READ_OP_LD_PCNT (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (772) MASTER_TEST: Characteristic #40 READ_OP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (782) MASTER_TEST: Characteristic #41 READ_OP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (792) MASTER_TEST: Characteristic #42 READ_OP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (802) MASTER_TEST: Characteristic #43 READ_OP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (812) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 4617.00 (0x1209) read successful.[0m
+[0;32mI (812) MASTER_TEST: Characteristic #45 READ_CHG_CURR (mA) value = 4617.00 (0x1209) read successful.[0m
+[0;32mI (822) MASTER_TEST: Characteristic #46 BAT_CAPACITY (%%) value = 4617.00 (0x1209) read successful.[0m
+[0;32mI (832) MASTER_TEST: Characteristic #47 INV_STATUS (__) value = 4617.00 (0x1209) read successful.[0m
+[0;32mI (842) MASTER_TEST: Characteristic #48 INV_FAULT (__) value = 4617.00 (0x1209) read successful.[0m
+[0;32mI (852) MASTER_TEST: Characteristic #49 READ_BP_WATT_HI (W) value = 4617.00 (0x1209) read successful.[0m
+[0;32mI (862) MASTER_TEST: Characteristic #50 READ_BP_WATT_LO (W) value = 4617.00 (0x1209) read successful.[0m
+[0;32mI (872) MASTER_TEST: Characteristic #51 READ_BP_VA_HI (VA) value = 4617.00 (0x1209) read successful.[0m
+[0;32mI (882) MASTER_TEST: Characteristic #52 READ_BP_VA_LO (VA) value = 4617.00 (0x1209) read successful.[0m
+[0;32mI (892) MASTER_TEST: Characteristic #53 READ_AC_IOUT (Hz) value = 4617.00 (0x1209) read successful.[0m
+[0;32mI (902) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = 5.00 (0x0005) read successful.[0m
+[0;32mI (912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1209) read successful.[0m
+[0;32mI (1922) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1209) read successful.[0m
+cnt: 1
+[0;32mI (3922) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1207) read successful.[0m
+[0;32mI (4922) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1207) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 2
+[0;32mI (7442) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1206) read successful.[0m
+[0;32mI (8442) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1206) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 3
+[0;32mI (10442) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1205) read successful.[0m
+[0;32mI (11442) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1205) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 4
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Amps being written: 1300
+[0;32mI (13102) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (13112) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (13112) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (13122) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (13132) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Amps being written: 1300
+[0;32mI (13152) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0x514), write successful.[0m
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+[0;32mI (13442) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1205) read successful.[0m
+[0;32mI (14442) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1205) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 5
+[0;32mI (16652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1204) read successful.[0m
+[0;32mI (17652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1204) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 6
+[0;32mI (19652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1202) read successful.[0m
+[0;32mI (20652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1202) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 7
+[0;32mI (22652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1203) read successful.[0m
+[0;32mI (23652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1203) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 8
+[0;32mI (25652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1201) read successful.[0m
+[0;32mI (26652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1201) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 9
+[0;32mI (28652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1209) read successful.[0m
+[0;32mI (29652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1209) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 10
+[0;32mI (31652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x122c) read successful.[0m
+[0;32mI (32652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x122c) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 11
+[0;32mI (34652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1233) read successful.[0m
+[0;32mI (35652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1233) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 12
+[0;32mI (37652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x123a) read successful.[0m
+[0;32mI (38652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x123a) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 13
+[0;32mI (40652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1240) read successful.[0m
+[0;32mI (41652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1240) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 14
+[0;32mI (43652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1245) read successful.[0m
+[0;32mI (44652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1245) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 15
+[0;32mI (46652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x124a) read successful.[0m
+[0;32mI (47652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x124a) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 16
+[0;32mI (49652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x124e) read successful.[0m
+[0;32mI (50652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x124e) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 17
+[0;32mI (52652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1252) read successful.[0m
+[0;32mI (53652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1252) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 18
+[0;32mI (55652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1258) read successful.[0m
+[0;32mI (56652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1258) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 19
+[0;32mI (58652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x125c) read successful.[0m
+[0;32mI (59652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x125c) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 20
+[0;32mI (61652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x125f) read successful.[0m
+[0;32mI (62652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x125f) read successful.[0m
+CID 56, Value writing to 0x0100 is 0x5, vBAT >= 4700[0;32mI (63652) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = (0x5), write successful.[0m
+CID 57, Value writing to 0x0100 is 0x5, vBAT >= 4700[0;32mI (63662) MASTER_TEST: Characteristic #57 SET_INV_OPERATION2 (..) value = (0x5), write successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 21
+[0;32mI (64882) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1263) read successful.[0m
+[0;32mI (65882) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1263) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 22
+[0;32mI (67882) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1267) read successful.[0m
+[0;32mI (68882) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1267) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 23
+[0;32mI (70882) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x126b) read successful.[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c410,len:0xe2c
+load:0x4086e610,len:0x2e24
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2024 10:48:08[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=42030020 size=12d10h ( 77072) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=00022d38 vaddr=40800000 size=052e0h ( 21216) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=29458h (169048) map[0m
+[0;32mI (149) esp_image: segment 3: paddr=00051480 vaddr=408052e0 size=09d9ch ( 40348) load[0m
+[0;32mI (160) esp_image: segment 4: paddr=0005b224 vaddr=4080f080 size=01b10h (  6928) load[0m
+[0;32mI (165) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Unicore app[0m
+[0;33mW (188) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (195) cpu_start: Pro cpu start user code[0m
+[0;32mI (195) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (195) cpu_start: Application information:[0m
+[0;32mI (198) cpu_start: Project name:     modbus_master[0m
+[0;32mI (204) cpu_start: App version:      e10bbbaa-dirty[0m
+[0;32mI (209) cpu_start: Compile time:     Sep 23 2024 10:47:31[0m
+[0;32mI (215) cpu_start: ELF file SHA256:  a4bf265f8...[0m
+[0;32mI (221) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (225) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (230) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (235) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (240) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (247) heap_init: At 40812550 len 0006A0C0 (424 KiB): RAM[0m
+[0;32mI (253) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (259) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (266) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (294) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (301) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (307) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (312) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) MASTER_TEST: Initializing SD card[0m
+[0;32mI (322) MASTER_TEST: Using SPI peripheral[0m
+[0;32mI (322) MASTER_TEST: Mounting filesystem[0m
+[0;32mI (332) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (342) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (382) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (402) MASTER_TEST: Filesystem mounted[0m
+Name: SD16G
+Type: SDHC/SDXC
+Speed: 20.00 MHz (limit: 20.00 MHz)
+Size: 7620MB
+CSD: ver=2, sector_size=512, capacity=15605760 read_bl_len=9
+SSR: bus_width=1
+[0;32mI (402) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (412) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (422) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (432) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (442) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (452) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Minimum free heap size: 411752 bytes
+[0;32mI (462) uart: queue free spaces: 20[0m
+[0;32mI (522) MASTER_TEST: Modbus master stack initialized...[0m
+[0;32mI (622) MASTER_TEST: Time set manually[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Amps being written: 1300
+[0;32mI (622) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (632) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (642) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (652) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (662) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Amps being written: 1300
+[0;32mI (672) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0x514), write successful.[0m
+[0;32mI (682) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = 1300.00 (0x0514) read successful.[0m
+[0;32mI (692) MASTER_TEST: Characteristic #32 CHG_STATUS_2 (__) value = 5600.00 (0x15E0) read successful.[0m
+[0;32mI (702) MASTER_TEST: Characteristic #33 READ_FREQ (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (712) MASTER_TEST: Characteristic #34 READ_ TEMPERATURE_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (722) MASTER_TEST: Characteristic #35 READ_FAN_SPEED_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (732) MASTER_TEST: Characteristic #36 READ_FAN_SPEED_2 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (742) MASTER_TEST: Characteristic #37 READ_AC_FOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (752) MASTER_TEST: Characteristic #38 READ_AC_VOUT (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (762) MASTER_TEST: Characteristic #39 READ_OP_LD_PCNT (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (772) MASTER_TEST: Characteristic #40 READ_OP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (782) MASTER_TEST: Characteristic #41 READ_OP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (792) MASTER_TEST: Characteristic #42 READ_OP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (802) MASTER_TEST: Characteristic #43 READ_OP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (812) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 4685.00 (0x124D) read successful.[0m
+[0;32mI (822) MASTER_TEST: Characteristic #45 READ_CHG_CURR (mA) value = 4685.00 (0x124D) read successful.[0m
+[0;32mI (832) MASTER_TEST: Characteristic #46 BAT_CAPACITY (%%) value = 4685.00 (0x124D) read successful.[0m
+[0;32mI (842) MASTER_TEST: Characteristic #47 INV_STATUS (__) value = 4685.00 (0x124D) read successful.[0m
+[0;32mI (852) MASTER_TEST: Characteristic #48 INV_FAULT (__) value = 4685.00 (0x124D) read successful.[0m
+[0;32mI (862) MASTER_TEST: Characteristic #49 READ_BP_WATT_HI (W) value = 4685.00 (0x124D) read successful.[0m
+[0;32mI (872) MASTER_TEST: Characteristic #50 READ_BP_WATT_LO (W) value = 4685.00 (0x124D) read successful.[0m
+[0;32mI (872) MASTER_TEST: Characteristic #51 READ_BP_VA_HI (VA) value = 4685.00 (0x124D) read successful.[0m
+[0;32mI (882) MASTER_TEST: Characteristic #52 READ_BP_VA_LO (VA) value = 4685.00 (0x124D) read successful.[0m
+[0;32mI (892) MASTER_TEST: Characteristic #53 READ_AC_IOUT (Hz) value = 4685.00 (0x124D) read successful.[0m
+[0;32mI (902) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = 5.00 (0x0005) read successful.[0m
+[0;32mI (912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x124b) read successful.[0m
+[0;32mI (1922) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x124b) read successful.[0m
+cnt: 1
+[0;32mI (3922) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1248) read successful.[0m
+[0;32mI (4922) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1248) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 2
+[0;32mI (7442) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1243) read successful.[0m
+[0;32mI (8442) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1243) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 3
+[0;32mI (10442) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1242) read successful.[0m
+[0;32mI (11442) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1242) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 4
+[0;32mI (13442) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x123e) read successful.[0m
+[0;32mI (14442) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x123e) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 5
+[0;32mI (16442) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x125e) read successful.[0m
+[0;32mI (17442) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x125e) read successful.[0m
+CID 56, Value writing to 0x0100 is 0x5, vBAT >= 4700[0;32mI (18442) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = (0x5), write successful.[0m
+CID 57, Value writing to 0x0100 is 0x5, vBAT >= 4700[0;32mI (18452) MASTER_TEST: Characteristic #57 SET_INV_OPERATION2 (..) value = (0x5), write successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 6
+[0;32mI (19672) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1267) read successful.[0m
+[0;32mI (20672) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1267) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 7
+[0;32mI (22672) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x126d) read successful.[0m
+[0;32mI (23672) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x126d) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 8
+[0;32mI (25672) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1271) read successful.[0m
+[0;32mI (26672) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1271) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 9
+[0;32mI (28672) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1276) read successful.[0m
+[0;32mI (29672) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1276) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 10
+[0;32mI (31672) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1279) read successful.[0m
+[0;32mI (32672) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1279) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 11
+[0;32mI (34672) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x127d) read successful.[0m
+[0;32mI (35672) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x127d) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 12
+[0;32mI (37672) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1280) read successful.[0m
+[0;32mI (38672) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1280) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 13
+[0;32mI (40672) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1284) read successful.[0m
+[0;32mI (41672) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1284) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 14
+[0;32mI (43672) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1288) read successful.[0m
+[0;32mI (44672) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1288) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 15
+[0;32mI (46672) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1289) read successful.[0m
+[0;32mI (47672) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1289) read successful.[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c410,len:0xe2c
+load:0x4086e610,len:0x2e24
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2024 10:48:08[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=42030020 size=12d10h ( 77072) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=00022d38 vaddr=40800000 size=052e0h ( 21216) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=29458h (169048) map[0m
+[0;32mI (149) esp_image: segment 3: paddr=00051480 vaddr=408052e0 size=09d9ch ( 40348) load[0m
+[0;32mI (160) esp_image: segment 4: paddr=0005b224 vaddr=4080f080 size=01b10h (  6928) load[0m
+[0;32mI (165) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Unicore app[0m
+[0;33mW (188) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (195) cpu_start: Pro cpu start user code[0m
+[0;32mI (195) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (195) cpu_start: Application information:[0m
+[0;32mI (198) cpu_start: Project name:     modbus_master[0m
+[0;32mI (204) cpu_start: App version:      e10bbbaa-dirty[0m
+[0;32mI (209) cpu_start: Compile time:     Sep 23 2024 10:47:31[0m
+[0;32mI (215) cpu_start: ELF file SHA256:  a4bf265f8...[0m
+[0;32mI (221) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (225) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (230) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (235) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (240) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (247) heap_init: At 40812550 len 0006A0C0 (424 KiB): RAM[0m
+[0;32mI (253) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (259) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (266) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (294) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (301) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (307) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (312) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) MASTER_TEST: Initializing SD card[0m
+[0;32mI (322) MASTER_TEST: Using SPI peripheral[0m
+[0;32mI (322) MASTER_TEST: Mounting filesystem[0m
+[0;32mI (332) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (342) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (382) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (402) MASTER_TEST: Filesystem mounted[0m
+Name: SD16G
+Type: SDHC/SDXC
+Speed: 20.00 MHz (limit: 20.00 MHz)
+Size: 7620MB
+CSD: ver=2, sector_size=512, capacity=15605760 read_bl_len=9
+SSR: bus_width=1
+[0;32mI (402) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (412) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (422) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (432) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (442) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (452) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Minimum free heap size: 411752 bytes
+[0;32mI (462) uart: queue free spaces: 20[0m
+[0;32mI (522) MASTER_TEST: Modbus master stack initialized...[0m
+[0;32mI (622) MASTER_TEST: Time set manually[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Amps being written: 1300
+[0;32mI (622) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (632) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (642) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (652) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (662) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Amps being written: 1300
+[0;32mI (672) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0x514), write successful.[0m
+[0;32mI (682) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = 1300.00 (0x0514) read successful.[0m
+[0;32mI (692) MASTER_TEST: Characteristic #32 CHG_STATUS_2 (__) value = 5600.00 (0x15E0) read successful.[0m
+[0;32mI (702) MASTER_TEST: Characteristic #33 READ_FREQ (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (712) MASTER_TEST: Characteristic #34 READ_ TEMPERATURE_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (722) MASTER_TEST: Characteristic #35 READ_FAN_SPEED_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (732) MASTER_TEST: Characteristic #36 READ_FAN_SPEED_2 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (742) MASTER_TEST: Characteristic #37 READ_AC_FOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (752) MASTER_TEST: Characteristic #38 READ_AC_VOUT (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (762) MASTER_TEST: Characteristic #39 READ_OP_LD_PCNT (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (772) MASTER_TEST: Characteristic #40 READ_OP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (782) MASTER_TEST: Characteristic #41 READ_OP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (792) MASTER_TEST: Characteristic #42 READ_OP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (802) MASTER_TEST: Characteristic #43 READ_OP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (812) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 4717.00 (0x126D) read successful.[0m
+[0;32mI (822) MASTER_TEST: Characteristic #45 READ_CHG_CURR (mA) value = 4717.00 (0x126D) read successful.[0m
+[0;32mI (832) MASTER_TEST: Characteristic #46 BAT_CAPACITY (%%) value = 4717.00 (0x126D) read successful.[0m
+[0;32mI (842) MASTER_TEST: Characteristic #47 INV_STATUS (__) value = 4717.00 (0x126D) read successful.[0m
+[0;32mI (852) MASTER_TEST: Characteristic #48 INV_FAULT (__) value = 4717.00 (0x126D) read successful.[0m
+[0;32mI (862) MASTER_TEST: Characteristic #49 READ_BP_WATT_HI (W) value = 4717.00 (0x126D) read successful.[0m
+[0;32mI (872) MASTER_TEST: Characteristic #50 READ_BP_WATT_LO (W) value = 4717.00 (0x126D) read successful.[0m
+[0;32mI (882) MASTER_TEST: Characteristic #51 READ_BP_VA_HI (VA) value = 4717.00 (0x126D) read successful.[0m
+[0;32mI (882) MASTER_TEST: Characteristic #52 READ_BP_VA_LO (VA) value = 4717.00 (0x126D) read successful.[0m
+[0;32mI (892) MASTER_TEST: Characteristic #53 READ_AC_IOUT (Hz) value = 4717.00 (0x126D) read successful.[0m
+[0;32mI (902) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = 5.00 (0x0005) read successful.[0m
+[0;32mI (912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x126d) read successful.[0m
+[0;32mI (1922) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x126d) read successful.[0m
+CID 56, Value writing to 0x0100 is 0x5, vBAT >= 4700[0;32mI (2922) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = (0x5), write successful.[0m
+CID 57, Value writing to 0x0100 is 0x5, vBAT >= 4700[0;32mI (2932) MASTER_TEST: Characteristic #57 SET_INV_OPERATION2 (..) value = (0x5), write successful.[0m
+cnt: 1
+[0;32mI (3942) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1268) read successful.[0m
+[0;32mI (4942) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1268) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 2
+[0;32mI (7462) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1265) read successful.[0m
+[0;32mI (8462) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1265) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 3
+[0;32mI (10462) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1263) read successful.[0m
+[0;32mI (11462) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1263) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 4
+[0;32mI (13462) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1262) read successful.[0m
+[0;32mI (14462) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1262) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 5
+[0;32mI (16462) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x127f) read successful.[0m
+[0;32mI (17462) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x127f) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 6
+[0;32mI (19462) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1287) read successful.[0m
+[0;32mI (20462) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1287) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 7
+[0;32mI (22462) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x128c) read successful.[0m
+[0;32mI (23462) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x128c) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 8
+[0;32mI (25462) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x128f) read successful.[0m
+[0;32mI (26462) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x128f) read successful.[0m
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Writing 40 amps
+Amps being written: 4000
+[0;32mI (27292) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (27302) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (27302) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (27312) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (27322) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Writing 40 amps
+Amps being written: 4000
+[0;32mI (27342) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0xfa0), write successful.[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+cnt: 9
+[0;32mI (28802) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1272) read successful.[0m
+[0;32mI (29802) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1272) read successful.[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+cnt: 10
+[0;32mI (31802) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x126f) read successful.[0m
+[0;32mI (32802) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x126f) read successful.[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+cnt: 11
+[0;32mI (34802) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x126c) read successful.[0m
+[0;32mI (35802) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x126c) read successful.[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+cnt: 12
+[0;32mI (37802) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x126a) read successful.[0m
+[0;32mI (38802) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x126a) read successful.[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+cnt: 13
+[0;32mI (40802) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x126a) read successful.[0m
+[0;32mI (41802) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x126a) read successful.[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+cnt: 14
+[0;32mI (43802) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1279) read successful.[0m
+Oscillating
+Finished!
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Amps being written: 1300
+[0;32mI (44362) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (44372) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (44372) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (44382) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (44392) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Amps being written: 1300
+[0;32mI (44412) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0x514), write successful.[0m
+Oscillating
+Finished!
+[0;32mI (44802) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1279) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+Oscillating
+Finished!
+cnt: 15
+[0;32mI (47042) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x126f) read successful.[0m
+[0;32mI (48042) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x126f) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 16
+[0;32mI (50042) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x126b) read successful.[0m
+[0;32mI (51042) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x126b) read successful.[0m
+Eddison registers LOW, Bates registers HIGH (EDDISON PLUGGED IN)
+cnt: 17
+Oscillating
+Finished!
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;32mI (53042) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (53042) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (53052) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (53062) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (53072) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;32mI (53092) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0x514), write successful.[0m
+Oscillating
+Finished!
+[0;32mI (53102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x126b) read successful.[0m
+[0;32mI (54112) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x126b) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 18
+[0;32mI (56332) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x126a) read successful.[0m
+[0;32mI (57332) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x126a) read successful.[0m
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+Writing 40 amps
+Amps being written: 4000
+[0;32mI (58142) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (58152) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (58162) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (58162) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (58172) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+Writing 40 amps
+Amps being written: 4000
+[0;32mI (58192) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0xfa0), write successful.[0m
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+Oscillating
+Finished!
+cnt: 19
+[0;32mI (59552) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1269) read successful.[0m
+[0;32mI (60552) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1269) read successful.[0m
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+cnt: 20
+[0;32mI (62552) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1268) read successful.[0m
+[0;32mI (63552) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1268) read successful.[0m
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+cnt: 21
+[0;32mI (65552) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1267) read successful.[0m
+[0;32mI (66552) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1267) read successful.[0m
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+cnt: 22
+[0;32mI (68552) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1267) read successful.[0m
+[0;32mI (69552) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1267) read successful.[0m
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+cnt: 23
+[0;32mI (71552) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1265) read successful.[0m
+[0;32mI (72552) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1265) read successful.[0m
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+cnt: 24
+[0;32mI (74552) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x129c) read successful.[0m
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Writing 40 amps
+Amps being written: 4000
+[0;32mI (75462) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (75472) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (75472) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (75482) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (75492) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+Writing 40 amps
+Amps being written: 4000
+[0;32mI (75512) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0xfa0), write successful.[0m
+[0;32mI (75552) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x129c) read successful.[0m
+Eddison and Bates registers LOW (BOTH PLUGGED IN) 
+cnt: 25
+[0;32mI (77872) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x12dd) read successful.[0m
+[0;32mI (78872) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x12dd) read successful.[0m
+Oscillating
+Finished!
+Oscillating
+Finished!
+Oscillating
+Finished!
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+Writing 40 amps
+Amps being written: 4000
+[0;32mI (79522) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (79532) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (79542) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (79542) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+[0;32mI (79552) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0xfa0), write successful.[0m
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+Writing 40 amps
+Amps being written: 4000
+[0;32mI (79572) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0xfa0), write successful.[0m
+Oscillating
+Finished!
+Eddison registers HIGH, Bates registers LOW (BATES PLUGGED IN)
+cnt: 26
+Oscillating
+Finished!
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;32mI (81002) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (81002) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (81012) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (81022) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+[0;32mI (81032) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = (0x514), write successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;32mI (81052) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0x514), write successful.[0m
+Oscillating
+Finished!
+[0;32mI (81092) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x128d) read successful.[0m
+[0;32mI (82092) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x128d) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 27
+[0;32mI (84312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1284) read successful.[0m
+[0;32mI (85312) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1284) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 28
+[0;32mI (87312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1280) read successful.[0m
+[0;32mI (88312) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1280) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 29
+[0;32mI (90312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x127f) read successful.[0m
+[0;32mI (91312) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x127f) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 30
+[0;32mI (93312) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = 1300.00 (0x0514) read successful.[0m
+[0;32mI (93312) MASTER_TEST: Characteristic #32 CHG_STATUS_2 (__) value = 5600.00 (0x15E0) read successful.[0m
+[0;32mI (93322) MASTER_TEST: Characteristic #33 READ_FREQ (Hz) value = 4735.00 (0x127F) read successful.[0m
+[0;32mI (93332) MASTER_TEST: Characteristic #34 READ_ TEMPERATURE_1 (__) value = 4735.00 (0x127F) read successful.[0m
+[0;32mI (93342) MASTER_TEST: Characteristic #35 READ_FAN_SPEED_1 (__) value = 4735.00 (0x127F) read successful.[0m
+[0;32mI (93352) MASTER_TEST: Characteristic #36 READ_FAN_SPEED_2 (__) value = 4735.00 (0x127F) read successful.[0m
+[0;32mI (93362) MASTER_TEST: Characteristic #37 READ_AC_FOUT (Hz) value = 4735.00 (0x127F) read successful.[0m
+[0;32mI (93372) MASTER_TEST: Characteristic #38 READ_AC_VOUT (mV) value = 4735.00 (0x127F) read successful.[0m
+[0;32mI (93382) MASTER_TEST: Characteristic #39 READ_OP_LD_PCNT (%%) value = 4735.00 (0x127F) read successful.[0m
+[0;32mI (93392) MASTER_TEST: Characteristic #40 READ_OP_WATT_HI (W) value = 4735.00 (0x127F) read successful.[0m
+[0;32mI (93402) MASTER_TEST: Characteristic #41 READ_OP_WATT_LO (W) value = 4735.00 (0x127F) read successful.[0m
+[0;32mI (93412) MASTER_TEST: Characteristic #42 READ_OP_VA_HI (VA) value = 4735.00 (0x127F) read successful.[0m
+[0;32mI (93422) MASTER_TEST: Characteristic #43 READ_OP_VA_LO (VA) value = 4735.00 (0x127F) read successful.[0m
+[0;32mI (93432) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 4732.00 (0x127C) read successful.[0m
+[0;32mI (93442) MASTER_TEST: Characteristic #45 READ_CHG_CURR (mA) value = 4732.00 (0x127C) read successful.[0m
+[0;32mI (93452) MASTER_TEST: Characteristic #46 BAT_CAPACITY (%%) value = 4732.00 (0x127C) read successful.[0m
+[0;32mI (93462) MASTER_TEST: Characteristic #47 INV_STATUS (__) value = 4732.00 (0x127C) read successful.[0m
+[0;32mI (93472) MASTER_TEST: Characteristic #48 INV_FAULT (__) value = 4732.00 (0x127C) read successful.[0m
+[0;32mI (93482) MASTER_TEST: Characteristic #49 READ_BP_WATT_HI (W) value = 4732.00 (0x127C) read successful.[0m
+[0;32mI (93492) MASTER_TEST: Characteristic #50 READ_BP_WATT_LO (W) value = 4732.00 (0x127C) read successful.[0m
+[0;32mI (93502) MASTER_TEST: Characteristic #51 READ_BP_VA_HI (VA) value = 4732.00 (0x127C) read successful.[0m
+[0;32mI (93512) MASTER_TEST: Characteristic #52 READ_BP_VA_LO (VA) value = 4732.00 (0x127C) read successful.[0m
+[0;32mI (93522) MASTER_TEST: Characteristic #53 READ_AC_IOUT (Hz) value = 4732.00 (0x127C) read successful.[0m
+[0;32mI (93532) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = 5.00 (0x0005) read successful.[0m
+[0;32mI (93542) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x127c) read successful.[0m
+[0;32mI (94552) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x127c) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 2
+[0;32mI (96982) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x127b) read successful.[0m
+[0;32mI (97982) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x127b) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 3
+[0;32mI (99982) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x127a) read successful.[0m
+[0;32mI (100982) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x127a) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 4
+[0;32mI (102982) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1279) read successful.[0m
+[0;32mI (103982) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1279) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 5
+[0;32mI (105982) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1277) read successful.[0m
+[0;32mI (106982) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1277) read successful.[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+cnt: 6
+[0;32mI (108982) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x1278) read successful.[0m
+[0;32mI (109982) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x1278) read successful.[0m

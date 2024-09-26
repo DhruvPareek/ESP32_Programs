@@ -37,9 +37,11 @@ extern uint8_t INPUT_60AMP_SWITCH_VAL; // Initial value for GPIO 0
 // The different things we will ask modbus_master_func to do
 typedef enum
 {
-    WRITE_DATA = 0,
+    WRITE_CURVE_CC = 0,
+    WRITE_INV_OPERATION,
     READ_MEANWELL,
     READ_JDB,
+
 
 } OperationType;
 
@@ -50,7 +52,7 @@ int sum(int one, int two);
 
 esp_err_t master_init(void);
 void *master_get_param_data(const mb_parameter_descriptor_t *param_descriptor);
-void master_operation_func(void *arg, int EDDISON_VAL, int BATES_VAL, OperationType op_type, Queue *queue);
+bool master_operation_func(void *arg, int EDDISON_VAL, int BATES_VAL, OperationType op_type, Queue *queue);
 
 void get_time_string(char *time_str, size_t max_len);
 void set_time_manually(int year, int month, int day, int hour, int minute, int second);

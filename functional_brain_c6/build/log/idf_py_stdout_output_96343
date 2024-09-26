@@ -1,0 +1,10 @@
+[0/1] Re-running CMake...
+-- Component directory /Users/dhruv/esp/functional_brain_c6/components/espressif__esp-modbus does not contain a CMakeLists.txt file. No component will be added
+-- Building ESP-IDF components for target esp32c6
+Processing 3 dependencies:
+[1/3] espressif/esp-modbus (1.0.16)
+[2/3] idf (5.2.2)
+[3/3] mb_example_common (*)
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja 
+/usr/local/Cellar/cmake/3.29.5/bin/cmake --regenerate-during-build -S/Users/dhruv/esp/functional_brain_c6 -B/Users/dhruv/esp/functional_brain_c6/build

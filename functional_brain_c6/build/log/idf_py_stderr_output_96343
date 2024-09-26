@@ -1,0 +1,29 @@
+CMake Error at /Users/dhruv/esp/esp-idf/tools/cmake/build.cmake:544 (message):
+  ERROR: Some components (espressif/esp-modbus) in the "managed_components"
+  directory were modified on the disk since the last run of the CMake.
+  Content of this directory is managed automatically.
+
+  If you want to keep the changes, you can move the directory with the
+  component to the "components"directory of your project.
+
+  I.E.  for "espressif__esp-modbus" run:
+
+  mv
+  /Users/dhruv/esp/functional_brain_c6/managed_components/espressif__esp-modbus
+  /Users/dhruv/esp/functional_brain_c6/components/espressif__esp-modbus
+
+  Or, if you want to discard the changes remove the ".component_hash" file
+  from the component's directory.
+
+  I.E.  for "espressif__esp-modbus" run:
+
+  rm
+  /Users/dhruv/esp/functional_brain_c6/managed_components/espressif__esp-modbus/.component_hash
+
+
+Call Stack (most recent call first):
+  /Users/dhruv/esp/esp-idf/tools/cmake/project.cmake:605 (idf_build_process)
+  CMakeLists.txt:6 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

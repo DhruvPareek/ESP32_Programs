@@ -1,0 +1,1310 @@
+rain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (362) MAS_TIMEOUT). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (372) MASTER_TEST: Filesystem mounted[0m
+Name: 
+Type: SDSC
+Speed: N/A
+Size: 346779MB
+CSD: ver=-1515870810, seESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c410,len:0xe2c
+load:0x4086e610,len:0x2e24
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 23 2024 10:48:08[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=42030020 size=12c68h ( 76904) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=00022c90 vaddr=40800000 size=05388h ( 21384) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=292a0h (168608) map[0m
+[0;32mI (149) esp_image: segment 3: paddr=000512c8 vaddr=40805388 size=09cf4h ( 40180) load[0m
+[0;32mI (159) esp_image: segment 4: paddr=0005afc4 vaddr=4080f080 size=01b08h (  6920) load[0m
+[0;32mI (165) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Unicore app[0m
+[0;33mW (188) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (195) cpu_start: Pro cpu start user code[0m
+[0;32mI (195) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (195) cpu_start: Application information:[0m
+[0;32mI (198) cpu_start: Project name:     modbus_master[0m
+[0;32mI (204) cpu_start: App version:      e10bbbaa-dirty[0m
+[0;32mI (209) cpu_start: Compile time:     Sep 23 2024 10:47:31[0m
+[0;32mI (215) cpu_start: ELF file SHA256:  4a1a3f56a...[0m
+[0;32mI (221) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (225) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (230) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (235) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (240) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (247) heap_init: At 40812550 len 0006A0C0 (424 KiB): RAM[0m
+[0;32mI (253) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (259) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (266) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (294) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (301) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (307) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (312) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) MASTER_TEST: Initializing SD card[0m
+[0;32mI (322) MASTER_TEST: Using SPI peripheral[0m
+[0;32mI (322) MASTER_TEST: Mounting filesystem[0m
+[0;32mI (332) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (362) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[0;32mI (362) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (362) MASTER_TEST: Failed to initialize the card (ESP_ERR_TIMEOUT). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (372) MASTER_TEST: Filesystem mounted[0m
+Name: 
+Type: SDSC
+Speed: N/A
+Size: 346779MB
+CSD: ver=-1515870810, sector_size=1082216384, capacity=336 read_bl_len=5
+SSR: bus_width=1
+[0;32mI (392) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (402) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (412) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (422) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:3 [0m
+[0;32mI (432) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (432) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Minimum free heap size: 440556 bytes
+[0;32mI (452) uart: queue free spaces: 20[0m
+[0;32mI (502) MASTER_TEST: Modbus master stack initialized...[0m
+[0;32mI (602) MASTER_TEST: Time set manually[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;31mE (1002) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1002) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1412) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1412) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1822) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (1822) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2232) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2232) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2642) MB_CONTROLLER_MASTER: mbc_master_set_parameter(135): Master set parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (2642) MASTER_TEST: Characteristic #31 (CURVE_CC_1) write fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+Eddison and Bates register HIGH (NEITHER PLUGGED IN) 
+Amps being written: 1300
+[0;32mI (2662) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0x514), write successful.[0m
+[0;32mI (2672) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0x514), write successful.[0m
+[0;32mI (2682) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0x514), write successful.[0m
+[0;32mI (2692) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0x514), write successful.[0m
+[0;32mI (2702) MASTER_TEST: Characteristic #54 CURVE_CC_2 (__) value = (0x514), write successful.[0m
+[0;31mE (3102) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (3102) MASTER_TEST: Characteristic #31 (CURVE_CC_1) read fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;32mI (3112) MASTER_TEST: Timeout error occurred. Skipping all other CID's.[0m
+[0;31mE (3522) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (3532) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+cnt: 1
+[0;31mE (4932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (4932) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+Oscillating
+Finished!
+Oscillating
+Finished!
+[0;31mE (6342) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (6342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;31mE (7752) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (7752) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;31mE (9162) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (9162) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;31mE (10572) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (10572) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;31mE (11982) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (11982) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;31mE (13392) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (13392) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;31mE (14802) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (14802) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;31mE (16212) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (16212) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;31mE (17622) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (17622) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;31mE (19032) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (19032) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;31mE (20442) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (20442) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;31mE (21852) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (21852) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;31mE (23262) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (23262) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;31mE (24672) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (24672) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;31mE (26082) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (26082) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;31mE (27492) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (27492) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+[0;31mE (28902) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (28902) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;31mE (30312) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (30312) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 20
+[0;31mE (31722) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (31722) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 21
+[0;31mE (33132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (33132) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 22
+[0;31mE (34542) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (34542) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 23
+[0;31mE (35952) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (35952) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 24
+[0;31mE (37362) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (37362) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 25
+[0;31mE (38772) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (38772) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 26
+[0;31mE (40182) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (40182) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 27
+[0;31mE (41592) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (41592) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 28
+[0;31mE (43002) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (43002) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 29
+[0;31mE (44412) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (44412) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 30
+[0;31mE (45822) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;31mE (45822) MASTER_TEST: Characteristic #31 (CURVE_CC_1) read fail, err = 0x107 (ESP_ERR_TIMEOUT).[0m
+[0;32mI (45832) MASTER_TEST: Timeout error occurred. Skipping all other CID's.[0m
+[0;31mE (46232) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (46242) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+[0;31mE (47652) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (47652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;31mE (49062) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (49062) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;31mE (50472) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (50472) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;31mE (51882) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (51882) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;31mE (53292) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (53292) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;31mE (54702) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (54702) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;31mE (56112) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (56112) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;31mE (57522) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (57522) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;31mE (58932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (58932) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;31mE (60342) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (60342) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;31mE (61752) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (61752) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;31mE (63162) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (63162) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;31mE (64572) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (64572) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;31mE (65982) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (65982) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;31mE (67392) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (67392) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;32mI (68402) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (68802) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+[0;32mI (69812) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (70212) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;32mI (71222) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (71222) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 20
+[0;32mI (72232) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (72232) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 21
+[0;32mI (73242) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (73242) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 22
+[0;32mI (74252) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (74252) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 23
+[0;32mI (75262) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (75262) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 24
+[0;32mI (76272) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (76272) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 25
+[0;32mI (77282) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (77282) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 26
+[0;32mI (78292) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (78292) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 27
+[0;32mI (79302) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (79302) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 28
+[0;32mI (80312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (80312) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 29
+[0;32mI (81322) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (81322) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 30
+[0;32mI (82332) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = 1300.00 (0x0514) read successful.[0m
+[0;32mI (82332) MASTER_TEST: Characteristic #32 CHG_STATUS_2 (__) value = 5600.00 (0x15E0) read successful.[0m
+[0;32mI (82342) MASTER_TEST: Characteristic #33 READ_FREQ (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82352) MASTER_TEST: Characteristic #34 READ_ TEMPERATURE_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82362) MASTER_TEST: Characteristic #35 READ_FAN_SPEED_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82372) MASTER_TEST: Characteristic #36 READ_FAN_SPEED_2 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82382) MASTER_TEST: Characteristic #37 READ_AC_FOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82392) MASTER_TEST: Characteristic #38 READ_AC_VOUT (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82402) MASTER_TEST: Characteristic #39 READ_OP_LD_PCNT (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82412) MASTER_TEST: Characteristic #40 READ_OP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82422) MASTER_TEST: Characteristic #41 READ_OP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82432) MASTER_TEST: Characteristic #42 READ_OP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82442) MASTER_TEST: Characteristic #43 READ_OP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82452) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82462) MASTER_TEST: Characteristic #45 READ_CHG_CURR (mA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82472) MASTER_TEST: Characteristic #46 BAT_CAPACITY (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82482) MASTER_TEST: Characteristic #47 INV_STATUS (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82492) MASTER_TEST: Characteristic #48 INV_FAULT (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82502) MASTER_TEST: Characteristic #49 READ_BP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82512) MASTER_TEST: Characteristic #50 READ_BP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82522) MASTER_TEST: Characteristic #51 READ_BP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82532) MASTER_TEST: Characteristic #52 READ_BP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82542) MASTER_TEST: Characteristic #53 READ_AC_IOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (82552) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = 5.00 (0x0005) read successful.[0m
+[0;32mI (82562) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (82562) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+[0;32mI (83582) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (83582) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;32mI (84592) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (84592) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;32mI (85602) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (85602) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;32mI (86612) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (86612) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;32mI (87622) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (88022) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;32mI (89032) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (89432) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;32mI (90442) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (90842) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;32mI (91852) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (92252) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;32mI (93262) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (93662) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;32mI (94672) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (95072) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;32mI (96082) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (96482) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;32mI (97492) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (97892) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;32mI (98902) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (99302) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;32mI (100312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (100712) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;32mI (101722) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (102122) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;32mI (103132) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (103532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+[0;32mI (104542) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (104942) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;32mI (105952) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (106352) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 20
+[0;32mI (107362) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (107762) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 21
+[0;32mI (108772) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (109172) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 22
+[0;32mI (110182) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (110582) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 23
+[0;32mI (111592) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (111992) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 24
+[0;32mI (113002) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (113402) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 25
+[0;32mI (114412) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (114812) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 26
+[0;32mI (115822) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (116222) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 27
+[0;32mI (117232) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (117632) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 28
+[0;32mI (118642) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (119042) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 29
+[0;32mI (120052) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (120452) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 30
+[0;32mI (121462) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = 1300.00 (0x0514) read successful.[0m
+[0;32mI (121462) MASTER_TEST: Characteristic #32 CHG_STATUS_2 (__) value = 5600.00 (0x15E0) read successful.[0m
+[0;32mI (121472) MASTER_TEST: Characteristic #33 READ_FREQ (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121482) MASTER_TEST: Characteristic #34 READ_ TEMPERATURE_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121492) MASTER_TEST: Characteristic #35 READ_FAN_SPEED_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121502) MASTER_TEST: Characteristic #36 READ_FAN_SPEED_2 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121512) MASTER_TEST: Characteristic #37 READ_AC_FOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121522) MASTER_TEST: Characteristic #38 READ_AC_VOUT (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121532) MASTER_TEST: Characteristic #39 READ_OP_LD_PCNT (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121542) MASTER_TEST: Characteristic #40 READ_OP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121552) MASTER_TEST: Characteristic #41 READ_OP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121562) MASTER_TEST: Characteristic #42 READ_OP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121572) MASTER_TEST: Characteristic #43 READ_OP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121582) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121592) MASTER_TEST: Characteristic #45 READ_CHG_CURR (mA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121602) MASTER_TEST: Characteristic #46 BAT_CAPACITY (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121612) MASTER_TEST: Characteristic #47 INV_STATUS (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121622) MASTER_TEST: Characteristic #48 INV_FAULT (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121632) MASTER_TEST: Characteristic #49 READ_BP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121642) MASTER_TEST: Characteristic #50 READ_BP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121652) MASTER_TEST: Characteristic #51 READ_BP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121662) MASTER_TEST: Characteristic #52 READ_BP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121672) MASTER_TEST: Characteristic #53 READ_AC_IOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (121682) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = 5.00 (0x0005) read successful.[0m
+[0;32mI (121692) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (121702) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+[0;32mI (122712) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (123112) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;32mI (124122) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (124522) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;32mI (125532) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (125932) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;32mI (126942) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (127342) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;32mI (128352) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (128752) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;32mI (129762) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (130162) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;32mI (131172) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (131572) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;32mI (132582) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (132982) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;32mI (133992) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (134392) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;32mI (135402) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (135802) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;32mI (136812) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (137212) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;32mI (138222) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (138622) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;32mI (139632) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (140032) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;32mI (141042) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (141442) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;32mI (142452) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (142852) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;32mI (143862) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (144262) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+[0;32mI (145272) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (145672) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;32mI (146682) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (147082) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 20
+[0;32mI (148092) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (148492) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 21
+[0;32mI (149502) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (149902) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 22
+[0;32mI (150912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (151312) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 23
+[0;32mI (152322) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (152722) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 24
+[0;32mI (153732) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (154132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 25
+[0;32mI (155142) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (155542) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 26
+[0;32mI (156552) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (156952) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 27
+[0;32mI (157962) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (158362) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 28
+[0;32mI (159372) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (159772) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 29
+[0;32mI (160782) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (161182) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 30
+[0;32mI (162192) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = 1300.00 (0x0514) read successful.[0m
+[0;32mI (162192) MASTER_TEST: Characteristic #32 CHG_STATUS_2 (__) value = 5600.00 (0x15E0) read successful.[0m
+[0;32mI (162202) MASTER_TEST: Characteristic #33 READ_FREQ (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162212) MASTER_TEST: Characteristic #34 READ_ TEMPERATURE_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162222) MASTER_TEST: Characteristic #35 READ_FAN_SPEED_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162232) MASTER_TEST: Characteristic #36 READ_FAN_SPEED_2 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162242) MASTER_TEST: Characteristic #37 READ_AC_FOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162252) MASTER_TEST: Characteristic #38 READ_AC_VOUT (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162262) MASTER_TEST: Characteristic #39 READ_OP_LD_PCNT (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162272) MASTER_TEST: Characteristic #40 READ_OP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162282) MASTER_TEST: Characteristic #41 READ_OP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162292) MASTER_TEST: Characteristic #42 READ_OP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162302) MASTER_TEST: Characteristic #43 READ_OP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162322) MASTER_TEST: Characteristic #45 READ_CHG_CURR (mA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162332) MASTER_TEST: Characteristic #46 BAT_CAPACITY (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162342) MASTER_TEST: Characteristic #47 INV_STATUS (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162352) MASTER_TEST: Characteristic #48 INV_FAULT (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162362) MASTER_TEST: Characteristic #49 READ_BP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162372) MASTER_TEST: Characteristic #50 READ_BP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162382) MASTER_TEST: Characteristic #51 READ_BP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162392) MASTER_TEST: Characteristic #52 READ_BP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162402) MASTER_TEST: Characteristic #53 READ_AC_IOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (162412) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = 5.00 (0x0005) read successful.[0m
+[0;32mI (162422) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (162432) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+[0;32mI (163442) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (163842) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;32mI (164852) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (165252) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;32mI (166262) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (166662) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;32mI (167672) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (168072) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;32mI (169082) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (169482) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;32mI (170492) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (170892) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;32mI (171902) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (172302) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;32mI (173312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (173712) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;32mI (174722) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (175122) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;32mI (176132) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (176532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;32mI (177542) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (177942) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;32mI (178952) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (179352) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;32mI (180362) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (180762) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;32mI (181772) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (182172) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;32mI (183182) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (183582) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;32mI (184592) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (184992) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+[0;32mI (186002) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (186402) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;32mI (187412) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (187812) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 20
+[0;32mI (188822) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (189222) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 21
+[0;32mI (190232) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (190632) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 22
+[0;32mI (191642) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (191642) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 23
+[0;32mI (192652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (192652) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 24
+[0;32mI (193662) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (193662) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 25
+[0;32mI (194672) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (194672) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 26
+[0;32mI (195682) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (195682) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 27
+[0;32mI (196692) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (196692) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 28
+[0;32mI (197702) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (197702) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 29
+[0;32mI (198712) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (198712) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 30
+[0;32mI (199722) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = 1300.00 (0x0514) read successful.[0m
+[0;32mI (199722) MASTER_TEST: Characteristic #32 CHG_STATUS_2 (__) value = 5600.00 (0x15E0) read successful.[0m
+[0;32mI (199732) MASTER_TEST: Characteristic #33 READ_FREQ (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199742) MASTER_TEST: Characteristic #34 READ_ TEMPERATURE_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199752) MASTER_TEST: Characteristic #35 READ_FAN_SPEED_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199762) MASTER_TEST: Characteristic #36 READ_FAN_SPEED_2 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199772) MASTER_TEST: Characteristic #37 READ_AC_FOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199782) MASTER_TEST: Characteristic #38 READ_AC_VOUT (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199792) MASTER_TEST: Characteristic #39 READ_OP_LD_PCNT (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199802) MASTER_TEST: Characteristic #40 READ_OP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199812) MASTER_TEST: Characteristic #41 READ_OP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199822) MASTER_TEST: Characteristic #42 READ_OP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199832) MASTER_TEST: Characteristic #43 READ_OP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199842) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199852) MASTER_TEST: Characteristic #45 READ_CHG_CURR (mA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199862) MASTER_TEST: Characteristic #46 BAT_CAPACITY (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199872) MASTER_TEST: Characteristic #47 INV_STATUS (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199882) MASTER_TEST: Characteristic #48 INV_FAULT (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199892) MASTER_TEST: Characteristic #49 READ_BP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199902) MASTER_TEST: Characteristic #50 READ_BP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199912) MASTER_TEST: Characteristic #51 READ_BP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199922) MASTER_TEST: Characteristic #52 READ_BP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199932) MASTER_TEST: Characteristic #53 READ_AC_IOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (199942) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = 5.00 (0x0005) read successful.[0m
+[0;32mI (199952) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (199962) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+[0;32mI (200972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (200972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;32mI (201982) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (201982) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;32mI (202992) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (202992) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;32mI (204002) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (204002) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;32mI (205012) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (205012) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;32mI (206022) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (206022) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;32mI (207032) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (207032) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;32mI (208042) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (208042) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;32mI (209052) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (209052) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;32mI (210062) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (210062) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;32mI (211072) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (211072) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;32mI (212082) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (212082) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;32mI (213092) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (213092) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;32mI (214102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (214102) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;32mI (215112) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (215112) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;32mI (216122) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (216122) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+[0;32mI (217132) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (217132) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;32mI (218142) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (218142) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 20
+[0;32mI (219152) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (219152) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 21
+[0;32mI (220162) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (220162) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 22
+[0;32mI (221172) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (221172) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 23
+[0;32mI (222182) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (222182) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 24
+[0;32mI (223192) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (223192) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 25
+[0;32mI (224202) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (224202) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 26
+[0;32mI (225212) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (225212) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 27
+[0;32mI (226222) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (226222) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 28
+[0;32mI (227232) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (227232) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 29
+[0;32mI (228242) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (228642) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 30
+[0;32mI (229652) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = 1300.00 (0x0514) read successful.[0m
+[0;32mI (229652) MASTER_TEST: Characteristic #32 CHG_STATUS_2 (__) value = 5600.00 (0x15E0) read successful.[0m
+[0;32mI (229662) MASTER_TEST: Characteristic #33 READ_FREQ (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229672) MASTER_TEST: Characteristic #34 READ_ TEMPERATURE_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229682) MASTER_TEST: Characteristic #35 READ_FAN_SPEED_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229692) MASTER_TEST: Characteristic #36 READ_FAN_SPEED_2 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229702) MASTER_TEST: Characteristic #37 READ_AC_FOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229712) MASTER_TEST: Characteristic #38 READ_AC_VOUT (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229722) MASTER_TEST: Characteristic #39 READ_OP_LD_PCNT (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229732) MASTER_TEST: Characteristic #40 READ_OP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229742) MASTER_TEST: Characteristic #41 READ_OP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229752) MASTER_TEST: Characteristic #42 READ_OP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229762) MASTER_TEST: Characteristic #43 READ_OP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229772) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229782) MASTER_TEST: Characteristic #45 READ_CHG_CURR (mA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229792) MASTER_TEST: Characteristic #46 BAT_CAPACITY (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229802) MASTER_TEST: Characteristic #47 INV_STATUS (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229812) MASTER_TEST: Characteristic #48 INV_FAULT (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229822) MASTER_TEST: Characteristic #49 READ_BP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229832) MASTER_TEST: Characteristic #50 READ_BP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229842) MASTER_TEST: Characteristic #51 READ_BP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229852) MASTER_TEST: Characteristic #52 READ_BP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229862) MASTER_TEST: Characteristic #53 READ_AC_IOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (229872) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = 5.00 (0x0005) read successful.[0m
+[0;32mI (229882) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (229892) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+[0;32mI (230902) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (231302) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;32mI (232312) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (232712) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;32mI (233722) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (234122) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;32mI (235132) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (235532) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;32mI (236542) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (236942) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;32mI (237952) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (238352) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;32mI (239362) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (239762) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;32mI (240772) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (241172) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;32mI (242182) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (242582) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;32mI (243592) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (243992) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;32mI (245002) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (245402) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;32mI (246412) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (246812) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;32mI (247822) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (248222) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;32mI (249232) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (249632) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;32mI (250642) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (251042) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;32mI (252052) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (252452) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+[0;32mI (253462) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (253862) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;32mI (254872) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (255272) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 20
+[0;32mI (256282) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (256682) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 21
+[0;32mI (257692) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (258092) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 22
+[0;32mI (259102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (259502) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 23
+[0;32mI (260512) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (260912) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 24
+[0;32mI (261922) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (262322) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 25
+[0;32mI (263332) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (263732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 26
+[0;32mI (264742) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (265142) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 27
+[0;32mI (266152) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (266552) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 28
+[0;32mI (267562) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (267962) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 29
+[0;32mI (268972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (269372) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 30
+[0;32mI (270382) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = 1300.00 (0x0514) read successful.[0m
+[0;32mI (270382) MASTER_TEST: Characteristic #32 CHG_STATUS_2 (__) value = 5600.00 (0x15E0) read successful.[0m
+[0;32mI (270392) MASTER_TEST: Characteristic #33 READ_FREQ (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270402) MASTER_TEST: Characteristic #34 READ_ TEMPERATURE_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270412) MASTER_TEST: Characteristic #35 READ_FAN_SPEED_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270422) MASTER_TEST: Characteristic #36 READ_FAN_SPEED_2 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270432) MASTER_TEST: Characteristic #37 READ_AC_FOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270442) MASTER_TEST: Characteristic #38 READ_AC_VOUT (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270452) MASTER_TEST: Characteristic #39 READ_OP_LD_PCNT (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270462) MASTER_TEST: Characteristic #40 READ_OP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270472) MASTER_TEST: Characteristic #41 READ_OP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270482) MASTER_TEST: Characteristic #42 READ_OP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270492) MASTER_TEST: Characteristic #43 READ_OP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270502) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270512) MASTER_TEST: Characteristic #45 READ_CHG_CURR (mA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270522) MASTER_TEST: Characteristic #46 BAT_CAPACITY (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270532) MASTER_TEST: Characteristic #47 INV_STATUS (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270542) MASTER_TEST: Characteristic #48 INV_FAULT (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270552) MASTER_TEST: Characteristic #49 READ_BP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270562) MASTER_TEST: Characteristic #50 READ_BP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270572) MASTER_TEST: Characteristic #51 READ_BP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270582) MASTER_TEST: Characteristic #52 READ_BP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270592) MASTER_TEST: Characteristic #53 READ_AC_IOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (270602) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = 5.00 (0x0005) read successful.[0m
+[0;32mI (270612) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (270622) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+[0;32mI (271632) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (272032) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;32mI (273042) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (273442) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;32mI (274452) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (274852) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;32mI (275862) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (276262) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;32mI (277272) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (277672) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;32mI (278682) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (279082) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;32mI (280092) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (280492) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;32mI (281502) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (281902) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;32mI (282912) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (283312) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;32mI (284322) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (284722) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;32mI (285732) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (286132) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;32mI (287142) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (287542) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;32mI (288552) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (288952) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;32mI (289962) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (290362) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;32mI (291372) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (291772) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;32mI (292782) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (293182) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+[0;32mI (294192) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (294592) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;32mI (295602) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (296002) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 20
+[0;32mI (297012) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (297412) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 21
+[0;32mI (298422) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (298822) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 22
+[0;32mI (299832) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (300232) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 23
+[0;32mI (301242) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (301642) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 24
+[0;32mI (302652) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (303052) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 25
+[0;32mI (304062) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (304462) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 26
+[0;32mI (305472) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (305872) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 27
+[0;32mI (306882) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (307282) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 28
+[0;32mI (308292) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (308692) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 29
+[0;32mI (309702) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (310102) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 30
+[0;32mI (311112) MASTER_TEST: Characteristic #31 CURVE_CC_1 (__) value = 1300.00 (0x0514) read successful.[0m
+[0;32mI (311112) MASTER_TEST: Characteristic #32 CHG_STATUS_2 (__) value = 5600.00 (0x15E0) read successful.[0m
+[0;32mI (311122) MASTER_TEST: Characteristic #33 READ_FREQ (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311132) MASTER_TEST: Characteristic #34 READ_ TEMPERATURE_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311142) MASTER_TEST: Characteristic #35 READ_FAN_SPEED_1 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311152) MASTER_TEST: Characteristic #36 READ_FAN_SPEED_2 (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311162) MASTER_TEST: Characteristic #37 READ_AC_FOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311172) MASTER_TEST: Characteristic #38 READ_AC_VOUT (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311182) MASTER_TEST: Characteristic #39 READ_OP_LD_PCNT (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311192) MASTER_TEST: Characteristic #40 READ_OP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311202) MASTER_TEST: Characteristic #41 READ_OP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311212) MASTER_TEST: Characteristic #42 READ_OP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311222) MASTER_TEST: Characteristic #43 READ_OP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311232) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311242) MASTER_TEST: Characteristic #45 READ_CHG_CURR (mA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311252) MASTER_TEST: Characteristic #46 BAT_CAPACITY (%%) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311262) MASTER_TEST: Characteristic #47 INV_STATUS (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311272) MASTER_TEST: Characteristic #48 INV_FAULT (__) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311282) MASTER_TEST: Characteristic #49 READ_BP_WATT_HI (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311292) MASTER_TEST: Characteristic #50 READ_BP_WATT_LO (W) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311302) MASTER_TEST: Characteristic #51 READ_BP_VA_HI (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311312) MASTER_TEST: Characteristic #52 READ_BP_VA_LO (VA) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311322) MASTER_TEST: Characteristic #53 READ_AC_IOUT (Hz) value = 0.00 (0x0000) read successful.[0m
+[0;32mI (311332) MASTER_TEST: Characteristic #56 SET_INV_OPERATION1 (..) value = 5.00 (0x0005) read successful.[0m
+[0;32mI (311342) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (311352) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 2
+[0;32mI (312362) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (312762) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 3
+[0;32mI (313772) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (314172) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 4
+[0;32mI (315182) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (315582) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 5
+[0;32mI (316592) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (316992) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 6
+[0;32mI (318002) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (318402) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 7
+[0;32mI (319412) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (319812) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 8
+[0;32mI (320822) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (321222) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 9
+[0;32mI (322232) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (322632) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 10
+[0;32mI (323642) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (324042) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 11
+[0;32mI (325052) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (325452) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 12
+[0;32mI (326462) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (326862) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 13
+[0;32mI (327872) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (328272) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 14
+[0;32mI (329282) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (329682) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 15
+[0;32mI (330692) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (331092) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 16
+[0;32mI (332102) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (332502) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 17
+[0;32mI (333512) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (333912) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 18
+[0;32mI (334922) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (335322) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 19
+[0;32mI (336332) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (336732) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 20
+[0;32mI (337742) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (338142) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 21
+[0;32mI (339152) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (339552) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 22
+[0;32mI (340562) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;31mE (340962) MB_CONTROLLER_MASTER: mbc_master_get_parameter(74): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 23
+[0;32mI (341972) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (341972) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 24
+[0;32mI (342982) MASTER_TEST: Characteristic #44 READ_VBAT1 (mV) value = 0.000000 (0x0) read successful.[0m
+[0;32mI (342982) MASTER_TEST: Characteristic #55 READ_VBAT2 (mV) value = 0.000000 (0x0) read successful.[0m
+Mosbud write to inverter failed, both SSR's set LOW 
+cnt: 25
